@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>离散数学下</title>
+      <link href="/2024/10/19/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E4%B8%8B/"/>
+      <url>/2024/10/19/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E4%B8%8B/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="格和布尔代数"><a href="#格和布尔代数" class="headerlink" title="格和布尔代数"></a>格和布尔代数</h1><h2 id="偏序集"><a href="#偏序集" class="headerlink" title="偏序集"></a>偏序集</h2><p>偏序关系：自反、反对称且可传递的关系</p><p>下界、最大下界(glb)、上界、最小上界(lub)、最小元素、最大元素的定义</p><p>glb、lub、最小元素、最大元素唯一</p><h2 id="格和性质"><a href="#格和性质" class="headerlink" title="格和性质"></a>格和性质</h2><p><strong>定义</strong>：设<L；≤>是一个偏序集，如果L中任意两个元素都存在着最大下界和最小上界，则称<L；≤>是格</p><script type="math/tex; mode=display">l1\wedge l2=glb(l1,l2),l1\vee l2=lub(l1,l2)</script><p><strong>性质</strong>：</p><script type="math/tex; mode=display">l1\wedge l2\leq l1,l1\wedge l2\leq l2</script><script type="math/tex; mode=display">l1\vee l2\geq l1,l1\vee l2 \geq l2</script><script type="math/tex; mode=display">l3\leq l1,l3\leq l2,l3\leq l1\wedge l2</script><script type="math/tex; mode=display">l3\geq l1,l3\geq l2,l3\geq l1\vee l2</script><script type="math/tex; mode=display">l1\vee l2=l2\Leftrightarrow l1\wedge l2\Leftrightarrow l1\leq l2</script><p><strong>格的保序性</strong>：</p><script type="math/tex; mode=display">若l1\leq l3,l2\leq l4,则l1\vee l2\leq l3\vee l4 ,l1\wedge l2\leq l3\wedge l4</script><script type="math/tex; mode=display">若l2\leq l3,则l1\vee l2\leq l1\vee l2,l1\wedge l2\leq l1\wedge l3</script><p><strong>对偶原理</strong>：格上的任一真命题，其对偶亦为真。</p><p><strong>交换律</strong>：<script type="math/tex">l1\vee l2=l2\vee l1,l1\wedge l2=l2\wedge l1</script></p><p><strong>结合律</strong>：<script type="math/tex">l1\vee (l2\vee l3)=(l1\vee l2)\vee l3,l1\wedge(l2\wedge l3)=(l1\wedge l2)\wedge l3</script></p><p><strong>等幂律</strong>：<script type="math/tex">l\vee l=l,l\wedge l=l</script></p><p><strong>吸收率</strong>：<script type="math/tex">l1\vee (l1\wedge l2)=l1,l1\wedge(l1\vee l2)=l1</script></p><p><strong>分配不等式</strong>：<script type="math/tex">l1\vee (l2\wedge l3)\leq (l1\vee l2)\wedge(l1\vee l3)</script></p><script type="math/tex; mode=display">l1\wedge(l2\vee l3)\geq (l1\wedge l2)\vee (l1\wedge l3)</script><h2 id="格是一种代数系统"><a href="#格是一种代数系统" class="headerlink" title="格是一种代数系统"></a>格是一种代数系统</h2><p><strong>定义</strong>：设$<L;\vee,\wedge>$是一格代数系统，$\vee$和$\wedge$是L上的二元运算，如果这两个运算满足交换律、结合律和吸收率，则称$<L;\vee,\wedge>$是一个格</p><p><strong>子格</strong>：设$<L,\vee,\wedge>$是一个格，如果$<A;\vee,\wedge>$是$<L;\vee,\wedge>$的子代数，则称$<A;\vee,\wedge>$是$<L;\vee,\wedge>$的子格</p><h2 id="分配格和有补格"><a href="#分配格和有补格" class="headerlink" title="分配格和有补格"></a>分配格和有补格</h2><h3 id="分配格"><a href="#分配格" class="headerlink" title="分配格"></a>分配格</h3><p><strong>定义</strong>：设$<L;\vee,\wedge>$是一个格，若对于任一的$l1,l2,l3\in L$，有<script type="math/tex">l1\wedge (l2\vee l3)=(l1\wedge l2)\vee(l1\wedge l3)</script> <script type="math/tex">l1\vee(l2\wedge l3)=(l1\vee l2)\wedge (l1\vee l3)</script></p><p><strong>性质1</strong>：在格中如果交运算对并运算是可分配的，那么并运算对交运算也是可分配的；反之同理。</p><p><strong>性质2</strong>：设$l1,l2,l3$是分配格$<L;\vee,\wedge>$中任意三个元素，则$(l1\vee l2=l1\vee l3,l1\wedge  l2=l1\wedge l3)\Leftrightarrow (l2=l3)$</p><p><strong>判定</strong>：格$<L; ≤>$是分配格的充要条件是$<L; ≤>$<strong>不含</strong>与<strong>钻石格</strong>或<strong>五角格</strong>同构的子格</p><p><img src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202410191508725.png" alt=""></p><h3 id="有补格"><a href="#有补格" class="headerlink" title="有补格"></a>有补格</h3><p><strong>有界格</strong>：具有最小元素和最大元素的格，最大元素1，最小元素0</p><p><strong>补元素</strong>：设$<L;\vee,\wedge>$是一个含有元素1和0的格，对于L中的一个元素l，若有元素$\overline{l}$使得$l\vee\overline{l}=1,l\wedge\overline{l}=0$，则称元素$\overline{l}$是l的补</p><p><strong>有补格</strong>：设$<L;\vee,\wedge>$是一个含有元素1和0的格，如果L中的每一个元素都有补，则称$<L;\vee,\wedge>$为有补格</p><h3 id="有补分配格"><a href="#有补分配格" class="headerlink" title="有补分配格"></a>有补分配格</h3><p><strong>对合律</strong>：在有补分配格$<L;\vee,\wedge>$中，对于任一元素$l\in L$，有$\overline{\overline{l}}=l$</p><p><strong>德摩根定律</strong>：在有补分配格$<L;\vee,\wedge>$中，对于任意的$l1,l2\in L$，有$\overline{l1\vee l2}=l1\wedge l2,\overline{l1\wedge l2}=\overline{l1}\vee\overline{l2}$</p><script type="math/tex; mode=display">(l1\leq l2)\Leftrightarrow (l1\wedge \overline{l2}=0)\Leftrightarrow (\overline{l1}\vee l2=1)</script><h2 id="布尔代数"><a href="#布尔代数" class="headerlink" title="布尔代数"></a>布尔代数</h2><p><strong>定义</strong>：如果一个格既是分配格又是有补格，而称其为一个布尔代数</p><p>设代数系统中$<B;-，\vee,\wedge>$的运算满足<strong>交换律</strong>、<strong>分配律</strong>、<strong>同一律</strong>和<strong>互补律</strong>，则它也必定满足其他的集合定律，则称$<B;-，\vee,\wedge>$是布尔代数</p><p><strong>性质</strong>：</p><p>布尔代数的每一子代数仍是布尔代数。</p><p>一个布尔代数的每一满同态像都是布尔代数。</p><h2 id="有限布尔代数的同构"><a href="#有限布尔代数的同构" class="headerlink" title="有限布尔代数的同构"></a>有限布尔代数的同构</h2><p>设$&lt; B ;－，∨，∧&gt;$是布尔代数，如果元素a≠0，且对任意的x ∈B，有x ∧a＝a或x ∧ a＝0，则称a是原子。</p><p>设$&lt; B ;－，∨，∧&gt;$是一有限布尔代数，则对任意的x ∈B 且 x ≠ 0，一定存在一个原子a ，使得x ∧ a＝a（或a ≤x）。</p><p>如果a1和a2是布尔代数$&lt; B ;－，∨，∧&gt;$的原子，且a1 ∧ a2 ≠ 0 ，则a1 ＝a2。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+          <category> 离散数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 离散数学上 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>应用层</title>
+      <link href="/2024/10/18/%E5%BA%94%E7%94%A8%E5%B1%82/"/>
+      <url>/2024/10/18/%E5%BA%94%E7%94%A8%E5%B1%82/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="应用层协议原理">应用层协议原理</h1><h2 id="网络应用的架构">网络应用的架构</h2><p><strong>客户端/服务器（Client/Server，C/S)</strong></p><p>服务器：</p><ul><li><p>总是打开</p></li><li><p>拥有一个固定的地址</p></li><li><p>缩放的数据中心</p></li></ul><p>客户端：</p><ul><li><p>与服务器通信</p></li><li><p>可能是间歇性连接</p></li><li><p>可能有动态的IP地址</p></li><li><p>客户端之间不能相互通信</p></li></ul><p><strong>对等网（Peer-to-Peer，P2P）</strong></p><ul><li><p>不一定总在线</p></li><li><p>结点之间可以直接通信</p></li><li><p>结点的地址以及他们之间的连接可能随时发生变化</p></li><li><p>任何一方既提供服务又享受服务，自扩展：新的节点带来新的服务能力，同时也带来新的服务需求</p></li><li><p>节点之间是间歇性连接、地址也是变化的</p></li><li><p>管理非常复杂</p></li></ul><p><strong>混合体系结构</strong>： C/S+P2P</p><h2 id="安全性">安全性</h2><ul><li><p>TCP/UDP天生不具备安全性</p></li><li><p>安全套接字层SSL</p><ul><li>提供加密的TCP连接</li><li>数据的完整性检查</li><li>端点身份鉴别</li><li>SSL位于应用层与TCP之间</li></ul></li></ul><h1 id="web和http">WEB和HTTP</h1><h2 id="web的构成">WEB的构成</h2><blockquote><p>WEB属于C/S模式</p></blockquote><p><strong>WEB服务器</strong>：IIS、Apache、TomCat……</p><p><strong>浏览器</strong>：IE、Maxthon、Firefox</p><p><strong>协议</strong></p><ul><li>信息表达的协议——HTML</li><li>信息传输的协议——HTTP</li></ul><h2 id="http">HTTP</h2><h3 id="客户端服务器模式">客户端/服务器模式</h3><p><strong>客户端:</strong> 浏览器<strong>请求、接收、展示</strong>Web对象</p><p><strong>服务器</strong>: Web服务器发送对象对请求进行<strong>响应</strong></p><h3 id="tcp-传输服务">TCP 传输服务</h3><p>客户端启动TCP连接(创建套接字) 到服务器, 端口 <strong>80</strong></p><p>服务器接受来自客户端的 TCP 连接</p><ul><li><p>http 报文(应用层协议报文) 在浏览器 (http client) 和Web服务器(httpserver)之间进行交换</p></li><li><p>关闭TCP 连接</p></li></ul><p>HTTP 是“无状态"的,服务器<strong>不保留</strong>任何访问过的请求信息</p><h3 id="http连接">HTTP连接</h3><p><strong>非持续HTTP</strong></p><ul><li><p>通过TCP连接最多发送一个对象</p></li><li><p>连接然后被关闭</p></li><li><p>下载多个对象需要建立多个连接</p></li></ul><p><strong>持续 HTTP</strong></p><ul><li>客户端和服务器之间的单个TCP连接上可以发送多个对象</li></ul><h1 id="文件传输协议ftp">文件传输协议：FTP</h1><h1 id="电子邮件">电子邮件</h1><h1 id="dns">DNS</h1><h1 id="p2p文件共享">P2P文件共享</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计网 </category>
+          
+          <category> 应用层 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>运输层</title>
       <link href="/2024/10/11/%E8%BF%90%E8%BE%93%E5%B1%82/"/>
       <url>/2024/10/11/%E8%BF%90%E8%BE%93%E5%B1%82/</url>
