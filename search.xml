@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>python环境配置</title>
+      <link href="/2024/12/19/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2024/12/19/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="vscode-anaconda">VSCode + anaconda</h1><p>首先按照步骤下载vscode和anaconda</p><p>在vscode中按<code>Ctrl+Shift+P</code>，找到<code>Python:Select Interpreter</code></p><p><imgsrc="/imgs/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20241219105619784.png" /></p><p>将python改成anaconda路径下的即可</p><p><imgsrc="/imgs/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20241219105710965.png" /></p><h1 id="pycharmanaconda">Pycharm+anaconda</h1><p>首先下载好pycharm和anaconda，如果需要破解版pycharm可以查看这个<ahref="https://www.exception.site/">网站</a></p><p>在新建pyhton文件时将类型改成conda</p><p><imgsrc="/imgs/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20241219110232604.png" /></p><p>找到自己的conda.bat的路径更改即可</p><p><imgsrc="/imgs/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/image-20241219110258051.png" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[hexo]Github+Typora图片上传</title>
       <link href="/2024/12/18/hexo-Github-Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
       <url>/2024/12/18/hexo-Github-Typora%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</url>
