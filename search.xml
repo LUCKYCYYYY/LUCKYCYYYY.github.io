@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>汇编总复习</title>
+      <link href="/2024/12/28/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/"/>
+      <url>/2024/12/28/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第一章">第一章</h1><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/349fad8b116299cb7ed5765e8a779b80_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/e8683dac5e965baa201265aab3e59a72_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228130520041.png" /></p><h1 id="第二章">第二章</h1><p>注意：</p><ol type="1"><li><code>mov ax, [bx]</code>注意是16位，不是8位</li><li>能处理seg的只有<code>mov, push, pop</code></li><li><code>shr</code>移位操作的对象是内存中的字或字节，不能是内存地址</li><li>字母开头加0</li></ol><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/532eca0768a54ae4955cccb4ac7b0fc0_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/73a8ba5669a99349df00f01b580d8afe.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/549727ea4aff2e71167bc27d1ccc92a5_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/ba9c7061673737810db8b33bbaa277d1_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/a7204a347a90e3cf1af6def23e142ec8_720.jpg" /></p><h1 id="第三章">第三章</h1><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/24ce7de47eebfa8bdb3602cdeb2d83d3_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/669b7d56232660eed88aff62a28d5450_720.jpg" /></p><h1 id="第四章">第四章</h1><h2 id="以十六进制显示">以十六进制显示</h2><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228132345724.png" /></p><h2 id="自然数求和">自然数求和</h2><p>先用<code>shr</code>，再用<code>rcr</code></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228132449734.png" /></p><h2 id="最低位的1">最低位的1</h2><p>使用<code>loope</code>同时判断<code>cf</code>和<code>zf</code></p><p>使用<code>ror</code>进行移位，防止改变<code>zf</code></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228132604379.png" /></p><h2 id="冒泡排序">冒泡排序</h2><p>根据大小<code>mov</code>到<code>al</code>而不是<code>ax</code></p><p>两层循环，每次让<code>mov bx, cx</code></p><p>如果利用<code>array[si]</code>应在<code>outloop</code>中加上<code>xor si, si</code></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228132808545.png" /></p><h2 id="n">N!</h2><p><strong>堆栈传参</strong></p><p><code>cmp ax, 0</code>后进行两个分支，一个是0，一个非0</p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133048194.png" /></p><p><strong>寄存器传参 </strong></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133216996.png" /></p><h2 id="读入十进制数">读入十进制数</h2><p>在读入后需要减去<code>30h</code>并判断是否在<code>0~9</code>内</p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133357346.png" /></p><h2 id="输出十进制数">输出十进制数</h2><p>在使用div之前记得清空dx</p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133506591.png" /></p><h2 id="计算平均数">计算平均数</h2><p>利用<code>cwd</code>扩展<code>ax</code>到<code>dx</code></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133647569.png" /></p><h1 id="第五章">第五章</h1><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/3d4b9336f09813cc92d97f9e2288832a_720.jpg" /></p><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/image-20241228133943926.png" /></p><h1 id="第六章">第六章</h1><p><imgsrc="/imgs/%E6%B1%87%E7%BC%96%E6%80%BB%E5%A4%8D%E4%B9%A0/35929460de4245990cbdf0ec063f54d9.jpg" /></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 汇编 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 汇编 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>振动与波动</title>
       <link href="/2024/12/23/%E7%89%A9%E7%90%86--%E6%8C%AF%E5%8A%A8%E4%B8%8E%E6%B3%A2%E5%8A%A8/"/>
       <url>/2024/12/23/%E7%89%A9%E7%90%86--%E6%8C%AF%E5%8A%A8%E4%B8%8E%E6%B3%A2%E5%8A%A8/</url>
@@ -148,7 +173,7 @@
           
           <category> 汇编 </category>
           
-          <category> 程序格式 </category>
+          <category> 基础知识 </category>
           
       </categories>
       
