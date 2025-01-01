@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>电磁感应</title>
+      <link href="/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/"/>
+      <url>/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="法拉第电磁感应定律">法拉第电磁感应定律</h1><p>感应电动势：单位<span class="math inline">\(1V=1Wb/s\)</span> <spanclass="math display">\[\varepsilon_i=-N\frac{d\Phi}{dt}\]</span> 任一回路中： <span class="math display">\[\Phi=\iint_S\vec{B}\cdot d\vec{S}=\iint_S B\cos \theta \cdot dS\]</span> 从<span class="math inline">\(t_1\tot_2\)</span>时间内，通过回路导线任一截面的感应电量： <spanclass="math display">\[q=\int_{t_1}^{t_2}Idt=-\frac{N}{R}\int_{\Phi_1}^{\Phi_2}d\Phi=-\frac{N}{R}(\Phi_2-\Phi_1)\]</span></p><h2 id="电源">电源</h2><p>提供<strong>非静电力</strong>，维持稳恒电流</p><p>正电荷在静电场力的作用下从A经过导线移到B，并与B上的负电荷中和，直至板间电势差消失。要维持稳恒电流，须使正电荷从B经BA内移至A上，使两板间有恒定的电势差。</p><p><imgsrc="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/image-20241231170359493.png" /></p><p>非静电场： <span class="math display">\[\vec{E_k}=\vec{F_k}/q\]</span> 方向：电源内部由负极指向正极</p><p><strong>电源电动势</strong>：单位正电荷从负极经电源内部移至正极时，非静电力做的功。<span class="math display">\[\varepsilon=\frac{A}{q}=\int_{内部-}^{内部+}\vec{E_k}\cdot d\vec{l}\]</span></p><h1 id="感应电动势">感应电动势</h1><h2 id="动生电动势">动生电动势</h2><p>导体在磁场中运动时产生的感应电动势 <span class="math display">\[\varepsilon_i=vBL\\\vec{F_k}=-e\vec{v}\times \vec{B}\\\vec{E_k}=\vec{v}\times\vec{B}\]</span></p><h2 id="感生电动势">感生电动势</h2><p><span class="math display">\[\varepsilon_i=-\frac{d\Phi}{dt}=-\frac{d}{dt}\iint_{S}\vec{B}\cdotd\vec{S}=-\iint_S \frac{\partial \vec B}{\partial t}\cdot d\vec{S}\]</span></p><p>考虑闭合回路：</p><p><imgsrc="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/image-20241231172455911.png" /><span class="math display">\[\oint_L\vec{E_i}\cdot d\vec{l}=-\iint_S \frac{\partial \vec B}{\partialt}\cdot d\vec{S}\]</span> 方向由楞次定律判断</p><h3 id="感应电场">感应电场</h3><p>感应电场是产生感应电动势的机制，不是静电场</p><p><span class="math inline">\(E_静\)</span>为保守力场： <spanclass="math display">\[\oint\vec{E_静}\cdot d\vec{l}=0\]</span> <span class="math inline">\(\vec{E_i}\)</span>是非保守力场：<span class="math display">\[\oint\vec{E_i}\cdot d\vec{l}\neq 0\]</span> <imgsrc="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/image-20241231172541541.png" /></p><h3 id="感应电场的计算">感应电场的计算</h3><p><imgsrc="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/image-20241231172901341.png" /><span class="math display">\[r&lt;R时,E_i=-\frac{r}{2}\frac{\partial B}{\partial t}\\r &gt; R时,E_i=\frac{R^2}{2r}\frac{\partial B}{\partial t}\]</span> <span class="math inline">\(\vecE_i\)</span>是涡旋场--非保守场，不能引入势函数，但是它对在场中的导体提供电动势</p><p>导体不闭合时<spanclass="math inline">\(\rightarrow\)</span>使到体内电荷重新分布<spanclass="math inline">\(\rightarrow\)</span>产生<spanclass="math inline">\(\vec{E_静}\rightarrow\)</span>到体内总电场达到平衡<spanclass="math inline">\(\rightarrow\)</span>由于电荷的存在空间出现电势<spanclass="math inline">\(\rightarrow \Delta U=\varepsilon_i\)</span></p><h1 id="自感与互感">自感与互感</h1><h1 id="磁场的能量">磁场的能量</h1><h1 id="麦克斯韦方程组">麦克斯韦方程组</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 物理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电磁感应 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数理统计的基本概念</title>
       <link href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
       <url>/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
@@ -13,9 +38,9 @@
       
       <categories>
           
-          <category> 概率论 </category>
+          <category> 数学 </category>
           
-          <category> 数理统计 </category>
+          <category> 概率论 </category>
           
       </categories>
       
@@ -41,8 +66,6 @@
       <categories>
           
           <category> 物理 </category>
-          
-          <category> 物理实验 </category>
           
       </categories>
       
@@ -148,8 +171,6 @@
           
           <category> 物理 </category>
           
-          <category> 半导体与激光 </category>
-          
       </categories>
       
       
@@ -174,8 +195,6 @@
       <categories>
           
           <category> python </category>
-          
-          <category> 环境配置 </category>
           
       </categories>
       
@@ -227,8 +246,6 @@
           
           <category> 汇编 </category>
           
-          <category> 基础知识 </category>
-          
       </categories>
       
       
@@ -252,9 +269,9 @@
       
       <categories>
           
-          <category> 概率论 </category>
+          <category> 数学 </category>
           
-          <category> 多维随机变量及其分布 </category>
+          <category> 概率论 </category>
           
       </categories>
       
@@ -279,9 +296,9 @@
       
       <categories>
           
-          <category> 概率论 </category>
+          <category> 数学 </category>
           
-          <category> 随机变量及其分布 </category>
+          <category> 概率论 </category>
           
       </categories>
       
@@ -306,9 +323,9 @@
       
       <categories>
           
-          <category> 概率论 </category>
+          <category> 数学 </category>
           
-          <category> 数字特征 </category>
+          <category> 概率论 </category>
           
       </categories>
       
@@ -389,8 +406,6 @@
           
           <category> 汇编 </category>
           
-          <category> 8086指令系统 </category>
-          
       </categories>
       
       
@@ -470,8 +485,6 @@
           
           <category> 汇编 </category>
           
-          <category> 程序格式 </category>
-          
       </categories>
       
       
@@ -496,8 +509,6 @@
       <categories>
           
           <category> 物理 </category>
-          
-          <category> 波动光学 </category>
           
       </categories>
       
@@ -524,8 +535,6 @@
           
           <category> 计网 </category>
           
-          <category> 链路层 </category>
-          
       </categories>
       
       
@@ -550,8 +559,6 @@
       <categories>
           
           <category> 计网 </category>
-          
-          <category> 网络层 </category>
           
       </categories>
       
@@ -767,8 +774,6 @@
           
           <category> 计网 </category>
           
-          <category> 应用层 </category>
-          
       </categories>
       
       
@@ -793,8 +798,6 @@
       <categories>
           
           <category> 计网 </category>
-          
-          <category> 运输层 </category>
           
       </categories>
       
@@ -1010,8 +1013,6 @@
           
           <category> 数据库 </category>
           
-          <category> 基础知识 </category>
-          
       </categories>
       
       
@@ -1090,8 +1091,6 @@
       <categories>
           
           <category> 计网 </category>
-          
-          <category> 框架 </category>
           
       </categories>
       
@@ -1658,8 +1657,6 @@
           
           <category> Linux </category>
           
-          <category> 基本指令 </category>
-          
       </categories>
       
       
@@ -1684,8 +1681,6 @@
       <categories>
           
           <category> Linux </category>
-          
-          <category> 环境配置 </category>
           
       </categories>
       
@@ -2035,8 +2030,6 @@
       <categories>
           
           <category> 物理 </category>
-          
-          <category> 静电场 </category>
           
       </categories>
       
