@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.luckycyyyy.top/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png">
 <meta property="article:published_time" content="2024-12-17T15:29:21.000Z">
-<meta property="article:modified_time" content="2025-01-04T13:35:32.116Z">
+<meta property="article:modified_time" content="2025-01-10T08:04:22.083Z">
 <meta property="article:author" content="摘星的小月亮">
 <meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2025-01-04 21:35:32'
+  postUpdate: '2025-01-10 16:04:22'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -157,96 +157,184 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png')"><nav id="nav"><span id="blog-info"><a href="/" title="眨眼的小星星"><span class="site-name">眨眼的小星星</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">随机变量及其分布</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-17T15:29:21.000Z" title="发表于 2024-12-17 23:29:21">2024-12-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-04T13:35:32.116Z" title="更新于 2025-01-04 21:35:32">2025-01-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">425</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="随机变量及其分布"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h1><p>分布函数$F_X(x)$为随机变量X的分布函数</p>
-<script type="math/tex; mode=display">
-F_X(x)=P(X\leq x)</script><p>性质</p>
-<ol>
-<li>单调非降性：对任意的$x_1&lt;x_2$，$F(x_1)\leq F(x_2)$</li>
-<li>右连续性：对任意的a，$\lim\limits_{x\downarrow a}F(x)=F(a)$</li>
-<li>规范性：$F(-\infty)=0,F(+\infty)=1$</li>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png')"><nav id="nav"><span id="blog-info"><a href="/" title="眨眼的小星星"><span class="site-name">眨眼的小星星</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">随机变量及其分布</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-17T15:29:21.000Z" title="发表于 2024-12-17 23:29:21">2024-12-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-10T08:04:22.083Z" title="更新于 2025-01-10 16:04:22">2025-01-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="随机变量及其分布"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="分布函数">分布函数</h1>
+<p>分布函数<span
+class="math inline">\(F_X(x)\)</span>为随机变量X的分布函数 <span
+class="math display">\[
+F_X(x)=P(X\leq x)
+\]</span> 性质</p>
+<ol type="1">
+<li>单调非降性：对任意的<span
+class="math inline">\(x_1&lt;x_2\)</span>，<span
+class="math inline">\(F(x_1)\leq F(x_2)\)</span></li>
+<li>右连续性：对任意的a，<span
+class="math inline">\(\lim\limits_{x\downarrow a}F(x)=F(a)\)</span></li>
+<li>规范性：<span
+class="math inline">\(F(-\infty)=0,F(+\infty)=1\)</span></li>
 </ol>
-<h1 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h1><p>分布函数</p>
-<script type="math/tex; mode=display">
-F(x)=P(X\leq x)=\sum_{x_i\leq x}p_i</script><h2 id="常见的离散型分布"><a href="#常见的离散型分布" class="headerlink" title="常见的离散型分布"></a>常见的离散型分布</h2><h3 id="单点分布"><a href="#单点分布" class="headerlink" title="单点分布"></a>单点分布</h3><script type="math/tex; mode=display">
-P(X=C)=1</script><h3 id="两点分布"><a href="#两点分布" class="headerlink" title="两点分布"></a>两点分布</h3><script type="math/tex; mode=display">
-P(X=0)=1-p,P(X=1)=p</script><h3 id="二项分布-X-sim-B-n-p"><a href="#二项分布-X-sim-B-n-p" class="headerlink" title="二项分布$X\sim B(n,p)$"></a>二项分布$X\sim B(n,p)$</h3><script type="math/tex; mode=display">
-p(X=k)=C_n^kp^k(1-p)^{n-k}</script><p>$P(X=[(n+1)p])$为二项分布的中心项，递推式</p>
-<script type="math/tex; mode=display">
-P(X=k)=\frac{(n-k+1)p}{kq}P(X=k-1)</script><h3 id="泊松分布-X-sim-P-lambda"><a href="#泊松分布-X-sim-P-lambda" class="headerlink" title="泊松分布$X\sim P(\lambda)$"></a>泊松分布$X\sim P(\lambda)$</h3><script type="math/tex; mode=display">
-P(X=k)=\frac{\lambda^ke^{-\lambda}}{k!},k=0,1,2,...</script><p>当$n\geq 20,p\leq 0.05$，取$\lambda=np$，有如下近似公式</p>
-<script type="math/tex; mode=display">
-C_n^kp^k(1-p)^{n-k}\approx\frac{\lambda^ke^{-\lambda}}{k!}</script><p>泊松分布的中心项$P(X=[\lambda])$</p>
-<script type="math/tex; mode=display">
-\frac{P(X=k)}{P(X=k-1)}=\frac{\lambda}{k},k>1</script><h3 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h3><script type="math/tex; mode=display">
-P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=0,1,2,...,n</script><p>其中$n\leq N,M\leq N$</p>
-<p>当N很大，n很小时，令$p=\frac{M}{N}$</p>
-<script type="math/tex; mode=display">
-\frac{C_M^kC_{N-M}^{n-k}}{C_N^n}\approx C_n^kp^k(1-p)^{n-k}</script><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><script type="math/tex; mode=display">
-P(X=k)=p(1-p)^{k-1},k=1,2,...</script><p>取自然数值的随机变量X服从几何分布的充要条件是X具有无记忆性：</p>
-<script type="math/tex; mode=display">
-P(X>m+n|X>m)=P(X>n),m,n\geq 1</script><h1 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h1><p>设随机变量X的分布函数$F(X)$，若存在非负可积函数$f(x)$，使得对任意实数$x$，有</p>
-<script type="math/tex; mode=display">
-F(x)=\int_{-\infty}^{+\infty}f(t)dt</script><p>则称$f(x)$是X的<strong>概率密度</strong></p>
-<script type="math/tex; mode=display">
-P(a<X\leq b)=F(b)-F(a)=\int_a^bf(x)dx</script><h2 id="常见的连续型分布"><a href="#常见的连续型分布" class="headerlink" title="常见的连续型分布"></a>常见的连续型分布</h2><h3 id="均匀分布-X-sim-U-a-b"><a href="#均匀分布-X-sim-U-a-b" class="headerlink" title="均匀分布$X\sim U(a,b)$"></a>均匀分布$X\sim U(a,b)$</h3><p><strong>概率密度</strong>：</p>
-<script type="math/tex; mode=display">
+<h1 id="离散型随机变量">离散型随机变量</h1>
+<p>分布函数 <span class="math display">\[
+F(x)=P(X\leq x)=\sum_{x_i\leq x}p_i
+\]</span></p>
+<h2 id="常见的离散型分布">常见的离散型分布</h2>
+<h3 id="单点分布">单点分布</h3>
+<p><span class="math display">\[
+P(X=C)=1
+\]</span> ### 两点分布 <span class="math display">\[
+P(X=0)=1-p,P(X=1)=p
+\]</span> ### 二项分布<span class="math inline">\(X\sim B(n,p)\)</span>
+<span class="math display">\[
+p(X=k)=C_n^kp^k(1-p)^{n-k}
+\]</span> <span
+class="math inline">\(P(X=[(n+1)p])\)</span>为二项分布的中心项，递推式
+<span class="math display">\[
+P(X=k)=\frac{(n-k+1)p}{kq}P(X=k-1)
+\]</span></p>
+<h3 id="泊松分布xsim-plambda">泊松分布<span class="math inline">\(X\sim
+P(\lambda)\)</span></h3>
+<p><span class="math display">\[
+P(X=k)=\frac{\lambda^ke^{-\lambda}}{k!},k=0,1,2,...
+\]</span></p>
+<p>当<span class="math inline">\(n\geq 20,p\leq 0.05\)</span>，取<span
+class="math inline">\(\lambda=np\)</span>，有如下近似公式 <span
+class="math display">\[
+C_n^kp^k(1-p)^{n-k}\approx\frac{\lambda^ke^{-\lambda}}{k!}
+\]</span> 泊松分布的中心项<span
+class="math inline">\(P(X=[\lambda])\)</span> <span
+class="math display">\[
+\frac{P(X=k)}{P(X=k-1)}=\frac{\lambda}{k},k&gt;1
+\]</span></p>
+<h3 id="超几何分布">超几何分布</h3>
+<p><span class="math display">\[
+P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=0,1,2,...,n
+\]</span></p>
+<p>其中<span class="math inline">\(n\leq N,M\leq N\)</span></p>
+<p>当N很大，n很小时，令<span
+class="math inline">\(p=\frac{M}{N}\)</span> <span
+class="math display">\[
+\frac{C_M^kC_{N-M}^{n-k}}{C_N^n}\approx C_n^kp^k(1-p)^{n-k}
+\]</span></p>
+<h3 id="几何分布">几何分布</h3>
+<p><span class="math display">\[
+P(X=k)=p(1-p)^{k-1},k=1,2,...
+\]</span></p>
+<p>取自然数值的随机变量X服从几何分布的充要条件是X具有无记忆性： <span
+class="math display">\[
+P(X&gt;m+n|X&gt;m)=P(X&gt;n),m,n\geq 1
+\]</span></p>
+<h1 id="连续型随机变量">连续型随机变量</h1>
+<p>设随机变量X的分布函数<span
+class="math inline">\(F(X)\)</span>，若存在非负可积函数<span
+class="math inline">\(f(x)\)</span>，使得对任意实数<span
+class="math inline">\(x\)</span>，有 <span class="math display">\[
+F(x)=\int_{-\infty}^{x}f(t)dt
+\]</span> 则称<span
+class="math inline">\(f(x)\)</span>是X的<strong>概率密度</strong> <span
+class="math display">\[
+P(a&lt;X\leq b)=F(b)-F(a)=\int_a^bf(x)dx
+\]</span></p>
+<h2 id="常见的连续型分布">常见的连续型分布</h2>
+<h3 id="均匀分布xsim-uab">均匀分布<span class="math inline">\(X\sim
+U(a,b)\)</span></h3>
+<p><strong>概率密度</strong>： <span class="math display">\[
 f(x)=\left\{\begin{matrix}
-  \frac{1}{b-a}&a\leq x\leq b \\
-  0&其他
-\end{matrix}\right.</script><p><strong>分布函数</strong>：</p>
-<script type="math/tex; mode=display">
+  \frac{1}{b-a}&amp;a\leq x\leq b \\
+  0&amp;其他
+\end{matrix}\right.
+\]</span> <strong>分布函数</strong>： <span class="math display">\[
 F(x)=\int_{-\infty}^{x}f(t)dt=\left\{\begin{matrix}
- 0 & x<a\\
- \frac{x-a}{x-b} & a\leq x<b\\
-  1&x\geq b
-\end{matrix}\right.</script><p>令$Y=F(X)$</p>
-<script type="math/tex; mode=display">
-P(Y<y)=P(F(X)<y)=P(X<F^{-1}(y))=F(F^{-1}(y))=y\\
-P(Y\leq y)=\lim\limits_{n\to\infty}P(F(X)<y+\frac{1}{n})=\lim\limits_{n\to\infty}(y+\frac{1}{n})=y</script><h3 id="指数分布-X-sim-E-lambda"><a href="#指数分布-X-sim-E-lambda" class="headerlink" title="指数分布$X\sim E(\lambda)$"></a>指数分布$X\sim E(\lambda)$</h3><p><strong>概率密度</strong>：</p>
-<script type="math/tex; mode=display">
+0 &amp; x&lt;a\\
+\frac{x-a}{x-b} &amp; a\leq x&lt;b\\
+  1&amp;x\geq b
+\end{matrix}\right.
+\]</span> 令<span class="math inline">\(Y=F(X)\)</span> <span
+class="math display">\[
+P(Y&lt;y)=P(F(X)&lt;y)=P(X&lt;F^{-1}(y))=F(F^{-1}(y))=y\\
+P(Y\leq
+y)=\lim\limits_{n\to\infty}P(F(X)&lt;y+\frac{1}{n})=\lim\limits_{n\to\infty}(y+\frac{1}{n})=y
+\]</span></p>
+<h3 id="指数分布xsim-elambda">指数分布<span class="math inline">\(X\sim
+E(\lambda)\)</span></h3>
+<p><strong>概率密度</strong>： <span class="math display">\[
 f(x)=\left\{\begin{matrix}
-  \lambda e^{-\lambda x}& x\geq0  \\
-   0&x<0  
-\end{matrix}\right.</script><p><strong>分布函数</strong>：</p>
-<script type="math/tex; mode=display">
+  \lambda e^{-\lambda x}&amp; x\geq0  \\
+   0&amp;x&lt;0  
+\end{matrix}\right.
+\]</span> <strong>分布函数</strong>： <span class="math display">\[
 F(x)=\left\{\begin{matrix}
- 1-e^{-\lambda X} &x\geq 0 \\
-  0&x<0
-\end{matrix}\right.</script><p>取非负实数的随机变量X服从指数分布的充要条件是X具有无记忆性：</p>
-<script type="math/tex; mode=display">
-P(X>x+y|X>x)=P(X>y),x,y>0</script><h3 id="正态分布-X-sim-N-mu-sigma-2"><a href="#正态分布-X-sim-N-mu-sigma-2" class="headerlink" title="正态分布$X\sim N(\mu,\sigma^2)$"></a>正态分布$X\sim N(\mu,\sigma^2)$</h3><p><strong>概率密度</strong>：</p>
-<script type="math/tex; mode=display">
-f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<+\infty</script><p><strong>分布函数</strong>：</p>
-<script type="math/tex; mode=display">
-F(x)=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x}e^{-\frac{(t-\mu)^2}{2\sigma^2}}dt,-\infty<x<+\infty</script><p>$x=\mu\pm\sigma$是$f(x)$的拐点，且当$x\to\pm\infty$时均以x轴为渐近线</p>
+1-e^{-\lambda X} &amp;x\geq 0 \\
+  0&amp;x&lt;0
+\end{matrix}\right.
+\]</span> 取非负实数的随机变量X服从指数分布的充要条件是X具有无记忆性：
+<span class="math display">\[
+P(X&gt;x+y|X&gt;x)=P(X&gt;y),x,y&gt;0
+\]</span></p>
+<h3 id="正态分布xsim-nmusigma2">正态分布<span
+class="math inline">\(X\sim N(\mu,\sigma^2)\)</span></h3>
+<p><strong>概率密度</strong>： <span class="math display">\[
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty&lt;x&lt;+\infty
+\]</span> <strong>分布函数</strong>： <span class="math display">\[
+F(x)=\frac{1}{\sqrt{2\pi}\sigma}\int_{-\infty}^{x}e^{-\frac{(t-\mu)^2}{2\sigma^2}}dt,-\infty&lt;x&lt;+\infty
+\]</span> <span class="math inline">\(x=\mu\pm\sigma\)</span>是<span
+class="math inline">\(f(x)\)</span>的拐点，且当<span
+class="math inline">\(x\to\pm\infty\)</span>时均以x轴为渐近线</p>
 <p><strong>标准正态分布：</strong></p>
-<p>若$X\sim N(0,1)$，称X服从标准正态分布</p>
-<script type="math/tex; mode=display">
-\Phi(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^xe^{-\frac{t^2}{2}}dt</script><ol>
-<li>对负的x有$\Phi(-x)=1-\Phi(x)$</li>
-<li>$\Phi(u_a)=1-P(X&gt;u_a)=1-a$</li>
-<li>$u<em>a=-u</em>{1-a}$</li>
+<p>若<span class="math inline">\(X\sim
+N(0,1)\)</span>，称X服从标准正态分布 <span class="math display">\[
+\Phi(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^xe^{-\frac{t^2}{2}}dt
+\]</span></p>
+<ol type="1">
+<li>对负的x有<span
+class="math inline">\(\Phi(-x)=1-\Phi(x)\)</span></li>
+<li><span
+class="math inline">\(\Phi(u_a)=1-P(X&gt;u_a)=1-a\)</span></li>
+<li><span class="math inline">\(u_a=u_{1-a}\)</span></li>
 </ol>
 <p><strong>化成标准正态分布</strong>：</p>
-<p>若$X\sim N(\mu,\sigma^2)$，则</p>
-<script type="math/tex; mode=display">
-F(x)=\Phi(\frac{X-\mu}{\sigma})</script><h1 id="随机变量函数的分布"><a href="#随机变量函数的分布" class="headerlink" title="随机变量函数的分布"></a>随机变量函数的分布</h1><h2 id="离散型"><a href="#离散型" class="headerlink" title="离散型"></a>离散型</h2><p>列分布列即可</p>
-<h2 id="连续型"><a href="#连续型" class="headerlink" title="连续型"></a>连续型</h2><h3 id="分布函数法"><a href="#分布函数法" class="headerlink" title="分布函数法"></a>分布函数法</h3><script type="math/tex; mode=display">
-F_Y(y)=P(Y\leq y)=P(g(X)\leq y)=\int_{g(X)\leq y}f_X(x)dx</script><p>对y求导得</p>
-<script type="math/tex; mode=display">
-f_Y(y)=F_Y'(y)</script><h3 id="公式法"><a href="#公式法" class="headerlink" title="公式法"></a>公式法</h3><p>假设$y=g(x)$是严格单调的函数，其反函数$x=g^{-1}(y)$有连续导数，则$Y=g(X)$也为连续型随机变量，且概率密度为</p>
-<script type="math/tex; mode=display">
+<p>若<span class="math inline">\(X\sim N(\mu,\sigma^2)\)</span>，则
+<span class="math display">\[
+F(x)=\Phi(\frac{X-\mu}{\sigma})
+\]</span></p>
+<h1 id="随机变量函数的分布">随机变量函数的分布</h1>
+<h2 id="离散型">离散型</h2>
+<p>列分布列即可</p>
+<h2 id="连续型">连续型</h2>
+<h3 id="分布函数法">分布函数法</h3>
+<p><span class="math display">\[
+F_Y(y)=P(Y\leq y)=P(g(X)\leq y)=\int_{g(X)\leq y}f_X(x)dx
+\]</span></p>
+<p>对y求导得 <span class="math display">\[
+f_Y(y)=F_Y&#39;(y)
+\]</span></p>
+<h3 id="公式法">公式法</h3>
+<p>假设<span
+class="math inline">\(y=g(x)\)</span>是严格单调的函数，其反函数<span
+class="math inline">\(x=g^{-1}(y)\)</span>有连续导数，则<span
+class="math inline">\(Y=g(X)\)</span>也为连续型随机变量，且概率密度为
+<span class="math display">\[
 f_Y(y)=\left\{\begin{matrix}
-  f_X(g^{-1}(y))|[g^{-1}(y)'|&y\in(\alpha,\beta) \\
-  0&其他
-\end{matrix}\right.</script><p>$(\alpha,\beta)$为$g(x)$的值域</p>
+  f_X(g^{-1}(y))|[g^{-1}(y)&#39;|&amp;y\in(\alpha,\beta) \\
+  0&amp;其他
+\end{matrix}\right.
+\]</span> <span class="math inline">\((\alpha,\beta)\)</span>为<span
+class="math inline">\(g(x)\)</span>的值域</p>
 <p><strong>推论</strong>：</p>
-<p>假设$g(x)$在不相重叠的区域$I_1,I_2,…$上逐段满足上述条件，且分别以$g_i^{-1}(y),[g_i^{-1}(y)]’(i=1,2,…)$记$y=g(x)$在各段上的反函数及其导数，则$Y=g(X)$也为连续型随机变量，且概率密度为</p>
-<script type="math/tex; mode=display">
+<p>假设<span class="math inline">\(g(x)\)</span>在不相重叠的区域<span
+class="math inline">\(I_1,I_2,...\)</span>上逐段满足上述条件，且分别以<span
+class="math inline">\(g_i^{-1}(y),[g_i^{-1}(y)]&#39;(i=1,2,...)\)</span>记<span
+class="math inline">\(y=g(x)\)</span>在各段上的反函数及其导数，则<span
+class="math inline">\(Y=g(X)\)</span>也为连续型随机变量，且概率密度为
+<span class="math display">\[
 f_Y(y)=\left\{\begin{matrix}
-  \sum\limits_{i;y\in g(I_i)}f_X(g_i^{-1}(y))|[g_i^{-1}(y)'|&y\in(\alpha,\beta) \\
-  0&其他
-\end{matrix}\right.</script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top">摘星的小月亮</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/">http://www.luckycyyyy.top/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.luckycyyyy.top" target="_blank">眨眼的小星星</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a></div><div class="post_share"><div class="social-share" data-image="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/12/18/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/" title="多维随机变量及其分布"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/ad9bc02f1eb9681592706af2d104d7b8_720.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">多维随机变量及其分布</div></div></a></div><div class="next-post pull-right"><a href="/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/" title="数字特征"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/54d5fdd1dd320b7db2672648a0cd931d.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数字特征</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/" title="数字特征"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/54d5fdd1dd320b7db2672648a0cd931d.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-17</div><div class="title">数字特征</div></div></a></div><div><a href="/2024/12/18/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/" title="多维随机变量及其分布"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/ad9bc02f1eb9681592706af2d104d7b8_720.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-18</div><div class="title">多维随机变量及其分布</div></div></a></div><div><a href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-30</div><div class="title">数理统计的基本概念</div></div></a></div><div><a href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/836faf684410aa37e18d790b1927b6ef.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-03</div><div class="title">参数估计</div></div></a></div><div><a href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/4f8b2360f3abfdf8249d9ff451680de9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-09</div><div class="title">大数定律和中心极限定理</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="avatar"/></div><div class="author-info__name">摘星的小月亮</div><div class="author-info__description">记录每一天的美好</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://luckycyyyy.github.io/"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">分布函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">离散型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%A6%BB%E6%95%A3%E5%9E%8B%E5%88%86%E5%B8%83"><span class="toc-number">2.1.</span> <span class="toc-text">常见的离散型分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%82%B9%E5%88%86%E5%B8%83"><span class="toc-number">2.1.1.</span> <span class="toc-text">单点分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%82%B9%E5%88%86%E5%B8%83"><span class="toc-number">2.1.2.</span> <span class="toc-text">两点分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83-X-sim-B-n-p"><span class="toc-number">2.1.3.</span> <span class="toc-text">二项分布$X\sim B(n,p)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83-X-sim-P-lambda"><span class="toc-number">2.1.4.</span> <span class="toc-text">泊松分布$X\sim P(\lambda)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-number">2.1.5.</span> <span class="toc-text">超几何分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-number">2.1.6.</span> <span class="toc-text">几何分布</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">连续型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%9E%8B%E5%88%86%E5%B8%83"><span class="toc-number">3.1.</span> <span class="toc-text">常见的连续型分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83-X-sim-U-a-b"><span class="toc-number">3.1.1.</span> <span class="toc-text">均匀分布$X\sim U(a,b)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83-X-sim-E-lambda"><span class="toc-number">3.1.2.</span> <span class="toc-text">指数分布$X\sim E(\lambda)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83-X-sim-N-mu-sigma-2"><span class="toc-number">3.1.3.</span> <span class="toc-text">正态分布$X\sim N(\mu,\sigma^2)$</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text">随机变量函数的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">离散型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B"><span class="toc-number">4.2.</span> <span class="toc-text">连续型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E6%B3%95"><span class="toc-number">4.2.1.</span> <span class="toc-text">分布函数法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F%E6%B3%95"><span class="toc-number">4.2.2.</span> <span class="toc-text">公式法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/4f8b2360f3abfdf8249d9ff451680de9.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="大数定律和中心极限定理"/></a><div class="content"><a class="title" href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理">大数定律和中心极限定理</a><time datetime="2025-01-08T17:09:14.000Z" title="发表于 2025-01-09 01:09:14">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/" title="物理演示实验"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/3ab000a8569e986978ba8c73beaf0b4d.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="物理演示实验"/></a><div class="content"><a class="title" href="/2025/01/04/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/" title="物理演示实验">物理演示实验</a><time datetime="2025-01-04T06:11:08.000Z" title="发表于 2025-01-04 14:11:08">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/836faf684410aa37e18d790b1927b6ef.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="参数估计"/></a><div class="content"><a class="title" href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计">参数估计</a><time datetime="2025-01-03T06:03:53.000Z" title="发表于 2025-01-03 14:03:53">2025-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/" title="电磁感应"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/049eb3c48a6cb515e67a40939fd90064.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="电磁感应"/></a><div class="content"><a class="title" href="/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/" title="电磁感应">电磁感应</a><time datetime="2024-12-31T08:36:30.000Z" title="发表于 2024-12-31 16:36:30">2024-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/1.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="数理统计的基本概念"/></a><div class="content"><a class="title" href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念">数理统计的基本概念</a><time datetime="2024-12-30T03:06:50.000Z" title="发表于 2024-12-30 11:06:50">2024-12-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png')"><div id="footer-wrap"><div class="footer_custom_text"><span id="realtime_duration"></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  \sum\limits_{i;y\in
+g(I_i)}f_X(g_i^{-1}(y))|[g_i^{-1}(y)&#39;|&amp;y\in(\alpha,\beta) \\
+  0&amp;其他
+\end{matrix}\right.
+\]</span></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top">摘星的小月亮</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://www.luckycyyyy.top/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/">http://www.luckycyyyy.top/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.luckycyyyy.top" target="_blank">眨眼的小星星</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a></div><div class="post_share"><div class="social-share" data-image="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/12/18/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/" title="多维随机变量及其分布"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/ad9bc02f1eb9681592706af2d104d7b8_720.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">多维随机变量及其分布</div></div></a></div><div class="next-post pull-right"><a href="/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/" title="数字特征"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/54d5fdd1dd320b7db2672648a0cd931d.jpg" onerror="onerror=null;src='/img/1.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数字特征</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/12/18/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/" title="多维随机变量及其分布"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/ad9bc02f1eb9681592706af2d104d7b8_720.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-18</div><div class="title">多维随机变量及其分布</div></div></a></div><div><a href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/836faf684410aa37e18d790b1927b6ef.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-03</div><div class="title">参数估计</div></div></a></div><div><a href="/2024/12/17/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/" title="数字特征"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81/54d5fdd1dd320b7db2672648a0cd931d.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-17</div><div class="title">数字特征</div></div></a></div><div><a href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/4f8b2360f3abfdf8249d9ff451680de9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-09</div><div class="title">大数定律和中心极限定理</div></div></a></div><div><a href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-30</div><div class="title">数理统计的基本概念</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="avatar"/></div><div class="author-info__name">摘星的小月亮</div><div class="author-info__description">记录每一天的美好</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">23</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://luckycyyyy.github.io/"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">分布函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">离散型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%A6%BB%E6%95%A3%E5%9E%8B%E5%88%86%E5%B8%83"><span class="toc-number">2.1.</span> <span class="toc-text">常见的离散型分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%82%B9%E5%88%86%E5%B8%83"><span class="toc-number">2.1.1.</span> <span class="toc-text">单点分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83xsim-plambda"><span class="toc-number">2.1.2.</span> <span class="toc-text">泊松分布\(X\sim
+P(\lambda)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-number">2.1.3.</span> <span class="toc-text">超几何分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="toc-number">2.1.4.</span> <span class="toc-text">几何分布</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">连续型随机变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%9E%8B%E5%88%86%E5%B8%83"><span class="toc-number">3.1.</span> <span class="toc-text">常见的连续型分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83xsim-uab"><span class="toc-number">3.1.1.</span> <span class="toc-text">均匀分布\(X\sim
+U(a,b)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83xsim-elambda"><span class="toc-number">3.1.2.</span> <span class="toc-text">指数分布\(X\sim
+E(\lambda)\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83xsim-nmusigma2"><span class="toc-number">3.1.3.</span> <span class="toc-text">正态分布\(X\sim N(\mu,\sigma^2)\)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-number">4.</span> <span class="toc-text">随机变量函数的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">离散型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%9E%8B"><span class="toc-number">4.2.</span> <span class="toc-text">连续型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E6%B3%95"><span class="toc-number">4.2.1.</span> <span class="toc-text">分布函数法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F%E6%B3%95"><span class="toc-number">4.2.2.</span> <span class="toc-text">公式法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/4f8b2360f3abfdf8249d9ff451680de9.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="大数定律和中心极限定理"/></a><div class="content"><a class="title" href="/2025/01/09/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B%E5%92%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86/" title="大数定律和中心极限定理">大数定律和中心极限定理</a><time datetime="2025-01-08T17:09:14.000Z" title="发表于 2025-01-09 01:09:14">2025-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/" title="物理演示实验"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/3ab000a8569e986978ba8c73beaf0b4d.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="物理演示实验"/></a><div class="content"><a class="title" href="/2025/01/04/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/" title="物理演示实验">物理演示实验</a><time datetime="2025-01-04T06:11:08.000Z" title="发表于 2025-01-04 14:11:08">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/836faf684410aa37e18d790b1927b6ef.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="参数估计"/></a><div class="content"><a class="title" href="/2025/01/03/%E6%A6%82%E7%8E%87%E8%AE%BA--%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" title="参数估计">参数估计</a><time datetime="2025-01-03T06:03:53.000Z" title="发表于 2025-01-03 14:03:53">2025-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/" title="电磁感应"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/049eb3c48a6cb515e67a40939fd90064.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="电磁感应"/></a><div class="content"><a class="title" href="/2024/12/31/%E7%89%A9%E7%90%86--%E7%94%B5%E7%A3%81%E6%84%9F%E5%BA%94/" title="电磁感应">电磁感应</a><time datetime="2024-12-31T08:36:30.000Z" title="发表于 2024-12-31 16:36:30">2024-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/1.jpg" onerror="this.onerror=null;this.src='/img/1.jpg'" alt="数理统计的基本概念"/></a><div class="content"><a class="title" href="/2024/12/30/%E6%A6%82%E7%8E%87%E8%AE%BA--%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="数理统计的基本概念">数理统计的基本概念</a><time datetime="2024-12-30T03:06:50.000Z" title="发表于 2024-12-30 11:06:50">2024-12-30</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/imgs/%E6%A6%82%E7%8E%87%E8%AE%BA--%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83/image-20241217233317710.png')"><div id="footer-wrap"><div class="footer_custom_text"><span id="realtime_duration"></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
