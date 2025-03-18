@@ -1,0 +1,647 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="计网" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/">
+
+
+
+  <title>
+网络层 - 计算机网络 - 计算机科学 |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">网络层
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-11-13 19:46:24">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-11-13T19:46:24+08:00">2024-11-13</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="item" rel="index" title="分类于 计算机网络"><span itemprop="name">计算机网络</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMzYwOTk2NDAyL2NoYW5uZWwvc2VyaWVzZGV0YWlsP3NpZD0xNzIxODgy">文章参考：湖科大教书匠</span></p>
+<h1 id="网络层概述"><a class="markdownIt-Anchor" href="#网络层概述">#</a> 网络层概述</h1>
+<h2 id="主要功能"><a class="markdownIt-Anchor" href="#主要功能">#</a> 主要功能</h2>
+<ul>
+<li>
+<p>在全局范畴为主机之间的通信进行<strong>选路</strong>，选路的结果反映为分组交换机（设备）上的<strong>转发表</strong> <strong>(控制层面）</strong></p>
+</li>
+<li>
+<p>分组交换机（设备）上的网络层根据<strong>转发表</strong>以及<strong>分组头部信息</strong>，将分组向适当链路进行<strong>转发（数据层面）</strong></p>
+</li>
+<li>
+<p>对于面向连接的网络层服务，提供<strong>连接建立</strong>的功能</p>
+</li>
+</ul>
+<h2 id="分组交换机分类"><a class="markdownIt-Anchor" href="#分组交换机分类">#</a> 分组交换机分类</h2>
+<p>交换机：</p>
+<ul>
+<li>连接不同 pc 端，连接到同一个局域网中</li>
+</ul>
+<p>路由器：</p>
+<ul>
+<li>连接不同网段</li>
+<li>转换网络地址，私网和公网的转换</li>
+</ul>
+<p>根据<strong>链路层首部信息</strong>进行转发的 ——<strong> 链路层节点交换机</strong></p>
+<p>根据<strong>网络层首部信息</strong>进行转发的 ——<strong> 路由器</strong></p>
+<h1 id="虚电路和数据报网络"><a class="markdownIt-Anchor" href="#虚电路和数据报网络">#</a> 虚电路和数据报网络</h1>
+<p>面向连接的服务 ——<strong> 虚电路</strong>，需事先握手</p>
+<p>面向无连接的服务 ——<strong> 数据报</strong>，无需握手</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132002702.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132002216.png" alt=""></p>
+<h1 id="路由器工作原理"><a class="markdownIt-Anchor" href="#路由器工作原理">#</a> 路由器工作原理</h1>
+<p>最长前缀匹配：查找给定目标地址的转发表项时，请使用与目标地址匹配的最长地址前缀</p>
+<h2 id="交换结构"><a class="markdownIt-Anchor" href="#交换结构">#</a> 交换结构</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132006397.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132006004.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132007513.png" alt=""></p>
+<h2 id="路由器的拥塞问题"><a class="markdownIt-Anchor" href="#路由器的拥塞问题">#</a> 路由器的拥塞问题</h2>
+<h3 id="缓冲区大小"><a class="markdownIt-Anchor" href="#缓冲区大小">#</a> 缓冲区大小</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132023542.png" alt=""></p>
+<h3 id="分组调度策略"><a class="markdownIt-Anchor" href="#分组调度策略">#</a> 分组调度策略</h3>
+<p>尾部丢弃：丢弃到达的数据包</p>
+<p>优先级：按优先级丢弃 / 删除</p>
+<p>随机：随机丢弃 / 移除</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132023291.png" alt=""></p>
+<h1 id="ip数据报的分片和重组"><a class="markdownIt-Anchor" href="#ip数据报的分片和重组">#</a> ip 数据报的分片和重组</h1>
+<p>网络链路具有 <strong>MTU</strong> (最大传输单位) 属性 —— 是由链路层最大帧的限制决定的</p>
+<ul>
+<li>不同类型的链路有不同的<strong> MTU</strong> 值</li>
+</ul>
+<p>大的<strong> IP</strong> 数据报在网络中会被分成小的分片</p>
+<ul>
+<li>
+<p>一个数据报变成了几个数据报</p>
+</li>
+<li>
+<p>重组只在目的主机进行</p>
+</li>
+<li>
+<p>数据报头部的<strong>标识</strong>、<strong>标志</strong>以及片<strong>偏移字段</strong>用于目的主机对接收的分片进行重组</p>
+</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132023505.png" alt=""></p>
+<ul>
+<li>每个小的分片都需要包含头部信息</li>
+<li>标志：1 为未结束，0 为结束（分片）</li>
+<li>片偏移量：每个分片在整个报文中的位置，偏移以 8 字节为单位，所以需要除以 8</li>
+</ul>
+<h1 id="ipv4地址概述"><a class="markdownIt-Anchor" href="#ipv4地址概述">#</a> ipv4 地址概述</h1>
+<h2 id="分类编址"><a class="markdownIt-Anchor" href="#分类编址">#</a> 分类编址</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132035454.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132029638.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132031570.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132034998.png" alt=""></p>
+<p>习题：</p>
+<p 注意解析3=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"></mstyle></mrow><annotation encoding="application/x-tex">\color{red}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132037574.png" alt=""></p>
+<p 0.0.0.0只能作为源地址=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"></mstyle></mrow><annotation encoding="application/x-tex">\color{red}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132041724.png" alt=""></p>
+<h2 id="划分子网"><a class="markdownIt-Anchor" href="#划分子网">#</a> 划分子网</h2>
+<p>子网划分的方法：从主机号中借用一部分位数作为子网号</p>
+<p>子网掩码：通过在网络号的子网号相应的位置全置 1，主机号相应的位置全置 0，即可得到子网掩码</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132045035.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132047630.png" alt=""></p>
+<h3 id="cidr"><a class="markdownIt-Anchor" href="#cidr">#</a> CIDR</h3>
+<p>构造超网</p>
+<p><strong>CIDR 编址格式</strong></p>
+<ul>
+<li &lt;网络前缀,="" &lt;主机号="">
+<p>IP 地址 ::=</p>
+</li>
+<li>
+<p>斜线记法：192.168.0.1/24</p>
+</li>
+<li>
+<p>简写记法：10.0.0.0/10 10/10</p>
+</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132051121.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132056925.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132057231.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132059897.png" alt=""></p>
+<h1 id="ip数据报的发送和转发过程"><a class="markdownIt-Anchor" href="#ip数据报的发送和转发过程">#</a> ip 数据报的发送和转发过程</h1>
+<p><strong>广播地址</strong>路由器<strong>不转发</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132124697.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132125993.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132126920.png" alt=""></p>
+<h2 id="cidr路由表"><a class="markdownIt-Anchor" href="#cidr路由表">#</a> CIDR 路由表</h2>
+<p>使用 CIDR 时，路由表中的每个项目由 “网络前缀” 和 “下一跳地址” 组成。在查找路由表时可能会得到不止一个匹配结果。</p>
+<p>应当从匹配结果中选择具有最长网络前缀的路由：<strong>最长前缀匹配</strong>。</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132130033.png" alt=""></p>
+<h1 id="获得ip地址"><a class="markdownIt-Anchor" href="#获得ip地址">#</a> 获得 ip 地址</h1>
+<p>手工配置</p>
+<p>DHCP: 动态主机配置协议：从服务器上动态获取 IP 地址</p>
+<ul>
+<li>工作在应用层</li>
+<li>使用 UDP 协议工作</li>
+<li>DHCP 有 3 个端口</li>
+<li>67 和 68 为正常的 DHCP 服务端口，分别作为 DHCP Server 和 DHCP Client 的服务端口</li>
+<li>546 号端口用于 DHCPv6 Client，而不用于 DHCPv4，是为 DHCP failover 服务，这是需要特别开启的服务，DHCP failover 是用来做 “双机热备” 的</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411132135450.png" alt=""></p>
+<h1 id="icmp协议"><a class="markdownIt-Anchor" href="#icmp协议">#</a> ICMP 协议</h1>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140757622.png" alt=""></p>
+<h1 id="nat"><a class="markdownIt-Anchor" href="#nat">#</a> NAT</h1>
+<p>动机：本地网络只要使用<strong>一个 IP 地址</strong>就可以和外部网络相连 :</p>
+<ul>
+<li>
+<p>不需要从 ISP 处获得大批 IP 地址：所有设备可以使用<strong>同一个 IP 地址</strong></p>
+</li>
+<li>
+<p>可以在不通知外部网络的情况下改变内网主机的 IP 地址</p>
+</li>
+<li>
+<p>即使改变了 ISP 也无须改变内网主机的 IP 地址</p>
+</li>
+<li>
+<p>内网主机对外网主机而言是不可见的、不可寻址的。(这也算是一项安全措施).</p>
+</li>
+</ul>
+<p>三种地址转换方式</p>
+<ul>
+<li>
+<p>静态 NAT：一个本地地址对应一个全球地址</p>
+</li>
+<li>
+<p>动态 NAT：一个全球地址对应多个本地地址</p>
+</li>
+<li>
+<p>端口 NAT：一个本地地址的端口对应到一个全球地址的端口</p>
+</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140819564.png" alt=""></p>
+<h1 id="选路算法"><a class="markdownIt-Anchor" href="#选路算法">#</a> 选路算法</h1>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140843643.png" alt=""></p>
+<h2 id="路由信息协议rip"><a class="markdownIt-Anchor" href="#路由信息协议rip">#</a> 路由信息协议 RIP</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140824352.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140825681.png" alt=""></p>
+<blockquote>
+<p>RIP 路由器更新规则</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140825568.png" alt=""></p>
+<blockquote>
+<p>RIP 协议中，距离 16 表示不可达</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140826283.png" alt=""></p>
+<blockquote>
+<p>坏消息传的慢</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140827705.png" alt=""></p>
+<h2 id="开放最短路优先ospf"><a class="markdownIt-Anchor" href="#开放最短路优先ospf">#</a> 开放最短路优先 OSPF</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140831734.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140832764.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140832541.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140836018.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140832664.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140834167.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140835313.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140836785.png" alt=""></p>
+<h2 id="外部网关协议bgp"><a class="markdownIt-Anchor" href="#外部网关协议bgp">#</a> 外部网关协议 BGP</h2>
+<p>因特网上的 AS 间路由 ——BGP4</p>
+<ul>
+<li>
+<p>因特网的规模太大，使得自治系统之间路由选择非常困难。对于自治系统之间的路由选择，要寻找最佳路由是很不现实的。自治系统之间的路由选择必须考虑有关策略</p>
+</li>
+<li>
+<p>BGP 为每个 AS 提供一种手段，以处理</p>
+<ul>
+<li><strong>eBGP</strong>: 从相邻 AS 获取子网可达性信息</li>
+<li><strong>iBGP</strong>: 向该 AS 内部的所有路由器传播这些可达性信息</li>
+</ul>
+</li>
+<li>
+<p>基于该可达性信息和 AS 策略，决定到达子网的 “好” 路由</p>
+<ul>
+<li>边界网关协议 BGP 只能是力求寻找一条能够到达目的网络且<strong>比较好</strong>的路由（不能兜圈子），而并非要寻找一条最佳路由</li>
+</ul>
+</li>
+</ul>
+<p>BGP 会话：两个 BGP 路由器间通过半永久的<strong> TCP</strong> 连接来交换 BGP 消息</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140842520.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411140842052.png" alt=""></p>
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%A1%E7%BD%91/" rel="tag"><i class="ic i-tag"></i> 计网</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 01:51:49" itemprop="dateModified" datetime="2025-03-18T01:51:49+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/" title="网络层">http://www.luckycyyyy.top/2024/11/13/计算机科学/计算机网络/计网--网络层/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/10/28/algorithm/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/CCPC%E5%A5%B3%E7%94%9F%E8%B5%9B/algorithm--CCPC%E5%A5%B3%E7%94%9F%E8%B5%9B2022/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj9410cj20zk0m8h12.jpg" title="CCPC女生赛2022">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> CCPC女生赛</span>
+  <h3>CCPC女生赛2022</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicmnywqgpj20zk0m8dwx.jpg" title="链路层">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机网络</span>
+  <h3>链路层</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 网络层概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-number">1.1.</span> <span class="toc-text"> 主要功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text"> 分组交换机分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E7%94%B5%E8%B7%AF%E5%92%8C%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%BD%91%E7%BB%9C"><span class="toc-number">2.</span> <span class="toc-text"> 虚电路和数据报网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text"> 路由器工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E7%BB%93%E6%9E%84"><span class="toc-number">3.1.</span> <span class="toc-text"> 交换结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E6%8B%A5%E5%A1%9E%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text"> 路由器的拥塞问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E5%A4%A7%E5%B0%8F"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 缓冲区大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 分组调度策略</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ip%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%9A%84%E5%88%86%E7%89%87%E5%92%8C%E9%87%8D%E7%BB%84"><span class="toc-number">4.</span> <span class="toc-text"> ip 数据报的分片和重组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ipv4%E5%9C%B0%E5%9D%80%E6%A6%82%E8%BF%B0"><span class="toc-number">5.</span> <span class="toc-text"> ipv4 地址概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E7%BC%96%E5%9D%80"><span class="toc-number">5.1.</span> <span class="toc-text"> 分类编址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91"><span class="toc-number">5.2.</span> <span class="toc-text"> 划分子网</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cidr"><span class="toc-number">5.2.1.</span> <span class="toc-text"> CIDR</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ip%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%9A%84%E5%8F%91%E9%80%81%E5%92%8C%E8%BD%AC%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">6.</span> <span class="toc-text"> ip 数据报的发送和转发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cidr%E8%B7%AF%E7%94%B1%E8%A1%A8"><span class="toc-number">6.1.</span> <span class="toc-text"> CIDR 路由表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97ip%E5%9C%B0%E5%9D%80"><span class="toc-number">7.</span> <span class="toc-text"> 获得 ip 地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#icmp%E5%8D%8F%E8%AE%AE"><span class="toc-number">8.</span> <span class="toc-text"> ICMP 协议</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nat"><span class="toc-number">9.</span> <span class="toc-text"> NAT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E8%B7%AF%E7%AE%97%E6%B3%95"><span class="toc-number">10.</span> <span class="toc-text"> 选路算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E4%BF%A1%E6%81%AF%E5%8D%8F%E8%AE%AErip"><span class="toc-number">10.1.</span> <span class="toc-text"> 路由信息协议 RIP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E6%9C%80%E7%9F%AD%E8%B7%AF%E4%BC%98%E5%85%88ospf"><span class="toc-number">10.2.</span> <span class="toc-text"> 开放最短路优先 OSPF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E7%BD%91%E5%85%B3%E5%8D%8F%E8%AE%AEbgp"><span class="toc-number">10.3.</span> <span class="toc-text"> 外部网关协议 BGP</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/09/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91/" rel="bookmark" title="计算机网络和因特网">计算机网络和因特网</a></li><li><a href="/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E8%BF%90%E8%BE%93%E5%B1%82/" rel="bookmark" title="运输层">运输层</a></li><li><a href="/2024/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E5%BA%94%E7%94%A8%E5%B1%82/" rel="bookmark" title="应用层">应用层</a></li><li class="active"><a href="/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="bookmark" title="网络层">网络层</a></li><li><a href="/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="bookmark" title="链路层">链路层</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">89</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">28</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">44</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/10/28/algorithm/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/CCPC%E5%A5%B3%E7%94%9F%E8%B5%9B/algorithm--CCPC%E5%A5%B3%E7%94%9F%E8%B5%9B2022/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">518k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/11/13/计算机科学/计算机网络/计网--网络层/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

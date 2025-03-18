@@ -1,0 +1,719 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="汇编" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--8086%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">
+
+
+
+  <title>
+8086指令系统 - 汇编 - 计算机科学 |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">8086指令系统
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-12-11 14:15:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-12-11T14:15:49+08:00">2024-12-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/" itemprop="item" rel="index" title="分类于 汇编"><span itemprop="name">汇编</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--8086%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="数据传送指令"><a class="markdownIt-Anchor" href="#数据传送指令">#</a> 数据传送指令</h1>
+<h2 id="mov"><a class="markdownIt-Anchor" href="#mov">#</a> MOV</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov reg/mem, imm</span><br><span class="line">mov reg/mem/seg, reg</span><br><span class="line">mov reg/seg, mem</span><br><span class="line">mov reg/mem, seg</span><br></pre></td></tr></table></figure>
+<p>注：</p>
+<ol>
+<li>当 src 是 imm，dest 是 mem 时，二者之一必须用 ptr 指定类型</li>
+<li>cs 不能做目的操作数，ip 既不能做源操作数也不能做目的操作数</li>
+<li>两个操作数必须类型一致</li>
+<li>立即数不能送<strong>直接寻址</strong>的内存单元</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">;错误</span><br><span class="line">mov word ptr[1000h],32A8h</span><br><span class="line">;修改</span><br><span class="line">mov ax, 21A8h</span><br><span class="line">mov [1000h], ax</span><br></pre></td></tr></table></figure>
+<h2 id="xchg"><a class="markdownIt-Anchor" href="#xchg">#</a> XCHG</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xchg reg, reg/mem</span><br><span class="line">xchg reg/mem, reg</span><br></pre></td></tr></table></figure>
+<h1 id="堆栈操作指令"><a class="markdownIt-Anchor" href="#堆栈操作指令">#</a> 堆栈操作指令</h1>
+<p><strong>栈顶</strong>是地址<strong>较小</strong>的一端</p>
+<p>修改 sp 值的操作：</p>
+<ul>
+<li>子程序调用 <code>CALL</code></li>
+<li>子程序返回 <code>RET</code></li>
+<li>中断调用 <code>INT</code></li>
+<li>中断返回 <code>IRET</code></li>
+</ul>
+<h2 id="push"><a class="markdownIt-Anchor" href="#push">#</a> PUSH</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">push r16/m16/seg	;sp &lt;- sp - 2, ss:[sp] &lt;- r16/m16/seg</span><br></pre></td></tr></table></figure>
+<h2 id="pop"><a class="markdownIt-Anchor" href="#pop">#</a> POP</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pop r16/m16/seg		;r16/m16/seg &lt;- ss:[sp], sp &lt;- sp + 2, </span><br></pre></td></tr></table></figure>
+<h1 id="标志传送指令"><a class="markdownIt-Anchor" href="#标志传送指令">#</a> 标志传送指令</h1>
+<h2 id="标志送ah指令lahf"><a class="markdownIt-Anchor" href="#标志送ah指令lahf">#</a> 标志送 AH 指令 LAHF</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lahf	;ah &lt;- flags的低字节</span><br></pre></td></tr></table></figure>
+<h2 id="ah送标志指令sahf"><a class="markdownIt-Anchor" href="#ah送标志指令sahf">#</a> AH 送标志指令 SAHF</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sahf	;flags的低字节 &lt;- ah</span><br></pre></td></tr></table></figure>
+<h2 id="标志进栈指令pushf"><a class="markdownIt-Anchor" href="#标志进栈指令pushf">#</a> 标志进栈指令 PUSHF</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pushf	;sp &lt;- sp - 2, ss:[sp] &lt;- flags</span><br></pre></td></tr></table></figure>
+<h2 id="标志出栈指令popf"><a class="markdownIt-Anchor" href="#标志出栈指令popf">#</a> 标志出栈指令 POPF</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">popf	;flags &lt;- ss:[sp], sp &lt;- sp + 2</span><br></pre></td></tr></table></figure>
+<h1 id="地址传送指令"><a class="markdownIt-Anchor" href="#地址传送指令">#</a> 地址传送指令</h1>
+<h2 id="lea"><a class="markdownIt-Anchor" href="#lea">#</a> LEA</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lea r16, mem	;r16 &lt;- mem的有效地址</span><br></pre></td></tr></table></figure>
+<h2 id="ldsles"><a class="markdownIt-Anchor" href="#ldsles">#</a> LDS&amp;LES</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lds r16, mem	;r16 &lt;- mem的有效地址， ds &lt;- mem + 2</span><br><span class="line">les r16, mem	;r16 &lt;- mem的有效地址， es &lt;- mem + 2</span><br></pre></td></tr></table></figure>
+<h1 id="状态标志"><a class="markdownIt-Anchor" href="#状态标志">#</a> 状态标志</h1>
+<p>进位标志 <code>CF</code>  是针对无符号整数运算设计的，反应无符号数据加减运算是否超出范围，是否需要利用进（借）位反映正确结果。</p>
+<ul>
+<li>N 位无符号数据加减运算结果范围是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><msup><mn>2</mn><mi>N</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0\sim 2^N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></li>
+</ul>
+<p>溢出标志 <code>OF</code>  用于表示有符号整数进行加减运算的结果是否超出范围</p>
+<ul>
+<li>处理器默认采用补码的形式表示有符号整数，N 位补码表达的范围是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>∼</mo><mo>+</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-2^{N-1}\sim+2^{N-1}-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标志</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CF</td>
+<td style="text-align:center">（加减）没有进位或借位</td>
+<td style="text-align:center">（加减）有进位或借位</td>
+</tr>
+<tr>
+<td style="text-align:center">OF</td>
+<td style="text-align:center">未超出范围</td>
+<td style="text-align:center">超出范围</td>
+</tr>
+<tr>
+<td style="text-align:center">ZF</td>
+<td style="text-align:center">运算结果不是 0</td>
+<td style="text-align:center">运算结果是 0</td>
+</tr>
+<tr>
+<td style="text-align:center">SF</td>
+<td style="text-align:center">最高位为 0</td>
+<td style="text-align:center">最高位为 1</td>
+</tr>
+<tr>
+<td style="text-align:center">PF</td>
+<td style="text-align:center">最低字节中 &quot;1&quot; 的个数是奇数</td>
+<td style="text-align:center">最低字节中 &quot;1&quot; 的个数是偶数</td>
+</tr>
+<tr>
+<td style="text-align:center">AF</td>
+<td style="text-align:center">最低半字节无进位</td>
+<td style="text-align:center">最低半字节有进位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>只有当两个相同符号数相加（含两个不同符号数相减）而运算结果的符号与原数据符号相反时产生溢出</li>
+</ul>
+<p>符号值对应表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标志</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CF</td>
+<td style="text-align:center">CY</td>
+<td style="text-align:center">NC</td>
+</tr>
+<tr>
+<td style="text-align:center">OF</td>
+<td style="text-align:center">OV</td>
+<td style="text-align:center">NV</td>
+</tr>
+<tr>
+<td style="text-align:center">ZF</td>
+<td style="text-align:center">ZR</td>
+<td style="text-align:center">NZ</td>
+</tr>
+<tr>
+<td style="text-align:center">SF</td>
+<td style="text-align:center">NG</td>
+<td style="text-align:center">PL</td>
+</tr>
+<tr>
+<td style="text-align:center">PF</td>
+<td style="text-align:center">PE</td>
+<td style="text-align:center">PO</td>
+</tr>
+<tr>
+<td style="text-align:center">AF</td>
+<td style="text-align:center">AC</td>
+<td style="text-align:center">NA</td>
+</tr>
+</tbody>
+</table>
+<p>运算指令对标志位的影响：</p>
+<p>说明：0: 清零  ✓: 有影响  X: 无影响  -: 不确定 (未定义)</p>
+<p><img data-src="//dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkhqs7f6kj30zn0hzad6.jpg" alt=""></p>
+<h1 id="加法指令"><a class="markdownIt-Anchor" href="#加法指令">#</a> 加法指令</h1>
+<h2 id="add"><a class="markdownIt-Anchor" href="#add">#</a> ADD</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add reg, imm/reg/mem	;reg &lt;- reg + imm/reg/mem</span><br><span class="line">add mem, imm/reg		;mem &lt;- mem + imm/reg</span><br></pre></td></tr></table></figure>
+<h2 id="adc"><a class="markdownIt-Anchor" href="#adc">#</a> ADC</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adc reg, imm/reg/mem	;reg &lt;- reg + imm/reg/mem + CF</span><br><span class="line">adc mem, imm/reg		;mem &lt;- mem + imm/reg + CF</span><br></pre></td></tr></table></figure>
+<h2 id="inc"><a class="markdownIt-Anchor" href="#inc">#</a> INC</h2>
+<p><strong>不影响 CF</strong>，其他影响与 ADD 一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inc reg/mem		;reg/mem &lt;- reg/mem + 1</span><br></pre></td></tr></table></figure>
+<h1 id="减法指令"><a class="markdownIt-Anchor" href="#减法指令">#</a> 减法指令</h1>
+<h2 id="sub"><a class="markdownIt-Anchor" href="#sub">#</a> SUB</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sub reg, imm/reg/mem	;reg &lt;- reg - imm/reg/mem</span><br><span class="line">sub mem, imm/reg		;mem &lt;- mem - imm/reg</span><br></pre></td></tr></table></figure>
+<h2 id="sbb"><a class="markdownIt-Anchor" href="#sbb">#</a> SBB</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sbb reg, imm/reg/mem	;reg &lt;- reg - imm/reg/mem - CF</span><br><span class="line">sbb mem, imm/reg		;mem &lt;- mem - imm/reg - CF</span><br></pre></td></tr></table></figure>
+<h2 id="dec"><a class="markdownIt-Anchor" href="#dec">#</a> DEC</h2>
+<p><strong>不影响 CF</strong>，其他影响与 SUB 一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dec reg/mem		;reg/mem &lt;- reg/mem - 1</span><br></pre></td></tr></table></figure>
+<h2 id="neg"><a class="markdownIt-Anchor" href="#neg">#</a> NEG</h2>
+<p>对标志位的影响和<strong>用零做减法</strong>的 SUB 指令一样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">neg reg/mem		;reg/mem &lt;- 0 - reg/mem</span><br><span class="line">				;对操作数 取反+1</span><br></pre></td></tr></table></figure>
+<h2 id="cmp"><a class="markdownIt-Anchor" href="#cmp">#</a> CMP</h2>
+<p>对标志位的影响<strong>和 sub 指令一样</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmp reg, imm/reg/mem	;reg - imm/reg/mem</span><br><span class="line">cmp mem, imm/reg		;mem - imm/reg</span><br></pre></td></tr></table></figure>
+<h1 id="乘法指令"><a class="markdownIt-Anchor" href="#乘法指令">#</a> 乘法指令</h1>
+<p>如果乘积的高一半（AH/DX）没有有效数值， <code>OF=CF=0</code> ，否则 <code>OF=CF=1</code></p>
+<h2 id="mul"><a class="markdownIt-Anchor" href="#mul">#</a> MUL</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">;无符号</span><br><span class="line">mul r8/m8	;ax &lt;- al × r8/m8</span><br><span class="line">mul r16/m16	;dx.ax &lt;- ax × r16/m16</span><br></pre></td></tr></table></figure>
+<h2 id="imul"><a class="markdownIt-Anchor" href="#imul">#</a> iMUL</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">;有符号</span><br><span class="line">imul r8/m8	;ax &lt;- al × r8/m8</span><br><span class="line">imul r16/m16;dx.ax &lt;- ax × r16/m16</span><br></pre></td></tr></table></figure>
+<h1 id="除法指令"><a class="markdownIt-Anchor" href="#除法指令">#</a> 除法指令</h1>
+<h2 id="div"><a class="markdownIt-Anchor" href="#div">#</a> DIV</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">;无符号</span><br><span class="line">div r8/m8	;al &lt;- ax ÷ r8/m8的商</span><br><span class="line">			;ah &lt;- ax ÷ r8/m8的余数</span><br><span class="line">div r16/m16	;ax &lt;- dx.ax ÷ r16/m16的商</span><br><span class="line">			;dx &lt;- dx.ax ÷ r16/m16的余数			</span><br></pre></td></tr></table></figure>
+<h2 id="idiv"><a class="markdownIt-Anchor" href="#idiv">#</a> iDIV</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">;有符号	余数和被除数符号相同</span><br><span class="line">idiv r8/m8	;al &lt;- ax ÷ r8/m8的商</span><br><span class="line">			;ah &lt;- ax ÷ r8/m8的余数</span><br><span class="line">idiv r8/m8	;ax &lt;- dx.ax ÷ r16/m16的商</span><br><span class="line">			;dx &lt;- dx.ax ÷ r16/m16的余数</span><br></pre></td></tr></table></figure>
+<h1 id="符号扩展指令"><a class="markdownIt-Anchor" href="#符号扩展指令">#</a> 符号扩展指令</h1>
+<p><code>CBW</code>  将 <code>AL</code>  的最高有效位扩展到 <code>AH</code></p>
+<p><code>CWD</code>  将 <code>AX</code>  的内容符号扩展形成 <code>DX</code></p>
+<h1 id="逻辑运算指令"><a class="markdownIt-Anchor" href="#逻辑运算指令">#</a> 逻辑运算指令</h1>
+<h2 id="andorxortest"><a class="markdownIt-Anchor" href="#andorxortest">#</a> AND/OR/XOR/TEST</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">逻辑运算助记符 reg, imm/reg/mem	;reg &lt;- reg 逻辑运算助记符 imm/reg/mem</span><br><span class="line">逻辑运算助记符 mem, imm/reg		;mem &lt;- mem 逻辑运算助记符 imm/reg</span><br></pre></td></tr></table></figure>
+<p>所有双操作数的逻辑指令均设置 <code>CF=OF=0</code></p>
+<h2 id="not"><a class="markdownIt-Anchor" href="#not">#</a> NOT</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">not reg/mem		;reg/mem &lt;- ~reg/mem</span><br></pre></td></tr></table></figure>
+<h1 id="移位指令"><a class="markdownIt-Anchor" href="#移位指令">#</a> 移位指令</h1>
+<p>根据移入的位设置进位标志 <code>CF</code> ，根据移位后的结果影响 <code>SF ZF PF</code> ；当进行 1 位移动，根据最高符号位有变化设置 <code>OF = 1</code> ，移位超过 1 位， <code>OF</code>  不确定</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shl reg/mem, 1/cl	;最低位补0， 最高位进入cf</span><br><span class="line">shr reg/mem, 1/cl	;最高位补0， 最低位进入cf</span><br><span class="line">sal reg/mem, 1/cl	;与shl相同</span><br><span class="line">sar reg/mem, 1/cl	;最高位不变， 最低位进入cf</span><br></pre></td></tr></table></figure>
+<h1 id="循环移位指令"><a class="markdownIt-Anchor" href="#循环移位指令">#</a> 循环移位指令</h1>
+<p>根据移入的位设置进位标志 <code>CF</code> ，不影响 <code>SF ZF PF AF</code> ，对 <code>OF</code>  与移位指令影响一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rol reg/mem, 1/cl	;不带进位循环左移</span><br><span class="line">ror reg/mem, 1/cl	;不带进位循环右移</span><br><span class="line">rcl reg/mem, 1/cl	;带进位循环左移</span><br><span class="line">rcr reg/mem, 1/cl	;带进位循环右移</span><br></pre></td></tr></table></figure>
+<h1 id="控制转移指令"><a class="markdownIt-Anchor" href="#控制转移指令">#</a> 控制转移指令</h1>
+<p>三种寻址方式：</p>
+<p><img data-src="//dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkhqtjverj30zk09rt9f.jpg" alt=""></p>
+<p>比较无符号数的高低：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">助记符</th>
+<th style="text-align:center">标志位</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">JB/JNAE</td>
+<td style="text-align:center">CF = 1</td>
+<td style="text-align:center">低于 / 不高于等于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JNB/JAE</td>
+<td style="text-align:center">CF = 0</td>
+<td style="text-align:center">不低于 / 高于等于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JBE/JNA</td>
+<td style="text-align:center">CF = 1 或 ZF = 1</td>
+<td style="text-align:center">低于等于 / 不高于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JNBE/JA</td>
+<td style="text-align:center">CF = 0 且 ZF = 0</td>
+<td style="text-align:center">不低于等于 / 高于</td>
+</tr>
+</tbody>
+</table>
+<p>比较有符号数的大小：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">助记符</th>
+<th style="text-align:center">标志位</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">JL/JNGE</td>
+<td style="text-align:center">SF<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span>OF</td>
+<td style="text-align:center">小于 / 不大于等于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JNL/JGE</td>
+<td style="text-align:center">SF = OF</td>
+<td style="text-align:center">不小于 / 大于等于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JLE/JNG</td>
+<td style="text-align:center">SF<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo mathvariant="normal">≠</mo></mrow><annotation encoding="application/x-tex">\neq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span></span></span></span>OF 或 ZF = 1</td>
+<td style="text-align:center">小于等于 / 不大于转移</td>
+</tr>
+<tr>
+<td style="text-align:center">JNLE/JG</td>
+<td style="text-align:center">SF = OF 且 ZF = 0</td>
+<td style="text-align:center">不小于等于 / 大于转移</td>
+</tr>
+</tbody>
+</table>
+<h1 id="子程序指令"><a class="markdownIt-Anchor" href="#子程序指令">#</a> 子程序指令</h1>
+<h2 id="call"><a class="markdownIt-Anchor" href="#call">#</a> CALL</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">;段内调用</span><br><span class="line">call label		;sp &lt;- sp - 2, ss:[sp] &lt;- ip, ip &lt;- ip + 16</span><br><span class="line">call r16/m16	;sp &lt;- sp - 2, ss:[sp] &lt;- ip, ip &lt;- r16/m16</span><br><span class="line">;段间调用</span><br><span class="line">call far ptr label	;sp &lt;- sp - 2, ss:[sp] &lt;- cs, sp &lt;- sp - 2, ss:[sp] &lt;- ip</span><br><span class="line">					;ip &lt;- label的偏移地址, cs &lt;- label的段地址</span><br><span class="line">call far ptr mem	;sp &lt;- sp - 2, ss:[sp] &lt;- cs, sp &lt;- sp - 2, ss[sp] &lt;- ip</span><br><span class="line">					;ip &lt;- [mem], cs &lt;- [mem + 2]</span><br></pre></td></tr></table></figure>
+<h2 id="ret"><a class="markdownIt-Anchor" href="#ret">#</a> RET</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">;段内返回</span><br><span class="line">ret		;ip &lt;- ss:[sp], sp &lt;- sp + 2</span><br><span class="line">ret i16	;ip &lt;- ss:[sp], sp &lt;- sp + 2, sp &lt;- sp + i16</span><br><span class="line">;段间返回</span><br><span class="line">ret		;ip &lt;- ss:[sp], sp &lt;- sp + 2, cs &lt;- ss:[sp], sp &lt;- sp + 2</span><br><span class="line">ret i16	;ip &lt;- ss:[sp], sp &lt;- sp + 2, cs &lt;- ss:[sp], sp &lt;- sp + i16</span><br></pre></td></tr></table></figure>
+<h1 id="中断指令"><a class="markdownIt-Anchor" href="#中断指令">#</a> 中断指令</h1>
+<h2 id="外部中断"><a class="markdownIt-Anchor" href="#外部中断">#</a> 外部中断</h2>
+<p>外部中断 —— 来自 CPU 之外的原因引起的中断，又可以分成</p>
+<ul>
+<li>可屏蔽中断：可由 CPU 的中断允许标志 IF 控制</li>
+<li>非屏蔽中断：不受 CPU 的中断允许标志 IF 控制</li>
+</ul>
+<h2 id="内部中断"><a class="markdownIt-Anchor" href="#内部中断">#</a> 内部中断</h2>
+<p>内部中断 ——CPU 内部<strong>执行程序</strong>引起的中断，又可以分成：</p>
+<ul>
+<li>除法错中断：执行除法指令，结果<strong>溢出</strong>产生的 0 号中断</li>
+<li>指令中断：执行中断调用指令 <code>INT i8</code>  产生的 i8 号中断</li>
+<li>断点中断：用于断点调试（ <code>INT 3</code> ）的 3 号中断</li>
+<li>溢出中断：执行溢出中断指令 <code>into</code> ，OF＝1 产生的 4 号中断</li>
+<li>单步中断：TF＝1 在每条指令执行后产生的 1 号中断</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E6%B1%87%E7%BC%96/" rel="tag"><i class="ic i-tag"></i> 汇编</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 08:21:51" itemprop="dateModified" datetime="2025-03-18T08:21:51+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--8086%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="8086指令系统">http://www.luckycyyyy.top/2024/12/11/计算机科学/汇编/汇编--8086指令系统/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/12/05/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--DP-Exercise/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="DP-Exercise">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂杂的算法知识</span>
+  <h3>DP-Exercise</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/12/15/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%97%A9%E6%9C%9F%E9%87%8F%E5%AD%90%E8%AE%BA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesrnqv3j20zk0m8ava.jpg" title="早期量子论">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 物理</span>
+  <h3>早期量子论</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%81%E6%8C%87%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text"> 数据传送指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mov"><span class="toc-number">1.1.</span> <span class="toc-text"> MOV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xchg"><span class="toc-number">1.2.</span> <span class="toc-text"> XCHG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A0%86%E6%A0%88%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> 堆栈操作指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#push"><span class="toc-number">2.1.</span> <span class="toc-text"> PUSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pop"><span class="toc-number">2.2.</span> <span class="toc-text"> POP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%BF%97%E4%BC%A0%E9%80%81%E6%8C%87%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text"> 标志传送指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%BF%97%E9%80%81ah%E6%8C%87%E4%BB%A4lahf"><span class="toc-number">3.1.</span> <span class="toc-text"> 标志送 AH 指令 LAHF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ah%E9%80%81%E6%A0%87%E5%BF%97%E6%8C%87%E4%BB%A4sahf"><span class="toc-number">3.2.</span> <span class="toc-text"> AH 送标志指令 SAHF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%BF%97%E8%BF%9B%E6%A0%88%E6%8C%87%E4%BB%A4pushf"><span class="toc-number">3.3.</span> <span class="toc-text"> 标志进栈指令 PUSHF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%BF%97%E5%87%BA%E6%A0%88%E6%8C%87%E4%BB%A4popf"><span class="toc-number">3.4.</span> <span class="toc-text"> 标志出栈指令 POPF</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%81%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text"> 地址传送指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#lea"><span class="toc-number">4.1.</span> <span class="toc-text"> LEA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ldsles"><span class="toc-number">4.2.</span> <span class="toc-text"> LDS&amp;LES</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A0%87%E5%BF%97"><span class="toc-number">5.</span> <span class="toc-text"> 状态标志</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95%E6%8C%87%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text"> 加法指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#add"><span class="toc-number">6.1.</span> <span class="toc-text"> ADD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#adc"><span class="toc-number">6.2.</span> <span class="toc-text"> ADC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inc"><span class="toc-number">6.3.</span> <span class="toc-text"> INC</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%8F%E6%B3%95%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text"> 减法指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sub"><span class="toc-number">7.1.</span> <span class="toc-text"> SUB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sbb"><span class="toc-number">7.2.</span> <span class="toc-text"> SBB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dec"><span class="toc-number">7.3.</span> <span class="toc-text"> DEC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#neg"><span class="toc-number">7.4.</span> <span class="toc-text"> NEG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cmp"><span class="toc-number">7.5.</span> <span class="toc-text"> CMP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%98%E6%B3%95%E6%8C%87%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text"> 乘法指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mul"><span class="toc-number">8.1.</span> <span class="toc-text"> MUL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#imul"><span class="toc-number">8.2.</span> <span class="toc-text"> iMUL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%A4%E6%B3%95%E6%8C%87%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text"> 除法指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#div"><span class="toc-number">9.1.</span> <span class="toc-text"> DIV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#idiv"><span class="toc-number">9.2.</span> <span class="toc-text"> iDIV</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E6%89%A9%E5%B1%95%E6%8C%87%E4%BB%A4"><span class="toc-number">10.</span> <span class="toc-text"> 符号扩展指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4"><span class="toc-number">11.</span> <span class="toc-text"> 逻辑运算指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#andorxortest"><span class="toc-number">11.1.</span> <span class="toc-text"> AND&#x2F;OR&#x2F;XOR&#x2F;TEST</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#not"><span class="toc-number">11.2.</span> <span class="toc-text"> NOT</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%BB%E4%BD%8D%E6%8C%87%E4%BB%A4"><span class="toc-number">12.</span> <span class="toc-text"> 移位指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%A7%BB%E4%BD%8D%E6%8C%87%E4%BB%A4"><span class="toc-number">13.</span> <span class="toc-text"> 循环移位指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%BD%AC%E7%A7%BB%E6%8C%87%E4%BB%A4"><span class="toc-number">14.</span> <span class="toc-text"> 控制转移指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E7%A8%8B%E5%BA%8F%E6%8C%87%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text"> 子程序指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#call"><span class="toc-number">15.1.</span> <span class="toc-text"> CALL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ret"><span class="toc-number">15.2.</span> <span class="toc-text"> RET</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E6%8C%87%E4%BB%A4"><span class="toc-number">16.</span> <span class="toc-text"> 中断指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD"><span class="toc-number">16.1.</span> <span class="toc-text"> 外部中断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E4%B8%AD%E6%96%AD"><span class="toc-number">16.2.</span> <span class="toc-text"> 内部中断</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/12/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F/" rel="bookmark" title="汇编语言程序格式">汇编语言程序格式</a></li><li class="active"><a href="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--8086%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="8086指令系统">8086指令系统</a></li><li><a href="/2024/12/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="bookmark" title="汇编语言基础知识">汇编语言基础知识</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">89</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">28</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">44</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/12/05/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--DP-Exercise/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/12/15/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%97%A9%E6%9C%9F%E9%87%8F%E5%AD%90%E8%AE%BA/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">518k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/12/11/计算机科学/汇编/汇编--8086指令系统/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

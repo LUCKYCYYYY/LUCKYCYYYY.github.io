@@ -1,0 +1,1122 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="计网" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/">
+
+
+
+  <title>
+链路层 - 计算机网络 - 计算机科学 |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">链路层
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-11-14 13:22:23">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-11-14T13:22:23+08:00">2024-11-14</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>5.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>5 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="item" rel="index" title="分类于 计算机网络"><span itemprop="name">计算机网络</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p><span class="exturl" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMzYwOTk2NDAyL2NoYW5uZWwvc2VyaWVzZGV0YWlsP3NpZD0xNzIxODgy">文章参考–湖科大教书匠</span></p>
+<h1 id="链路层概述"><a class="markdownIt-Anchor" href="#链路层概述">#</a> 链路层概述</h1>
+<h2 id="链路层提供的服务"><a class="markdownIt-Anchor" href="#链路层提供的服务">#</a> 链路层提供的服务</h2>
+<p><strong>成帧</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141436390.png" alt=""></p>
+<ul>
+<li>将数据加上头部和尾部，封装成数据帧</li>
+<li>帧头部用 MAC 地址标识源和目的（不同于 IP 地址）</li>
+<li>MSS = MTU - IP 头部长度 - TCP 头部长度</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141429164.png" alt=""></p>
+<p>透明传输中因为对传输数据没有任何限制，即允许数据中存在帧定界符，所以接收方可能把数据中的那段数据错认成帧定界符。</p>
+<p>解决方法：</p>
+<ol>
+<li>对帧界定符进行 “转义”，在其之前加上 ESC</li>
+<li>在数据中与转义字符相同的数据段中填充 0</li>
+</ol>
+<p>eg：<br>
+<img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141435145.png" alt=""></p>
+<p><strong>链路接入</strong></p>
+<ul>
+<li>共享介质的信道访问</li>
+</ul>
+<p><strong>可靠交付</strong></p>
+<ul>
+<li>
+<p>很少用于误码率低的链路（光纤、双绞线链路）</p>
+</li>
+<li>
+<p>用于误码率高的链路（无线链路）</p>
+</li>
+</ul>
+<p><strong>差错检测和纠正</strong></p>
+<ul>
+<li>
+<p>信号衰减和电磁干扰噪声导致出错</p>
+</li>
+<li>
+<p>接收方检测到错误存在：</p>
+<ul>
+<li>给发送方发送信号要求重传或丢弃该数据帧</li>
+<li>接收方检测和纠正帧中错误，不用重传</li>
+</ul>
+</li>
+</ul>
+<p><strong>流量控制</strong></p>
+<ul>
+<li>在相邻的收发节点间限制流量</li>
+</ul>
+<p><strong>半双工和全双工</strong></p>
+<ul>
+<li>半双工时，链路两端的节点都能传输分组，但不能同时传输</li>
+</ul>
+<h2 id="链路层实现地点"><a class="markdownIt-Anchor" href="#链路层实现地点">#</a> 链路层实现地点</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141422284.png" alt=""></p>
+<h1 id="差错检测和纠正技术"><a class="markdownIt-Anchor" href="#差错检测和纠正技术">#</a> 差错检测和纠正技术</h1>
+<h2 id="奇偶校验"><a class="markdownIt-Anchor" href="#奇偶校验">#</a> 奇偶校验</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141441883.png" alt=""></p>
+<h2 id="循环冗余校验"><a class="markdownIt-Anchor" href="#循环冗余校验">#</a> 循环冗余校验</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141517355.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141517857.png" alt=""></p>
+<p>发送方：</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141516661.png" alt=""></p>
+<ol>
+<li>” 除法 “实质上是异或运算</li>
+<li>是否够除，是看位数是否足够</li>
+</ol>
+<p>接收方：</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141516573.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411141516644.png" alt=""></p>
+<h2 id="因特网检查和"><a class="markdownIt-Anchor" href="#因特网检查和">#</a> 因特网检查和</h2>
+<p><strong>分组</strong>：首先，将数据（或数据包）分为若干个 16 位的字（即每个字为两个字节）。如果数据长度不是 16 位的倍数，最后的一个部分将补充零填充。</p>
+<p><strong>求和</strong>：将所有 16 位的字相加，如果出现溢出（即超过 16 位），将溢出的部分加到和的最低位。也就是说，要进行 “循环加法”。</p>
+<p><strong>取反</strong>：对最终的和值进行按位取反（将 0 变为 1，1 变为 0），得到检查和。这个和值就是<strong>校验和</strong>。</p>
+<p><strong>校验</strong>：接收方收到数据后，执行相同的操作，计算出一个校验和。若计算出的校验和为全 1，则认为数据无误；如果不为全 1，表示数据在传输过程中可能发生了错误。</p>
+<h1 id="多路访问链路和协议"><a class="markdownIt-Anchor" href="#多路访问链路和协议">#</a> 多路访问链路和协议</h1>
+<p><strong>广播链路的特点</strong></p>
+<blockquote>
+<p>广播链路是指在一个通信系统中，信号从单个源设备发送出去，所有处于链路上的接收设备都能接收到该信号。广播通常用于无线通信或广播电视中。</p>
+</blockquote>
+<ul>
+<li>
+<p>单个共享广播信道</p>
+</li>
+<li>
+<p>两个或多个节点同时传输：相互干扰</p>
+</li>
+<li>
+<p>碰撞：一个节点同时收到两个或多个信号</p>
+</li>
+</ul>
+<p><strong>多路访问协议</strong></p>
+<blockquote>
+<p>多路访问是指多个设备在同一时间使用共享的通信介质进行通信。为了避免冲突，多路访问需要一些协议来协调不同设备的传输。常见的多路访问方法包括时分多路访问（TDMA）、频分多路访问（FDMA）、码分多路访问（CDMA）等。</p>
+</blockquote>
+<ul>
+<li>
+<p>分布式算法决定节点如何共享信道，如节点何时可以传输数据</p>
+</li>
+<li>
+<p>** 特别注意：** 有关共享信道的通信（协商）需使用信道本身</p>
+</li>
+<li>
+<p>没有额外的信道来进行协调</p>
+</li>
+</ul>
+<p><strong>多址访问协议分类</strong></p>
+<blockquote>
+<p>多址访问实际上是多路访问的一个子集，特指如何在多个设备之间有效地分配通信资源。在多址访问中，每个设备有一个独立的标识（地址），这样设备之间可以根据地址来区分不同的通信流。</p>
+</blockquote>
+<ul>
+<li>
+<p>信道划分协议</p>
+<ul>
+<li>将信道划分成小的 “片”（时隙、频率、编码）</li>
+<li>将 “片” 分配给节点使用</li>
+</ul>
+</li>
+<li>
+<p>随机接入（访问）协议</p>
+<ul>
+<li>
+<p>信道没有被分割，允许碰撞</p>
+</li>
+<li>
+<p>碰撞恢复</p>
+</li>
+</ul>
+</li>
+<li>
+<p>轮流协议</p>
+<ul>
+<li>节点轮流传送，但数据量大的节点轮流更长时间</li>
+</ul>
+</li>
+</ul>
+<h2 id="信道的划分"><a class="markdownIt-Anchor" href="#信道的划分">#</a> 信道的划分</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150913515.png" alt=""></p>
+<h3 id="静态信道划分"><a class="markdownIt-Anchor" href="#静态信道划分">#</a> 静态信道划分</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150806445.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150806602.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150807071.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150812909.png" alt=""></p>
+<h3 id="动态信道划分"><a class="markdownIt-Anchor" href="#动态信道划分">#</a> 动态信道划分</h3>
+<h4 id="aloha"><a class="markdownIt-Anchor" href="#aloha">#</a> ALOHA</h4>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150918169.png" alt=""></p>
+<p><strong>时隙 ALOHA</strong>：</p>
+<ul>
+<li>
+<p>所有的帧大小相同</p>
+</li>
+<li>
+<p>时间被划分为相同大小的时隙，一个时隙等于传输一帧的时间</p>
+</li>
+<li>
+<p>节点只在时隙的开始传输帧</p>
+</li>
+<li>
+<p>节点被同步</p>
+</li>
+<li>
+<p>若有两个或多个节点在一个时隙内传送，则所有节点都能在该时隙内检测到冲突</p>
+</li>
+<li>
+<p>当节点有新的帧发送，它等到下一个时隙发送</p>
+</li>
+<li>
+<p>若没有碰撞，节点能在下一时隙传送完新帧</p>
+</li>
+<li>
+<p>若有碰撞，节点以概率 p 在后续的每一个时隙重传该帧，即在发生冲突后会随机间隔 n 个时隙进行重发</p>
+</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>
+<p>单个活动节点能以全速 R 连续传输</p>
+</li>
+<li>
+<p>高度分散：时隙只在节点同步</p>
+</li>
+<li>
+<p>简单</p>
+</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>
+<p>碰撞，浪费时隙</p>
+</li>
+<li>
+<p>时隙空闲</p>
+</li>
+<li>
+<p>节点需要在分组传送时间以内检测到碰撞</p>
+</li>
+<li>
+<p>时钟同步</p>
+</li>
+</ul>
+<p><strong>效率：</strong></p>
+<p>时隙 ALOHA：</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150926401.png" alt=""></p>
+<p>纯 ALOHA：</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150927423.png" alt=""></p>
+<h4 id="csmacd"><a class="markdownIt-Anchor" href="#csmacd">#</a> CSMA/CD</h4>
+<h5 id="概念"><a class="markdownIt-Anchor" href="#概念">#</a> 概念</h5>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150933829.png" alt=""></p>
+<p><strong>分类：</strong></p>
+<p><strong>非坚持 CSMA</strong>：一旦监听到信道忙（即发现有其他站在发送数据），就不再坚持听下去，而是根据协议的算法<strong>延迟一个随机的时间后</strong>重新再监听。若进行载波监听时发现信道空闲，则将准备好的帧发送出去。</p>
+<p><strong>时隙非坚持 CSMA：<strong>采用划分时隙的随机接入 CSMA 协议，协议规定只能</strong>在每个时隙开始时</strong>才能发送帧。</p>
+<p><strong>1 坚持 CSMA：<strong>当一个站点要传送数据时，首先侦听信道，看是否有其他站点正在传送。如果信道正忙，它就</strong>持续等待直到它侦听到信道空闲</strong>时，便将数据送出。若发生<strong>冲突</strong>，站点就<strong>等待一个随机长的时间</strong>，然后重新开始。</p>
+<p><strong>P 坚持 CSMA：<strong>当一个站点要传送数据时，首先侦听信道，看是否有其他站点正在传送。如果信道正忙，它就</strong>持续等待直到它侦听到信道空闲</strong>时，以<strong>概率 P 发送数据</strong>，而<strong>以概率（1－P）延迟一段时间 τ</strong>（网络中最远的端到端的传播时延），重新监听信道。若发生冲突，站点就等待一个随机长的时间，然后重新开始。</p>
+<p><strong>CSMA 比较：</strong></p>
+<ul>
+<li>
+<p>非坚持：不能充分利用信道刚刚转入空闲期的这段时间。</p>
+</li>
+<li>
+<p>1 坚持：容易在上述这段时间产生冲突。</p>
+</li>
+<li>
+<p>P 坚持：可以在一定程度上克服这些缺点，但却很难选择一个能用于各种通信量强度的 P 值。</p>
+</li>
+</ul>
+<p><strong>在实际网络中常选择 1 坚持</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151015046.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150940320.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150942115.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150943083.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150945231.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150947490.png" alt=""></p>
+<h5 id="习题"><a class="markdownIt-Anchor" href="#习题">#</a> 习题</h5>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151000035.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151003140.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151003086.png" alt=""></p>
+<h5 id="发送流程"><a class="markdownIt-Anchor" href="#发送流程">#</a> 发送流程</h5>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150948941.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411150948573.png" alt=""></p>
+<h4 id="轮流协议"><a class="markdownIt-Anchor" href="#轮流协议">#</a> 轮流协议</h4>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151019498.png" alt=""></p>
+<p><strong>三者比较</strong></p>
+<p><strong>信道划分协议</strong></p>
+<ul>
+<li>
+<p>在重负荷时，共享信道有效、公平</p>
+</li>
+<li>
+<p>在轻负荷时效率低：信道访问延时，即使只有一个活动节点，也只能分配到 1/N 的带宽</p>
+</li>
+</ul>
+<p><strong>随机访问协议</strong></p>
+<ul>
+<li>
+<p>轻负荷时效率高：只有一个节点时，能充分利用信道</p>
+</li>
+<li>
+<p>在重负荷下：碰撞的开销</p>
+</li>
+</ul>
+<p><strong>轮流协议</strong></p>
+<ul>
+<li>在两个方面寻求最佳的解决方案！</li>
+</ul>
+<h1 id="交换局域网"><a class="markdownIt-Anchor" href="#交换局域网">#</a> 交换局域网</h1>
+<h2 id="链路层寻址和arp"><a class="markdownIt-Anchor" href="#链路层寻址和arp">#</a> 链路层寻址和 ARP</h2>
+<p><strong>Q</strong>：既然有 IP 地址，为何要 MAC 地址</p>
+<p><strong>A</strong>：局域网设备不能够识别 IP 地址（工作在链路层），只能通过 MAC 地址寻找主机</p>
+<p><strong>Q</strong>：进程产生的套接字是端口号 + IP 地址，在局域网中如何找到目的主机</p>
+<p><strong>A</strong>：通过 IP 地址获取 MAC 地址</p>
+<p><strong>Q</strong>：如何在已知 IP 地址的情况下，获得 MAC 地址</p>
+<p><strong>A</strong>：地址解析协议（ARP）</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151045976.png" alt=""></p>
+<h3 id="mac地址lan地址物理地址"><a class="markdownIt-Anchor" href="#mac地址lan地址物理地址">#</a> MAC 地址（LAN 地址，物理地址）</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151047259.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151047902.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151047332.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151045825.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151047437.png" alt=""></p>
+<blockquote>
+<p>物理地址指的是 MAC 地址，在数据链路层上</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151046083.png" alt=""></p>
+<h3 id="arp"><a class="markdownIt-Anchor" href="#arp">#</a> ARP</h3>
+<blockquote>
+<p>根据目标的 IP 地址获取其 MAC 地址</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411172037484.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151057305.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151057575.png" alt=""></p>
+<blockquote>
+<p>ARP 协议只能在一段链路或一个网络上使用，而不能跨网络使用</p>
+</blockquote>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411151058910.png" alt=""></p>
+<h2 id="以太网"><a class="markdownIt-Anchor" href="#以太网">#</a> 以太网</h2>
+<h3 id="以太网类型"><a class="markdownIt-Anchor" href="#以太网类型">#</a> 以太网类型</h3>
+<ul>
+<li>总线式以太网</li>
+<li>交换式以太网</li>
+</ul>
+<h3 id="以太网的帧结构"><a class="markdownIt-Anchor" href="#以太网的帧结构">#</a> 以太网的帧结构</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161124022.png" alt=""></p>
+<p><strong>数据字段</strong>：（46 字节～1500 字节）</p>
+<p><strong>前同步码</strong>：</p>
+<ul>
+<li>
+<p>总共 8 字节，前 7 字节的格式为 10101010 ，最后一个字节格式为 10101011</p>
+</li>
+<li>
+<p>用于同步发送方与接收方时钟</p>
+</li>
+</ul>
+<p><strong>地址</strong>：6 字节</p>
+<ul>
+<li>若适配器收到以太网帧，目的地址为自己的 MAC 地址或广播地址（如 ARP 包），就将帧中的数据传给网络层。</li>
+<li>否则，适配器丢弃该帧</li>
+</ul>
+<p><strong>类型</strong>：上层协议类型 （大多为 IP 协议，也支持其它协议如 Novell IPX 和 AppleTalk）</p>
+<p><strong>CRC</strong>：由接收方检查，若检测到错误，就将该帧丢弃</p>
+<h3 id="以太网提供的服务"><a class="markdownIt-Anchor" href="#以太网提供的服务">#</a> 以太网提供的服务</h3>
+<ul>
+<li>
+<p><strong>无连接服务</strong>：在发送适配器和接收适配器之间不需要握手</p>
+</li>
+<li>
+<p><strong>不可靠服务</strong>：接收适配器不发送确认帧或否认帧给发送方</p>
+<ul>
+<li>交给网络层的数据报可能存在间隙</li>
+<li>若应用使用 TCP，间隙会被填充</li>
+<li>否则，应用就会看见间隙</li>
+</ul>
+</li>
+</ul>
+<h3 id="以太网使用的csmacd"><a class="markdownIt-Anchor" href="#以太网使用的csmacd">#</a> 以太网使用的 CSMA/CD</h3>
+<p><strong>特点</strong></p>
+<ul>
+<li>
+<p>没有时隙</p>
+</li>
+<li>
+<p>当适配器侦听到其它适配器在传输，则不传输帧，即<strong>载波侦听</strong></p>
+</li>
+<li>
+<p>正在传输的适配器若检测到其它适配器也在传输，则它中止自己的传输，即<strong>碰撞检测</strong></p>
+</li>
+<li>
+<p>在重新传输之前，适配器要等待一段随机时间，即<strong>随机访问</strong></p>
+</li>
+</ul>
+<p><strong>算法</strong></p>
+<ol>
+<li>适配器收到来自网络层的数据报，创建帧</li>
+<li>若适配器检测到信道空闲，则开始传输帧；若检测到信道忙，就开始等待，直到信道空闲再开始传输该帧</li>
+<li>若适配器传输了整个帧而没有检测到其它适配器的传输，则该适配器完成该帧的传输</li>
+<li>若适配器在传输时检测到其它适配器也在传输，则停止传输，发送拥塞信号</li>
+<li>中止传输后，适配器进入指数回退阶段，在经历第 m 次碰撞后，适配器随机从<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mtext>，</mtext><mn>1</mn><mtext>，</mtext><mn>2</mn><mtext>，</mtext><mo>…</mo><mtext>，</mtext><msup><mn>2</mn><mi>m</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">{0，1，2，…，2^m-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">0</span><span class="mord cjk_fallback">，</span><span class="mord">1</span><span class="mord cjk_fallback">，</span><span class="mord">2</span><span class="mord cjk_fallback">，</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">，</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span></span> 中选择 K 值。适配器在等待 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mtext>·</mtext><mn>512</mn></mrow><annotation encoding="application/x-tex">K·512</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord">·</span><span class="mord">5</span><span class="mord">1</span><span class="mord">2</span></span></span></span> 比特时间后，返回第 2 步</li>
+</ol>
+<p><strong>重要特性</strong></p>
+<ul>
+<li>
+<p>使用 CSMA/CD 协议的以太网不能进行<strong>全双工通信</strong>而只能进行双向交替通信（<strong>半双工通信</strong>）。</p>
+</li>
+<li>
+<p>每个站在发送数据之后的一小段时间内，存在着遭遇碰撞的可能性。</p>
+</li>
+<li>
+<p>这种发送的不确定性使整个以太网的平均通信量远小于以太网的最高数据率。</p>
+</li>
+</ul>
+<h3 id="传统以太网的物理层"><a class="markdownIt-Anchor" href="#传统以太网的物理层">#</a> 传统以太网的物理层</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161429974.png" alt=""></p>
+<p><strong>10BASE5</strong></p>
+<ul>
+<li>
+<p>10 表示传输速率为 10Mbps</p>
+</li>
+<li>
+<p>BASE 表示基带传输：将信源的数据经过变换变为数字基带信号直接传输，信号不经过频谱搬移。</p>
+<ul>
+<li>基带数字信号在传输过程中，随着传输距离加大，信号衰减及噪声干扰会使得数字信号波形产生<strong>失真</strong>。</li>
+<li>为消除失真，每隔一定传输距离加设一个<strong>中继器</strong>。</li>
+<li><strong>中继器</strong>工作在<strong>物理层</strong>，把一端电缆的信号放大后传到另一端的电缆中。</li>
+</ul>
+</li>
+<li>
+<p>5 表示最远传输距离为 500m</p>
+</li>
+</ul>
+<h3 id="吉比特以太网千兆以太网"><a class="markdownIt-Anchor" href="#吉比特以太网千兆以太网">#</a> 吉比特以太网（千兆以太网）</h3>
+<ul>
+<li>
+<p>使用标准以太网帧格式</p>
+</li>
+<li>
+<p>允许点对点链路和共享的广播信道</p>
+</li>
+<li>
+<p>共享信道时，使用 CSMA/CD; 为了得到可接受的效率，节点之间的距离要短</p>
+</li>
+<li>
+<p>对于点到点链路，可以以 1Gbps 的速率全双工工作</p>
+</li>
+<li>
+<p>2006 年达到 10 Gbps</p>
+</li>
+</ul>
+<h3 id="信号编码"><a class="markdownIt-Anchor" href="#信号编码">#</a> 信号编码</h3>
+<p><strong>曼彻斯特编码</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161530621.png" alt=""></p>
+<p><strong>编码规则</strong></p>
+<ol>
+<li>每个比特周期分为两个部分（前半周期和后半周期）。</li>
+<li>逻辑 <code>0</code>
+<ul>
+<li>前半周期为高电平，后半周期为低电平（高到低跳变）。</li>
+</ul>
+</li>
+<li>逻辑 <code>1</code>
+<ul>
+<li>前半周期为低电平，后半周期为高电平（低到高跳变）。</li>
+</ul>
+</li>
+</ol>
+<p>也可以简单记为：</p>
+<ul>
+<li>电平<strong>高到低</strong>表示 <code>0</code> 。</li>
+<li>电平<strong>低到高</strong>表示 <code>1</code> 。</li>
+</ul>
+<p><strong>特性</strong></p>
+<ol>
+<li>同步性
+<ul>
+<li>每个比特周期都有一个中间跳变（高到低或低到高），提供了时钟同步信号。</li>
+</ul>
+</li>
+<li>直流平衡
+<ul>
+<li>平均电平为零，不存在直流分量（频谱更适合传输介质）。</li>
+</ul>
+</li>
+<li>抗干扰性
+<ul>
+<li>即使传输中发生一些干扰，由于信号变化的频率较高，接收端更容易检测和恢复信号。</li>
+</ul>
+</li>
+</ol>
+<p><strong>差分曼彻斯特编码</strong></p>
+<p>基于信号的物理层编码技术，常用于数字通信中，用于将比特数据转换成电信号传输。它结合了差分编码和曼彻斯特编码的优点，具有良好的抗干扰能力和同步特性。</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161538118.png" alt=""></p>
+<ol>
+<li>
+<p><strong>编码规则</strong>：</p>
+<ul>
+<li><strong>逻辑 “0”</strong>：在比特开始时进行<strong>翻转</strong>（电平从高到低，或低到高）。</li>
+<li><strong>逻辑 “1”</strong>：在比特开始时<strong>不翻转</strong>（电平保持上一位结束时的状态）。</li>
+<li><strong>同步跳变</strong>：每个比特周期中间（即位间隔中点）必须<strong>翻转</strong>，确保同步信号的存在。</li>
+</ul>
+<p><strong>NRZ 信号</strong>：</p>
+<ul>
+<li>作为对比，NRZ 信号直接用高低电平表示逻辑 “1” 和逻辑 “0”。</li>
+<li>无中点翻转，容易因长时间电平不变而丢失同步。</li>
+</ul>
+<p><strong>差分曼彻斯特信号</strong>：</p>
+<ul>
+<li>每位的中点始终有一次<strong>固定翻转</strong>（用于时钟同步）。</li>
+<li>根据开始时是否翻转来区分逻辑 “0” 和 “1”。</li>
+<li>不同于普通曼彻斯特编码，差分曼彻斯特编码对信号极性反转不敏感。</li>
+</ul>
+</li>
+</ol>
+<p><strong>信号解读</strong></p>
+<p>以图中的比特流  <code>0 1 0 0 1 1 0 1 0</code>  为例，逐位分析：</p>
+<p>在最开头的高横线表示之前的状态</p>
+<ul>
+<li>第一位  <code>0</code>
+<ul>
+<li>开始时翻转（横线高到低）。</li>
+<li>中点时翻转（横线低到高）。</li>
+</ul>
+</li>
+<li>第二位 <code>1</code>
+<ul>
+<li>开始时不翻转，保持上一位结束时的状态（横线高）。</li>
+<li>中点时翻转（横线高到低）。</li>
+</ul>
+</li>
+<li>第三位  <code>0</code>
+<ul>
+<li>开始时翻转（横线低到高）。</li>
+<li>中点时翻转（横线高到低）。</li>
+</ul>
+</li>
+<li>后续位依次按规则进行。</li>
+</ul>
+<h2 id="链路交换机"><a class="markdownIt-Anchor" href="#链路交换机">#</a> 链路交换机</h2>
+<h3 id="集线器"><a class="markdownIt-Anchor" href="#集线器">#</a> 集线器</h3>
+<p>集线器本质上是<strong>物理层</strong>的中继器：</p>
+<ul>
+<li>
+<p>从一个接口收到的比特流会传给其它所有接口</p>
+</li>
+<li>
+<p>同样速率</p>
+</li>
+<li>
+<p>没有帧缓存</p>
+</li>
+<li>
+<p>集线器没有 CSMA/CD ：由适配器检测碰撞</p>
+</li>
+<li>
+<p>提供网络管理功能（可网管、智能、网络分段）</p>
+</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161547157.png" alt=""></p>
+<h3 id="交换机"><a class="markdownIt-Anchor" href="#交换机">#</a> 交换机</h3>
+<ul>
+<li>
+<p>数据链路层 + 物理层</p>
+</li>
+<li>
+<p>主机<strong>直接连接</strong>到交换机</p>
+</li>
+<li>
+<p>交换机<strong>缓存</strong>数据包</p>
+</li>
+<li>
+<p>每一条链路都采用了以太网协议，但之间<strong>没有冲突，全双工通信</strong></p>
+</li>
+</ul>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161612362.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161553650.png" alt=""></p>
+<p><strong>自学习转发</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161612013.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161612196.png" alt=""></p>
+<p>每条记录都有自己的有效时间，到期会自动删除；因为 MAC 地址和结构的关系不是永久的。</p>
+<p><strong>习题</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161614140.png" alt=""></p>
+<h3 id="网桥"><a class="markdownIt-Anchor" href="#网桥">#</a> 网桥</h3>
+<p>网桥实质上就是一种存储转发设备，用来实现 MAC 层的 LAN 互连</p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161620742.png" alt=""></p>
+<p><strong>网桥的工作原理</strong></p>
+<ul>
+<li>
+<p>不断监听各端口是否有信号</p>
+</li>
+<li>
+<p>收到无差错的帧则缓存，反之将差错帧丢弃</p>
+</li>
+<li>
+<p>若所收帧的目的 MAC 地址属另一网段，则通过站表决定向何端口转发</p>
+</li>
+<li>
+<p>网桥不转发同一 “网段” 内通信的帧</p>
+</li>
+<li>
+<p>目的主机和源主机不连接在网桥的同一接口上才会转发</p>
+</li>
+<li>
+<p>网桥不修改所转发的帧的源地址</p>
+</li>
+</ul>
+<p><strong>网桥的优势</strong></p>
+<ul>
+<li>
+<p>过滤通信量</p>
+</li>
+<li>
+<p>扩大了局域网的物理范围</p>
+</li>
+<li>
+<p>提高了可靠性</p>
+</li>
+<li>
+<p>可互连不同物理层、不同 MAC 子层和不同速率的局域网</p>
+</li>
+</ul>
+<p><strong>网桥的缺点</strong></p>
+<ul>
+<li>
+<p>由于要接收和转发，增加了时延</p>
+</li>
+<li>
+<p>MAC 子层没有流量控制功能，网络负荷重时，网桥缓存空间可能发生溢出，产生帧丢失现象</p>
+</li>
+<li>
+<p>不同 MAC 子层的网段桥接时，在转发帧之前要修改帧的某些字段，这也需要耗费时间</p>
+</li>
+<li>
+<p>出现<strong>广播风暴</strong>。网桥只适合用户少于几百个和通信量不太大的局域网，否则有时会因传播过多广播信息而产生网络拥塞</p>
+</li>
+</ul>
+<p><strong>网桥和集线器的区别</strong></p>
+<ul>
+<li>
+<p>集线器只是将网络的覆盖距离简单的延长，而且距离有限，具体实现在<strong>物理层</strong>；网桥不仅具有将 LAN 的覆盖距离延长的作用，而且理论上可做到无限延长（?），具体实现在<strong> MAC 层</strong>。</p>
+<ul>
+<li><strong>MAC 层</strong>（媒体访问控制层）是计算机网络中的一个子层，属于数据链路层。MAC 层的主要职责是控制设备如何访问物理介质并实现数据帧的可靠传输。它是网络中通信设备之间协同工作、避免冲突的重要机制。</li>
+</ul>
+</li>
+<li>
+<p>集线器仅具有简单的信号整形和放大的功能；网桥则属于一种智能互连设备，它主要提供<strong>信号的存储 / 转发、数据过滤、路由选择</strong>等能力。</p>
+</li>
+<li>
+<p>集线器仅是一种<strong>硬设备</strong>，而网桥既包括<strong>硬件又包括软件</strong>。</p>
+</li>
+<li>
+<p>集线器仅只能互连<strong>同类 LAN</strong>，而网桥可支持<strong>不同类型的 LAN</strong> 互连。</p>
+</li>
+</ul>
+<p><strong>透明网桥</strong></p>
+<p>这里所谓 “透明” 是指局域网上的每个站并不知道所发送的帧将经过哪几个网桥，即网桥对各站来说是看不见的</p>
+<p><strong>存在问题一一兜圈子</strong></p>
+<p>假设网络中存在多个互联网桥 A、B、C，形成了一个环路。当某设备发送广播帧时：</p>
+<ol>
+<li>广播帧从网桥 A 被转发到网桥 B，然后又被转发到网桥 C，再返回到网桥 A。</li>
+<li>每个网桥不断将广播帧转发到其他网桥，帧在环路中不断循环，形成广播风暴。</li>
+<li>在此过程中，各网桥不断更新 MAC 地址表，但无法正确确定设备的位置</li>
+</ol>
+<p><strong>解决方案 —— 支撑树算法</strong></p>
+<ul>
+<li>
+<p>互连在一起的网桥彼此通信后，就能找出原来的网络拓扑的一个子集，在这个子集里整个连通的网络中<strong>不存在回路</strong>。一旦支撑树确定了网桥就会将某些端口断开，以确保从原来的拓扑得出一个支撑树</p>
+</li>
+<li>
+<p>支撑树算法选择<strong>一个网桥为树的根</strong>，然后以最短路径为依据，找到树上的每一个结点</p>
+</li>
+<li>
+<p>为了让支撑树能反映网络拓扑的变化，每隔几秒钟每个网桥要广播其标识号，和它所知道的所有其他网桥</p>
+</li>
+</ul>
+<p><strong>缺点</strong>：互连局域网数目非常大时，支撑树算法可能花很多时间。</p>
+<p><strong>以太网交换机 —— 多端口网桥</strong></p>
+<ul>
+<li>
+<p>链路层设备</p>
+</li>
+<li>
+<p>存储和转发以太网帧</p>
+</li>
+<li>
+<p>检查帧头部，根据目的 MAC 地址转发帧</p>
+</li>
+<li>
+<p>当帧转发到 LAN 网段，用 CSMA/CD 访问 LAN 网段</p>
+</li>
+<li>
+<p>透明主机不知道交换机的存在</p>
+</li>
+<li>
+<p>即插即用，自学习，交换机不需配置</p>
+</li>
+<li>
+<p>直通交换：帧从入端口转发到出端口不需收集整个帧</p>
+</li>
+<li>
+<p>能少量减少延迟</p>
+</li>
+<li>
+<p>共享 / 专用的、10/100/1000Mbps 接口的结合</p>
+</li>
+</ul>
+<h3 id="对比"><a class="markdownIt-Anchor" href="#对比">#</a> 对比</h3>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161638793.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161558608.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161639568.png" alt=""></p>
+<h2 id="虚拟局域网"><a class="markdownIt-Anchor" href="#虚拟局域网">#</a> 虚拟局域网</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161657489.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161657254.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658542.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658986.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658713.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658779.png" alt=""></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658977.png" alt=""></p>
+<img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161658761.png" style="zoom: 50%;" />
+<p><strong>习题</strong></p>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202411161659018.png" alt=""></p>
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%A1%E7%BD%91/" rel="tag"><i class="ic i-tag"></i> 计网</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 01:51:43" itemprop="dateModified" datetime="2025-03-18T01:51:43+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/" title="链路层">http://www.luckycyyyy.top/2024/11/14/计算机科学/计算机网络/计网--链路层/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="网络层">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机网络</span>
+  <h3>网络层</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/12/03/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfb3vzhj20zk0m8wny.jpg" title="波动光学">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 物理</span>
+  <h3>波动光学</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 链路层概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.1.</span> <span class="toc-text"> 链路层提供的服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%9C%B0%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text"> 链路层实现地点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%AE%E9%94%99%E6%A3%80%E6%B5%8B%E5%92%8C%E7%BA%A0%E6%AD%A3%E6%8A%80%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text"> 差错检测和纠正技术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C"><span class="toc-number">2.1.</span> <span class="toc-text"> 奇偶校验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C"><span class="toc-number">2.2.</span> <span class="toc-text"> 循环冗余校验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%A0%E7%89%B9%E7%BD%91%E6%A3%80%E6%9F%A5%E5%92%8C"><span class="toc-number">2.3.</span> <span class="toc-text"> 因特网检查和</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E8%B7%AF%E8%AE%BF%E9%97%AE%E9%93%BE%E8%B7%AF%E5%92%8C%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.</span> <span class="toc-text"> 多路访问链路和协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E9%81%93%E7%9A%84%E5%88%92%E5%88%86"><span class="toc-number">3.1.</span> <span class="toc-text"> 信道的划分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E4%BF%A1%E9%81%93%E5%88%92%E5%88%86"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 静态信道划分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E4%BF%A1%E9%81%93%E5%88%92%E5%88%86"><span class="toc-number">3.1.2.</span> <span class="toc-text"> 动态信道划分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#aloha"><span class="toc-number">3.1.2.1.</span> <span class="toc-text"> ALOHA</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#csmacd"><span class="toc-number">3.1.2.2.</span> <span class="toc-text"> CSMA&#x2F;CD</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.2.2.1.</span> <span class="toc-text"> 概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-number">3.1.2.2.2.</span> <span class="toc-text"> 习题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E6%B5%81%E7%A8%8B"><span class="toc-number">3.1.2.2.3.</span> <span class="toc-text"> 发送流程</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AE%E6%B5%81%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.1.2.3.</span> <span class="toc-text"> 轮流协议</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-number">4.</span> <span class="toc-text"> 交换局域网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E5%B1%82%E5%AF%BB%E5%9D%80%E5%92%8Carp"><span class="toc-number">4.1.</span> <span class="toc-text"> 链路层寻址和 ARP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mac%E5%9C%B0%E5%9D%80lan%E5%9C%B0%E5%9D%80%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80"><span class="toc-number">4.1.1.</span> <span class="toc-text"> MAC 地址（LAN 地址，物理地址）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arp"><span class="toc-number">4.1.2.</span> <span class="toc-text"> ARP</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="toc-number">4.2.</span> <span class="toc-text"> 以太网</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.2.1.</span> <span class="toc-text"> 以太网类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84%E5%B8%A7%E7%BB%93%E6%9E%84"><span class="toc-number">4.2.2.</span> <span class="toc-text"> 以太网的帧结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%8F%90%E4%BE%9B%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="toc-number">4.2.3.</span> <span class="toc-text"> 以太网提供的服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BD%BF%E7%94%A8%E7%9A%84csmacd"><span class="toc-number">4.2.4.</span> <span class="toc-text"> 以太网使用的 CSMA&#x2F;CD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84%E7%89%A9%E7%90%86%E5%B1%82"><span class="toc-number">4.2.5.</span> <span class="toc-text"> 传统以太网的物理层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%89%E6%AF%94%E7%89%B9%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%8D%83%E5%85%86%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="toc-number">4.2.6.</span> <span class="toc-text"> 吉比特以太网（千兆以太网）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E7%BC%96%E7%A0%81"><span class="toc-number">4.2.7.</span> <span class="toc-text"> 信号编码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="toc-number">4.3.</span> <span class="toc-text"> 链路交换机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E7%BA%BF%E5%99%A8"><span class="toc-number">4.3.1.</span> <span class="toc-text"> 集线器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="toc-number">4.3.2.</span> <span class="toc-text"> 交换机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E6%A1%A5"><span class="toc-number">4.3.3.</span> <span class="toc-text"> 网桥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-number">4.3.4.</span> <span class="toc-text"> 对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-number">4.4.</span> <span class="toc-text"> 虚拟局域网</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/09/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91/" rel="bookmark" title="计算机网络和因特网">计算机网络和因特网</a></li><li><a href="/2024/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E8%BF%90%E8%BE%93%E5%B1%82/" rel="bookmark" title="运输层">运输层</a></li><li><a href="/2024/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E5%BA%94%E7%94%A8%E5%B1%82/" rel="bookmark" title="应用层">应用层</a></li><li><a href="/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="bookmark" title="网络层">网络层</a></li><li class="active"><a href="/2024/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="bookmark" title="链路层">链路层</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">89</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">28</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">44</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91--%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/12/03/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">518k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/11/14/计算机科学/计算机网络/计网--链路层/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

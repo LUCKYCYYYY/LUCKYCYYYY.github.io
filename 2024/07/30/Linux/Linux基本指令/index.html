@@ -1,0 +1,587 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Linux" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
+
+
+
+  <title>
+Linux基本指令 - Linux |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Linux基本指令
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-07-30 15:06:41">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-07-30T15:06:41+08:00">2024-07-30</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Linux/" itemprop="item" rel="index" title="分类于 Linux"><span itemprop="name">Linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="基本知识"><a class="markdownIt-Anchor" href="#基本知识">#</a> 基本知识</h1>
+<p>路径分隔符：windows:\ 	linux:/</p>
+<p>根目录：/</p>
+<p>./：表示当前目录下</p>
+<p>上级目录：… 可以返回当前目录的上级目录</p>
+<p>清屏：clear</p>
+<p>linux 系统中磁盘上的文件和目录构成一颗目录树，通过 tree 指令可以查看对应的 “目录树”</p>
+<p>安装 tree： <code>yum -y install tree(centos版本)</code></p>
+<p>通配符 *：表示任意内容，eg：file<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>*</mtext></mrow><annotation encoding="application/x-tex">\text *</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:0em;"></span><span class="mord text"><span class="mord">*</span></span></span></span></span> 表示以 file 开头的任意内容；rm -rf * 删除当前目录的所有内容</p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkt04wzf5j30li05oq4g.jpg" alt=""></p>
+<p>热键：</p>
+<ol>
+<li>Tab：连按两次 Tab 可以对命令 / 路径进行补齐</li>
+<li>Ctrl + C：失控的状态，按 Ctrl+C 直接终止</li>
+<li>Ctrl + R：查找功能，找到之前输入过的指令</li>
+</ol>
+<h1 id="ls指令"><a class="markdownIt-Anchor" href="#ls指令">#</a> ls 指令</h1>
+<blockquote>
+<p>显示当前目录下的指定文件或者目录</p>
+</blockquote>
+<p><em><strong>常用选项</strong></em></p>
+<blockquote>
+<p>选项可以拼接在一起，顺序随意</p>
+</blockquote>
+<p>-l：显示文件的详细信息（等价于 ll）</p>
+<p>-a：列出目录下的所有文件（包括以。开头的隐藏文件）</p>
+<p>-d：只显示目录本身，而不是显示目录里的内容</p>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzksxy2p6qj30ij0pwdnc.jpg" alt=""></p>
+<p>+ 指定路径：显示指定路径下的文件和目录</p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkszkabw6j30ki0ff78q.jpg" alt=""></p>
+<h1 id="pwd指令"><a class="markdownIt-Anchor" href="#pwd指令">#</a> pwd 指令</h1>
+<blockquote>
+<p>查看当前目录</p>
+</blockquote>
+<h1 id="cd指令"><a class="markdownIt-Anchor" href="#cd指令">#</a> cd 指令</h1>
+<blockquote>
+<p>改变当前路径</p>
+</blockquote>
+<p>cd …：返回上层路径</p>
+<p>cd -：跳转到最近的上一次的路径</p>
+<p>cd ~：回到自己的家目录下（root 用户首次登录，所处的路径，叫做 root 的家目录 /root；普通用户首次登录，所处的路径，叫做普通用户的家目录 /home/cyy）</p>
+<h1 id="touch指令"><a class="markdownIt-Anchor" href="#touch指令">#</a> touch 指令</h1>
+<blockquote>
+<p>创建普通文件，一次可以创建多个文件</p>
+</blockquote>
+<h1 id="mkdir指令"><a class="markdownIt-Anchor" href="#mkdir指令">#</a> mkdir 指令</h1>
+<blockquote>
+<p>创建目录</p>
+</blockquote>
+<p><em><strong>常用选项</strong></em></p>
+<p>-p：一次可建多个目录</p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkt1b16crj30ll05pjs1.jpg" alt=""></p>
+<h1 id="rmdir指令"><a class="markdownIt-Anchor" href="#rmdir指令">#</a> rmdir 指令</h1>
+<blockquote>
+<p>删除空目录，非空不能删</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzkt11jzlij30hd0algmu.jpg" alt=""></p>
+<h1 id="rm指令"><a class="markdownIt-Anchor" href="#rm指令">#</a> rm 指令</h1>
+<blockquote>
+<p>rm -r 可以递归式删除非空目录</p>
+<p>rm -rf 递归并强制删除目录，即没有询问</p>
+</blockquote>
+<h1 id="man指令"><a class="markdownIt-Anchor" href="#man指令">#</a> man 指令</h1>
+<blockquote>
+<p>各种指令的用法</p>
+</blockquote>
+<p>如果未安装则输入指令： <code>yum install -y man-pages</code></p>
+<h1 id="nano指令"><a class="markdownIt-Anchor" href="#nano指令">#</a> nano 指令</h1>
+<blockquote>
+<p>相当于记事本，可以快速打开一个文件并且在里面添加内容</p>
+</blockquote>
+<p>如果未安装则输入： <code>yum install -y nano</code></p>
+<h1 id="cp指令"><a class="markdownIt-Anchor" href="#cp指令">#</a> cp 指令</h1>
+<blockquote>
+<p>cp src [文件、目录] dst [路径、文件]</p>
+<p>将文件进行拷贝；如果想拷贝目录，需要加 - r 选项</p>
+</blockquote>
+<p><code>cp ../</code> ：拷贝到上级目录</p>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkt0lyjaaj30r30j90uu.jpg" alt=""></p>
+<h1 id="cat指令"><a class="markdownIt-Anchor" href="#cat指令">#</a> cat 指令</h1>
+<blockquote>
+<p>查看目标文件的内容，默认从键盘读入数据</p>
+<p>查看大文件会刷屏</p>
+</blockquote>
+<p><em><strong>基本选项</strong></em></p>
+<p>-n：给每行前面加上行号</p>
+<p>-s：将多个空行合并为一个空行</p>
+<p>-b：只给非空行编号</p>
+<p><code>&lt;</code> ：表示输入重定向，本来应该从键盘读入数据，现在从指定文件中读入数据</p>
+<p><code>cat &lt; test.txt </code> ：从 test.txt 读入数据</p>
+<h1 id="tac指令"><a class="markdownIt-Anchor" href="#tac指令">#</a> tac 指令</h1>
+<blockquote>
+<p>逆序打印文件</p>
+</blockquote>
+<h1 id="more指令"><a class="markdownIt-Anchor" href="#more指令">#</a> more 指令</h1>
+<blockquote>
+<p>只会显示一屏的内容，按回车下翻，不能上翻</p>
+</blockquote>
+<p>q：退出</p>
+<h1 id="less指令"><a class="markdownIt-Anchor" href="#less指令">#</a> less 指令</h1>
+<blockquote>
+<p>只会显示一屏的内容，输入 q 退出，按上下箭头进行向上向下翻</p>
+</blockquote>
+<p>/：搜索功能，按 n 往后翻，N 往前翻</p>
+<p>q：退出</p>
+<h1 id="head-tail-指令"><a class="markdownIt-Anchor" href="#head-tail-指令">#</a> head &amp;&amp; tail 指令</h1>
+<blockquote>
+<p>查看文件的开头结尾</p>
+</blockquote>
+<p>-n：后面跟数字，要看几行就输几</p>
+<p>要看第 5000-5020 行，怎么操作？</p>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkt0a7nj4j30mp0fygnh.jpg" alt=""></p>
+<p>管道 |：可以进行连续操作</p>
+<p>比如解决上述问题： head -5020 log.txt | tail -21</p>
+<h1 id="mv指令"><a class="markdownIt-Anchor" href="#mv指令">#</a> mv 指令</h1>
+<blockquote>
+<p>mv src [文件、目录] dst [路径、文件]</p>
+<ol>
+<li>剪切文件或者目录</li>
+<li>重命名</li>
+</ol>
+</blockquote>
+<h1 id="echo指令"><a class="markdownIt-Anchor" href="#echo指令">#</a> echo 指令</h1>
+<p><code>&gt;</code> ：表示输出重定向，将本来要输出到显示器文件的内容输出到指定文件；如果指定文件不存在就新建一个</p>
+<blockquote>
+<p>输出重定向，每次都从头开始，清空源文件的所有内容，再进行写入</p>
+</blockquote>
+<p><code>&gt;test.txt</code> ：可以实现新建文件 / 将文件内容清空</p>
+<p><code>echo &quot;helloword&quot;&gt;test.txt</code>  将要输出的字符串内容，写到文件中</p>
+<p><code>&gt;&gt;</code> ：追加重定向</p>
+<blockquote>
+<p>每次在文件后面追加内容，不清空</p>
+</blockquote>
+<h1 id="时间相关的指令"><a class="markdownIt-Anchor" href="#时间相关的指令">#</a> 时间相关的指令</h1>
+<p>date： <code>date +%Y-%m-%d\ %H:%M:%S</code></p>
+<p>查看时间戳为 0 时的时间： <code>date +%Y-%m-%d\ %H:%M:%S -d @0</code></p>
+<p>cal：显示任意年份的日历</p>
+<h1 id="find指令"><a class="markdownIt-Anchor" href="#find指令">#</a> find 指令</h1>
+<blockquote>
+<p>find + 路径 + -name +  文件名，把所有该文件名的文件显示出来</p>
+</blockquote>
+<p>-o：表示或者，可以同时查找多个文件，如： <code>find /home/cy -name test1.c -o -name test2.c</code></p>
+<h1 id="which指令"><a class="markdownIt-Anchor" href="#which指令">#</a> which 指令</h1>
+<blockquote>
+<p>用来在 linux 系统中查找指定的指令</p>
+</blockquote>
+
+      <div class="tags">
+          <a href="/tags/Linux/" rel="tag"><i class="ic i-tag"></i> Linux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 08:14:42" itemprop="dateModified" datetime="2025-03-18T08:14:42+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" title="Linux基本指令">http://www.luckycyyyy.top/2024/07/30/Linux/Linux基本指令/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/07/29/Linux/Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh3brzpj20zk0m8ann.jpg" title="Linux环境配置">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Linux</span>
+  <h3>Linux环境配置</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/08/12/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciundwu5j20zk0m8n9e.jpg" title="最短路问题">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂杂的算法知识</span>
+  <h3>最短路问题</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text"> 基本知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls%E6%8C%87%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> ls 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pwd%E6%8C%87%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text"> pwd 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cd%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text"> cd 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#touch%E6%8C%87%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text"> touch 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mkdir%E6%8C%87%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text"> mkdir 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rmdir%E6%8C%87%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text"> rmdir 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rm%E6%8C%87%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text"> rm 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#man%E6%8C%87%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text"> man 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nano%E6%8C%87%E4%BB%A4"><span class="toc-number">10.</span> <span class="toc-text"> nano 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cp%E6%8C%87%E4%BB%A4"><span class="toc-number">11.</span> <span class="toc-text"> cp 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cat%E6%8C%87%E4%BB%A4"><span class="toc-number">12.</span> <span class="toc-text"> cat 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tac%E6%8C%87%E4%BB%A4"><span class="toc-number">13.</span> <span class="toc-text"> tac 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#more%E6%8C%87%E4%BB%A4"><span class="toc-number">14.</span> <span class="toc-text"> more 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#less%E6%8C%87%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text"> less 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#head-tail-%E6%8C%87%E4%BB%A4"><span class="toc-number">16.</span> <span class="toc-text"> head &amp;&amp; tail 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mv%E6%8C%87%E4%BB%A4"><span class="toc-number">17.</span> <span class="toc-text"> mv 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#echo%E6%8C%87%E4%BB%A4"><span class="toc-number">18.</span> <span class="toc-text"> echo 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">19.</span> <span class="toc-text"> 时间相关的指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#find%E6%8C%87%E4%BB%A4"><span class="toc-number">20.</span> <span class="toc-text"> find 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#which%E6%8C%87%E4%BB%A4"><span class="toc-number">21.</span> <span class="toc-text"> which 指令</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/07/29/Linux/Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="bookmark" title="Linux环境配置">Linux环境配置</a></li><li class="active"><a href="/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" rel="bookmark" title="Linux基本指令">Linux基本指令</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">89</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">28</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">44</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/07/29/Linux/Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/08/12/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">518k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/07/30/Linux/Linux基本指令/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

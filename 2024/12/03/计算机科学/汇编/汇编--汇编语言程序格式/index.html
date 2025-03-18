@@ -1,0 +1,640 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="汇编" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/12/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F/">
+
+
+
+  <title>
+汇编语言程序格式 - 汇编 - 计算机科学 |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">汇编语言程序格式
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-12-03 13:54:35">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-12-03T13:54:35+08:00">2024-12-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.9k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/" itemprop="item" rel="index" title="分类于 汇编"><span itemprop="name">汇编</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/12/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="汇编语言程序开发"><a class="markdownIt-Anchor" href="#汇编语言程序开发">#</a> 汇编语言程序开发</h1>
+<h2 id="汇编语言程序的语句格式"><a class="markdownIt-Anchor" href="#汇编语言程序的语句格式">#</a> 汇编语言程序的语句格式</h2>
+<h3 id="硬指令执行性语句"><a class="markdownIt-Anchor" href="#硬指令执行性语句">#</a> 硬指令 &amp; 执行性语句</h3>
+<p><strong>硬指令</strong>：使 CPU 产生动作、并在程序执行时才处理的语句</p>
+<p><strong>执行性语句</strong> —— 表达处理器指令，由<strong>硬指令</strong>构成的语句，它通常对应一条机器指令，出现在程序的代码段中，格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">标号: 硬指令助记符 操作数,操作数,... ;注释</span><br><span class="line">again: mov dx, offset string	;获得string的偏移地址并保存到dx中</span><br></pre></td></tr></table></figure>
+<p><strong>标号</strong>：反映硬指令位置（逻辑地址）的标识符，后跟一个冒号分隔</p>
+<p><strong>硬指令助记符</strong>：可以是任何一条处理器指令</p>
+<p>处理器指令的操作数可以是<strong>立即数、寄存器和存储单元</strong></p>
+<h3 id="伪指令说明性语句"><a class="markdownIt-Anchor" href="#伪指令说明性语句">#</a> 伪指令 &amp; 说明性语句</h3>
+<p><strong>伪指令</strong> —— 不产生 CPU 动作、在程序执行前由汇编程序处理的说明性语句。伪指令与具体的处理器类型无关，但与汇编程序的版本有关</p>
+<p><strong>说明性语句</strong> —— 由<strong>伪指令</strong>构成的语句，它通常指示汇编程序如何汇编源程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">名字  伪指令助记符  参数,参数,...	;注释</span><br><span class="line">string db ‘Hello,world’			;使用db伪指令定义一个字符串，使用变量名string表达其在主存中的逻辑地址(包含段基地址和逻辑地址)、</span><br></pre></td></tr></table></figure>
+<p><strong>名字</strong>：反映伪指令位置（逻辑地址）和属性的标识符，后跟空格或制表符分隔，没有冒号</p>
+<p><strong>伪指令助记符</strong>：定义字节数据和字符串的 DB 就是伪指令</p>
+<p>伪指令的参数可以是<strong>常数、变量名、表达式</strong>等，可以有多个，参数之间用<strong>逗号分隔</strong></p>
+<h3 id="标识符"><a class="markdownIt-Anchor" href="#标识符">#</a> 标识符</h3>
+<blockquote>
+<p>标号和名字是符合汇编程序语法的用户自定义的标识符</p>
+</blockquote>
+<p>标识符一般最多由 31 个字母、数字及规定的特殊符号（如 _、$、?、@）组成，<strong>不能以数字开头</strong>。默认情况下，汇编程序不区别标识符中的字母大小写。一个程序中，每个标识符的定义是唯一的，还不能是汇编语言采用的保留字。</p>
+<p><strong>保留字</strong>是汇编程序已经利用的标识符，主要有：</p>
+<ul>
+<li>硬指令助记符 —— 例如： <code>MOV、ADD</code></li>
+<li>伪指令助记符 —— 例如： <code>DB、EQU</code></li>
+<li>操作符 —— 例如： <code>OFFSET、PTR</code></li>
+<li>寄存器名 —— 例如： <code>AX、CS</code></li>
+</ul>
+<h2 id="汇编语言源程序框架"><a class="markdownIt-Anchor" href="#汇编语言源程序框架">#</a> 汇编语言源程序框架</h2>
+<h3 id="简化段定义的源程序框架"><a class="markdownIt-Anchor" href="#简化段定义的源程序框架">#</a> 简化段定义的源程序框架</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.model small	;存储模型伪指令.model，small表示小型模式</span><br><span class="line">.stack			;堆栈段</span><br><span class="line">.data			;数据段</span><br><span class="line">...				;数据定义</span><br><span class="line">.code			;代码段</span><br><span class="line">.startup		;指明程序的起始执行点，同时为程序的数据段、代码段、堆栈段设置相应的段寄存器值</span><br><span class="line">...				;主程序代码</span><br><span class="line">.exit 0			;返回DOS操作系统</span><br><span class="line">...				;子程序代码</span><br><span class="line">end				;汇编结束</span><br></pre></td></tr></table></figure>
+<p>MASM 5.0/5.1 不支持 <code>.startup</code>  和 <code>.exit</code> ，可修改如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.model small				;存储模型伪指令.model，small表示小型模式</span><br><span class="line">.stack						;堆栈段</span><br><span class="line">.data						;数据段</span><br><span class="line">...							;数据定义</span><br><span class="line">.code						;代码段</span><br><span class="line">;;.startup					;指明程序的起始执行点，同时为程序的数据段、代码段、堆栈段设置相应的段寄存器值</span><br><span class="line">start:	mov ax, @data</span><br><span class="line">		mov ds, ax</span><br><span class="line">...							;主程序代码</span><br><span class="line">;;.exit 0					;返回DOS操作系统</span><br><span class="line">		mov ax, 4c00h</span><br><span class="line">		int 21h</span><br><span class="line">...							;子程序代码</span><br><span class="line">;;end						;汇编结束</span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<h3 id="完整段定义的源程序框架"><a class="markdownIt-Anchor" href="#完整段定义的源程序框架">#</a> 完整段定义的源程序框架</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">stack	segment stack</span><br><span class="line">   	 	...</span><br><span class="line">stack	ends</span><br><span class="line">data	segment</span><br><span class="line">    	...</span><br><span class="line">data 	ends</span><br><span class="line">code	segment &#x27;code&#x27;</span><br><span class="line">    	assume cs:code, ds:data, ss:stack	;assume将cs，ds，ss，依次指向名为code，data，stack逻辑段</span><br><span class="line">start:	mov ax, data</span><br><span class="line">    	mov ds, ax							;因为assume不为ds赋值，所以在start中为ds赋值data逻辑段</span><br><span class="line">    	...</span><br><span class="line">    	mov ax, 4c00h</span><br><span class="line">    	int 21h</span><br><span class="line">  		...</span><br><span class="line">code 	ends</span><br><span class="line">    	end start</span><br></pre></td></tr></table></figure>
+<h2 id="汇编语言程序的开发过程"><a class="markdownIt-Anchor" href="#汇编语言程序的开发过程">#</a> 汇编语言程序的开发过程</h2>
+<p><img data-src="https://raw.githubusercontent.com/LUCKYCYYYY/WEb_img2/main/img/202412031446517.jpg" alt=""></p>
+<h2 id="dos系统功能调用"><a class="markdownIt-Anchor" href="#dos系统功能调用">#</a> DOS 系统功能调用</h2>
+<blockquote>
+<p>DOS 系统主要分配<strong> 21H 号</strong>中断，用于程序员调用 DOS 操作系统工功能</p>
+<ul>
+<li>中断调用指令： <code>INT 21H</code></li>
+</ul>
+<p>在 AH 寄存器中设置系统功能调用号</p>
+</blockquote>
+<h3 id="字符输入01h"><a class="markdownIt-Anchor" href="#字符输入01h">#</a> 字符输入 (01H)</h3>
+<p>从键盘读入一个字符，并使用<strong> AL 保存出口参数</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOV AH,01H</span><br><span class="line">INT 21H   ;读入的字符在AL寄存器</span><br></pre></td></tr></table></figure>
+<h3 id="字符输出02h"><a class="markdownIt-Anchor" href="#字符输出02h">#</a> 字符输出 (02H)</h3>
+<p>在显示器当前光标位置显示给定字符，且光标右移一个字符位置，使用<strong> DL 作为入口参数</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MOV AH,02H</span><br><span class="line">MOV DL,字符  ;ASCII码，例如：41H</span><br><span class="line">;MOV    DL,41H  ;输出‘A’，方法一</span><br><span class="line">;MOV    DL,&#x27;A&#x27;  ;输出‘A’，方法二</span><br><span class="line">INT 21H</span><br></pre></td></tr></table></figure>
+<h3 id="字符串输入0ah"><a class="markdownIt-Anchor" href="#字符串输入0ah">#</a> 字符串输入 (0AH)</h3>
+<p>需要事先在主存设置用于保存输入字符串的缓冲区，使用 ** <code>DS：DX</code>  作为出口参数 **</p>
+<ul>
+<li>缓冲区的第 1 字节填入最多<strong>欲</strong>接收的字符个数（<strong>包括回车符</strong>）</li>
+<li>缓冲区的第 2 个字节存放<strong>实际</strong>输入的字符个数（<strong>不包括回车符</strong>）</li>
+<li>从第 3 个字节开始存放输入的字符串，实际输入字符数多余定义数时，多出的字符被<strong>丢弃</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">buffer 	db	81					;可能输入的最大字符数</span><br><span class="line">		db	0					;存放实际输入的字符数</span><br><span class="line">		db	81	dup (0)			;存放输入的字符串</span><br><span class="line">		...</span><br><span class="line">		mov	ah, 0AH				;设置功能号</span><br><span class="line">		mov dx, seg buffer		;提供入口参数，seg获得buffer的段地址</span><br><span class="line">		mov ds, dx				;设置数据段</span><br><span class="line">		mov dx, offset buffer	</span><br><span class="line">		int 21h					</span><br></pre></td></tr></table></figure>
+<h3 id="字符串输出09h"><a class="markdownIt-Anchor" href="#字符串输出09h">#</a> 字符串输出 (09H)</h3>
+<p>需要事先将欲显示的字符串保存在主存中</p>
+<ul>
+<li>设置 ** 入口参数 <code>DS:DX</code> ** 等于该字符串在主存中的首地址</li>
+<li>字符串必须以 <code>$(24H)</code>  结束</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string	db	&#x27;hello,everybody&#x27;,&#x27;$&#x27;</span><br><span class="line">		mov	ah, 09h</span><br><span class="line">		mov dx, offset string</span><br><span class="line">		int 21h</span><br></pre></td></tr></table></figure>
+<h3 id="按键判断0bh"><a class="markdownIt-Anchor" href="#按键判断0bh">#</a> 按键判断 (0BH)</h3>
+<p>仅判断当前是否有按下的键，设置<strong>输出参数 AL</strong> 后退出。</p>
+<ul>
+<li><code>AL = 0</code>  没有按键</li>
+<li><code>AL = FFH</code>  已经按键</li>
+</ul>
+<h1 id="参数变量标号"><a class="markdownIt-Anchor" href="#参数变量标号">#</a> 参数 &amp; 变量 &amp; 标号</h1>
+<h2 id="数值型参数"><a class="markdownIt-Anchor" href="#数值型参数">#</a> 数值型参数</h2>
+<h3 id="常数"><a class="markdownIt-Anchor" href="#常数">#</a> 常数</h3>
+<p>十进制常数 – 以 D/d 结尾，默认情况后缀可省略</p>
+<p>十六进制常数 – 以 H/h 结尾</p>
+<p>八进制 – 以 Q/q 结尾</p>
+<p>二进制 – 以 B/b 结尾</p>
+<p>字符串常数 – 用英文缩略号括起来的单个字符或多个字符</p>
+<p>符号常数 – 利用一个标识符表达一个数值。符号定义伪指令有<strong> EQU</strong> 和 **=**</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">符号名 equ 数值表达式</span><br><span class="line">符号名 equ &lt;字符串&gt;	;该字符串可以是一条处理器指令</span><br><span class="line">符号名 = 数值表达式</span><br></pre></td></tr></table></figure>
+<p>EQU 用于数值等价时不能重复定义符号名，但是 &quot;=&quot; 允许重复赋值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">x = 7		;x equ 7同样正确</span><br><span class="line">x = x + 5	;但是x equ x + 5错误</span><br></pre></td></tr></table></figure>
+<h3 id="数值表达式"><a class="markdownIt-Anchor" href="#数值表达式">#</a> 数值表达式</h3>
+<p>算术运算符： <code>+,-,*,/,mod</code></p>
+<p>逻辑运算符： <code>and,or,xor(异或),not</code></p>
+<p>移位运算符： <code>shl,shr</code></p>
+<p>关系运算符： <code>eq,ne,gt(大于),lt(小于),ge(大于等于),le(小于等于)</code></p>
+<ul>
+<li>用 FFFFH (补码 - 1) 表示真</li>
+<li>用 0000H 表示假</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">mov bx, ((port lt 5) and 20) or ((port ge 5) and 30)</span><br><span class="line">;当port &lt; 5时，mov bx, 20</span><br><span class="line">;当port &gt;= 5时，mov bx, 30</span><br></pre></td></tr></table></figure>
+<p>高低分离符： <code>high(高字节), low(低字节), highword(高字),lowword(低字)</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ah, high 8765h	</span><br><span class="line">;等价于mov ah, 87h</span><br></pre></td></tr></table></figure>
+<h2 id="变量定义伪指令"><a class="markdownIt-Anchor" href="#变量定义伪指令">#</a> 变量定义伪指令</h2>
+<p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名 伪指令 初值表</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>变量名：用户自定义的标识符，表示初值表首元素的<strong>逻辑地址</strong>。变量名可以没有，在此情况下直接为初值表分配空间，无符号地址</p>
+</li>
+<li>
+<p>初值表：用 &quot;,&quot; 分隔的参数，主要由<strong>数值常数、表达式、&quot;?&quot;，&quot;DUP&quot; 组成</strong></p>
+<ul>
+<li>&quot;?&quot; 表示初值不确定</li>
+<li>重复初值可以用 DUP 进行定义</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">重复次数 dup(重复参数)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>变量定义伪指令有 <code>DB、DW、DD、DF、DQ、DT</code></li>
+</ol>
+<h3 id="定义字节单元伪指令db"><a class="markdownIt-Anchor" href="#定义字节单元伪指令db">#</a> 定义字节单元伪指令 DB</h3>
+<p>用于分配一字节或多<strong>字节</strong>单元，初值表中的每个数据一定是字节量 (Byte)，可以是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><mn>255</mn></mrow><annotation encoding="application/x-tex">0\sim 255</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">5</span></span></span></span> 的无符号数，或<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>128</mn><mo>∼</mo><mo>+</mo><mn>127</mn></mrow><annotation encoding="application/x-tex">-128\sim +127</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">1</span><span class="mord">2</span><span class="mord">7</span></span></span></span> 带符号数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">x	db &#x27;A&#x27;, -5</span><br><span class="line">	db 2dup(100), ?</span><br><span class="line">y	db &#x27;ABC&#x27;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">存储单元</th>
+<th style="text-align:center">偏移地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">43h©</td>
+<td style="text-align:center">0007H</td>
+</tr>
+<tr>
+<td style="text-align:center">42h(B)</td>
+<td style="text-align:center">0006H</td>
+</tr>
+<tr>
+<td style="text-align:center">41h(A)</td>
+<td style="text-align:center">0005H</td>
+</tr>
+<tr>
+<td style="text-align:center">——(?)</td>
+<td style="text-align:center">0004H</td>
+</tr>
+<tr>
+<td style="text-align:center">64h(100)</td>
+<td style="text-align:center">0003H</td>
+</tr>
+<tr>
+<td style="text-align:center">64h(100)</td>
+<td style="text-align:center">0002H</td>
+</tr>
+<tr>
+<td style="text-align:center">fbh(-5)</td>
+<td style="text-align:center">0001H</td>
+</tr>
+<tr>
+<td style="text-align:center">61h(a)</td>
+<td style="text-align:center">0000H</td>
+</tr>
+</tbody>
+</table>
+<h3 id="定义字单元伪指令dw"><a class="markdownIt-Anchor" href="#定义字单元伪指令dw">#</a> 定义字单元伪指令 DW</h3>
+<p>用于分配一个或多个<strong>字</strong>单元，初值表中的每个数据一定是字量 (Word)，一个字单元可用于存放任何<strong> 16 位</strong>数据，如：一个段地址、一个偏移地址、两个字符、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><mn>65535</mn></mrow><annotation encoding="application/x-tex">0\sim 65535</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">5</span><span class="mord">5</span><span class="mord">3</span><span class="mord">5</span></span></span></span> 之间的无符号数、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>32768</mn><mo>∼</mo><mo>+</mo><mn>32767</mn></mrow><annotation encoding="application/x-tex">-32768\sim +32767</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">3</span><span class="mord">2</span><span class="mord">7</span><span class="mord">6</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">3</span><span class="mord">2</span><span class="mord">7</span><span class="mord">6</span><span class="mord">7</span></span></span></span> 之间的带符号数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wnum	equ 5678h	;定义wnum为常量</span><br><span class="line">count	dw 20h		;定义count为变量</span><br><span class="line">					;假设count在的数据段的偏移地址是10h</span><br><span class="line"></span><br><span class="line">mov	ax, [bx + si + wnum]		;mov	ax, [bx + si + 5678h]</span><br><span class="line">mov	ax, count					;mov	ax, [0010h]</span><br><span class="line">mov	ax, [si + count]			;mov	ax, [si + 10h]</span><br><span class="line">								;mov	ax, count[si]</span><br><span class="line">lea	bx, count					;lea	bx, [0010h]</span><br><span class="line">								;mov	bx, 0010h</span><br><span class="line">mov	bx, offset count			;mov 	bx, 0010h</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><strong>变量实质表达的是主存地址</strong></p>
+</li>
+<li>
+<p><strong>仅使用变量名或者加个常量是直接寻址</strong></p>
+</li>
+<li>
+<p><strong>再加一个寄存器是寄存器相对寻址</strong></p>
+</li>
+<li>
+<p><strong>加两个寄存器是基址变址相对寻址</strong></p>
+</li>
+</ul>
+<h3 id="定义双字单元伪指令dd"><a class="markdownIt-Anchor" href="#定义双字单元伪指令dd">#</a> 定义双字单元伪指令 DD</h3>
+<p>用于分配一个或多个<strong>双字</strong>单元，初值表中的每个数据一定是一个<strong> 32 位</strong>的双字量</p>
+<p>可以用来表达 16 位段地址和 16 位偏移地址的远指针</p>
+<h3 id="其他数据定义伪指令dfdqdt"><a class="markdownIt-Anchor" href="#其他数据定义伪指令dfdqdt">#</a> 其他数据定义伪指令 DF&amp;DQ&amp;DT</h3>
+<p>定义 3 字伪指令 DF：为一个或多个 6 字节变量分配空间及初始化</p>
+<p>定义 4 字伪指令 DQ：为一个或多个 8 字节变量分配空间及初始化</p>
+<p>定义 10 字节伪指令 DT：为一个或多个 10 字节变量分配空间及初始化</p>
+<p>** 练习：** 定义一个缓冲区，包含 33H、34H、35H、36H 四个字节字符，把这四个数据复制 20 遍，存入接着的缓冲区，最后显示出复制结果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">source	db	33j, 34h, 35h, 36h</span><br><span class="line">target	db	80dp(?)				;紧接着分配80个空间</span><br><span class="line"></span><br><span class="line">;分别指向源和目的的偏移地址首部</span><br><span class="line">mov	si, offset source</span><br><span class="line">mov	di, offset target</span><br><span class="line"></span><br><span class="line">mov cx 80</span><br><span class="line">again1:	mov	al. [si]</span><br><span class="line">		mov	[di], al</span><br><span class="line">		inc	si</span><br><span class="line">		int	di</span><br><span class="line">		loop again1</span><br><span class="line">mov	di, 0</span><br><span class="line">again2:	mov dl, target[di]</span><br><span class="line">        mov	ah, 2</span><br><span class="line">        int	21h</span><br><span class="line">        inc	di</span><br><span class="line">        cmp	di, 80</span><br><span class="line">        jb	again2</span><br></pre></td></tr></table></figure>
+<h3 id="定位伪指针orgevenalign"><a class="markdownIt-Anchor" href="#定位伪指针orgevenalign">#</a> 定位伪指针 ORG&amp;EVEN&amp;ALIGN</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$表示当前的偏移地址</span><br><span class="line"></span><br><span class="line">```assembly</span><br><span class="line">;在偏移地址100H单元开始定义</span><br><span class="line">dw 1, 2, $ + 4, $ + 4</span><br><span class="line">;在104H单元的值为108H，106H单元的值为10AH</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```ALIGN n```：使它后面的数据或指令从n的整数倍开始，如果不是就加上$1\sim n-1$中的一个数</span><br><span class="line"></span><br><span class="line">n是2的乘方，且小于所在段的定位属性值</span><br><span class="line"></span><br><span class="line">## 变量和标号的属性</span><br><span class="line"></span><br><span class="line">### 地址操作符</span><br><span class="line"></span><br><span class="line">```[]```表示将括起来的表达式作为存储器地址指针</span><br><span class="line"></span><br><span class="line">```$```表示当前偏移地址</span><br><span class="line"></span><br><span class="line">```:```表示采用指定的段地址寄存器</span><br><span class="line"></span><br><span class="line">```offset```返回偏移地址</span><br><span class="line"></span><br><span class="line">```seg```返回段地址</span><br><span class="line"></span><br><span class="line">### 类型操作符</span><br><span class="line"></span><br><span class="line">1. ```ptr```</span><br><span class="line"></span><br><span class="line">   ```类型名 ptr 名字/标号```</span><br><span class="line"></span><br><span class="line">2. ```this```</span><br><span class="line"></span><br><span class="line">   创建时采用当前地址，但为指定类型的操作数</span><br><span class="line"></span><br><span class="line">   ```assembly</span><br><span class="line">   ;b_var 和 w_var 地址相同</span><br><span class="line">   b_var equ this byte ;按字节访问b_var</span><br><span class="line">   w_var dw 10 dup(0)`;按字访问w_var</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>
+<p><code>type 名字/标号</code></p>
+<p>返回一个字量数值，表明名字或标号的类型；对字节、字、双字变量依次返回 1，2，4</p>
+</li>
+</ol>
+
+      <div class="tags">
+          <a href="/tags/%E6%B1%87%E7%BC%96/" rel="tag"><i class="ic i-tag"></i> 汇编</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 01:49:48" itemprop="dateModified" datetime="2025-03-18T01:49:48+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/12/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F/" title="汇编语言程序格式">http://www.luckycyyyy.top/2024/12/03/计算机科学/汇编/汇编--汇编语言程序格式/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/12/03/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="波动光学">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 物理</span>
+  <h3>波动光学</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/12/04/algorithm/%E7%AE%97%E6%B3%95OJ/Nowcoder/NOWCODER-10-14-16/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="NOWCODER_10_14_16">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Nowcoder</span>
+  <h3>NOWCODER_10_14_16</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text"> 汇编语言程序开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%AF%AD%E5%8F%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text"> 汇编语言程序的语句格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%80%A7%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 硬指令 &amp; 执行性语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E%E6%80%A7%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 伪指令 &amp; 说明性语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">1.1.3.</span> <span class="toc-text"> 标识符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6"><span class="toc-number">1.2.</span> <span class="toc-text"> 汇编语言源程序框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8C%96%E6%AE%B5%E5%AE%9A%E4%B9%89%E7%9A%84%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 简化段定义的源程序框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E6%AE%B5%E5%AE%9A%E4%B9%89%E7%9A%84%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%A1%86%E6%9E%B6"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 完整段定义的源程序框架</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text"> 汇编语言程序的开发过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dos%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E8%B0%83%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text"> DOS 系统功能调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A501h"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 字符输入 (01H)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA02h"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 字符输出 (02H)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%85%A50ah"><span class="toc-number">1.4.3.</span> <span class="toc-text"> 字符串输入 (0AH)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%87%BA09h"><span class="toc-number">1.4.4.</span> <span class="toc-text"> 字符串输出 (09H)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E9%94%AE%E5%88%A4%E6%96%AD0bh"><span class="toc-number">1.4.5.</span> <span class="toc-text"> 按键判断 (0BH)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%8F%98%E9%87%8F%E6%A0%87%E5%8F%B7"><span class="toc-number">2.</span> <span class="toc-text"> 参数 &amp; 变量 &amp; 标号</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text"> 数值型参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 常数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 数值表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E4%BC%AA%E6%8C%87%E4%BB%A4"><span class="toc-number">2.2.</span> <span class="toc-text"> 变量定义伪指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%AD%97%E8%8A%82%E5%8D%95%E5%85%83%E4%BC%AA%E6%8C%87%E4%BB%A4db"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 定义字节单元伪指令 DB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%AD%97%E5%8D%95%E5%85%83%E4%BC%AA%E6%8C%87%E4%BB%A4dw"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 定义字单元伪指令 DW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%8F%8C%E5%AD%97%E5%8D%95%E5%85%83%E4%BC%AA%E6%8C%87%E4%BB%A4dd"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 定义双字单元伪指令 DD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E4%BC%AA%E6%8C%87%E4%BB%A4dfdqdt"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 其他数据定义伪指令 DF&amp;DQ&amp;DT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E4%BC%AA%E6%8C%87%E9%92%88orgevenalign"><span class="toc-number">2.2.5.</span> <span class="toc-text"> 定位伪指针 ORG&amp;EVEN&amp;ALIGN</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2024/12/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F/" rel="bookmark" title="汇编语言程序格式">汇编语言程序格式</a></li><li><a href="/2024/12/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--8086%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="8086指令系统">8086指令系统</a></li><li><a href="/2024/12/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96--%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="bookmark" title="汇编语言基础知识">汇编语言基础知识</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">89</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">28</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">44</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/12/03/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/12/04/algorithm/%E7%AE%97%E6%B3%95OJ/Nowcoder/NOWCODER-10-14-16/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">518k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/12/03/计算机科学/汇编/汇编--汇编语言程序格式/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

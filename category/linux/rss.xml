@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>眨眼的小星玥 • Posts by &#34;linux&#34; category</title>
+        <link>http://www.luckycyyyy.top</link>
+        <description>小星玥，要努力学习呀！</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 30 Jul 2024 15:06:41 +0800</pubDate>
+        <lastBuildDate>Tue, 30 Jul 2024 15:06:41 +0800</lastBuildDate>
+        <category>Linux</category>
+        <category>python</category>
+        <category>数字电路与逻辑设计</category>
+        <category>半导体与激光</category>
+        <category>原子核物理</category>
+        <category>振动与波动</category>
+        <category>量子物理</category>
+        <category>实验</category>
+        <category>波动光学</category>
+        <category>稳恒磁场</category>
+        <category>无穷级数</category>
+        <category>静电场</category>
+        <category>物理实验</category>
+        <category>概率论</category>
+        <category>离散数学上</category>
+        <category>AC自动机</category>
+        <category>Dp</category>
+        <category>algorithm</category>
+        <category>sstream</category>
+        <category>memset</category>
+        <category>数据库</category>
+        <category>前缀和</category>
+        <category>差分</category>
+        <category>二分</category>
+        <category>电磁感应</category>
+        <category>并查集</category>
+        <category>数论</category>
+        <category>图论</category>
+        <category>贪心</category>
+        <category>数据结构</category>
+        <category>线段树</category>
+        <category>级数</category>
+        <category>常微分方程</category>
+        <category>常用定理</category>
+        <category>微分中值定理</category>
+        <category>公式</category>
+        <category>极限</category>
+        <category>积分</category>
+        <category>汇编</category>
+        <category>计网</category>
+        <category>DP</category>
+        <category>Codeforces</category>
+        <category>Nowcoder</category>
+        <category>CSP</category>
+        <item>
+            <guid isPermalink="true">http://www.luckycyyyy.top/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/</guid>
+            <title>Linux基本指令</title>
+            <link>http://www.luckycyyyy.top/2024/07/30/Linux/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/</link>
+            <category>Linux</category>
+            <pubDate>Tue, 30 Jul 2024 15:06:41 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;基本知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本知识&#34;&gt;#&lt;/a&gt; 基本知识&lt;/h1&gt;
+&lt;p&gt;路径分隔符：windows:\ 	linux:/&lt;/p&gt;
+&lt;p&gt;根目录：/&lt;/p&gt;
+&lt;p&gt;./：表示当前目录下&lt;/p&gt;
+&lt;p&gt;上级目录：… 可以返回当前目录的上级目录&lt;/p&gt;
+&lt;p&gt;清屏：clear&lt;/p&gt;
+&lt;p&gt;linux 系统中磁盘上的文件和目录构成一颗目录树，通过 tree 指令可以查看对应的 “目录树”&lt;/p&gt;
+&lt;p&gt;安装 tree： &lt;code&gt;yum -y install tree(centos版本)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;通配符 *：表示任意内容，eg：file&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;*&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text *&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.75em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 表示以 file 开头的任意内容；rm -rf * 删除当前目录的所有内容&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkt04wzf5j30li05oq4g.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;热键：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tab：连按两次 Tab 可以对命令 / 路径进行补齐&lt;/li&gt;
+&lt;li&gt;Ctrl + C：失控的状态，按 Ctrl+C 直接终止&lt;/li&gt;
+&lt;li&gt;Ctrl + R：查找功能，找到之前输入过的指令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;ls指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls指令&#34;&gt;#&lt;/a&gt; ls 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;显示当前目录下的指定文件或者目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;常用选项&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;选项可以拼接在一起，顺序随意&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-l：显示文件的详细信息（等价于 ll）&lt;/p&gt;
+&lt;p&gt;-a：列出目录下的所有文件（包括以。开头的隐藏文件）&lt;/p&gt;
+&lt;p&gt;-d：只显示目录本身，而不是显示目录里的内容&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzksxy2p6qj30ij0pwdnc.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;+ 指定路径：显示指定路径下的文件和目录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkszkabw6j30ki0ff78q.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;pwd指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pwd指令&#34;&gt;#&lt;/a&gt; pwd 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看当前目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;cd指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cd指令&#34;&gt;#&lt;/a&gt; cd 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;改变当前路径&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;cd …：返回上层路径&lt;/p&gt;
+&lt;p&gt;cd -：跳转到最近的上一次的路径&lt;/p&gt;
+&lt;p&gt;cd ~：回到自己的家目录下（root 用户首次登录，所处的路径，叫做 root 的家目录 /root；普通用户首次登录，所处的路径，叫做普通用户的家目录 /home/cyy）&lt;/p&gt;
+&lt;h1 id=&#34;touch指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#touch指令&#34;&gt;#&lt;/a&gt; touch 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创建普通文件，一次可以创建多个文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;mkdir指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mkdir指令&#34;&gt;#&lt;/a&gt; mkdir 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创建目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;常用选项&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;-p：一次可建多个目录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzkt1b16crj30ll05pjs1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;rmdir指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rmdir指令&#34;&gt;#&lt;/a&gt; rmdir 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删除空目录，非空不能删&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzkt11jzlij30hd0algmu.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;rm指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rm指令&#34;&gt;#&lt;/a&gt; rm 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rm -r 可以递归式删除非空目录&lt;/p&gt;
+&lt;p&gt;rm -rf 递归并强制删除目录，即没有询问&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;man指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#man指令&#34;&gt;#&lt;/a&gt; man 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;各种指令的用法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果未安装则输入指令： &lt;code&gt;yum install -y man-pages&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;nano指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nano指令&#34;&gt;#&lt;/a&gt; nano 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相当于记事本，可以快速打开一个文件并且在里面添加内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果未安装则输入： &lt;code&gt;yum install -y nano&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;cp指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cp指令&#34;&gt;#&lt;/a&gt; cp 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cp src [文件、目录] dst [路径、文件]&lt;/p&gt;
+&lt;p&gt;将文件进行拷贝；如果想拷贝目录，需要加 - r 选项&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;cp ../&lt;/code&gt; ：拷贝到上级目录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkt0lyjaaj30r30j90uu.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;cat指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cat指令&#34;&gt;#&lt;/a&gt; cat 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看目标文件的内容，默认从键盘读入数据&lt;/p&gt;
+&lt;p&gt;查看大文件会刷屏&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;基本选项&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;-n：给每行前面加上行号&lt;/p&gt;
+&lt;p&gt;-s：将多个空行合并为一个空行&lt;/p&gt;
+&lt;p&gt;-b：只给非空行编号&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;&lt;/code&gt; ：表示输入重定向，本来应该从键盘读入数据，现在从指定文件中读入数据&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cat &amp;lt; test.txt &lt;/code&gt; ：从 test.txt 读入数据&lt;/p&gt;
+&lt;h1 id=&#34;tac指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tac指令&#34;&gt;#&lt;/a&gt; tac 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;逆序打印文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;more指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#more指令&#34;&gt;#&lt;/a&gt; more 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只会显示一屏的内容，按回车下翻，不能上翻&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;q：退出&lt;/p&gt;
+&lt;h1 id=&#34;less指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#less指令&#34;&gt;#&lt;/a&gt; less 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只会显示一屏的内容，输入 q 退出，按上下箭头进行向上向下翻&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;/：搜索功能，按 n 往后翻，N 往前翻&lt;/p&gt;
+&lt;p&gt;q：退出&lt;/p&gt;
+&lt;h1 id=&#34;head-tail-指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#head-tail-指令&#34;&gt;#&lt;/a&gt; head &amp;amp;&amp;amp; tail 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看文件的开头结尾&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-n：后面跟数字，要看几行就输几&lt;/p&gt;
+&lt;p&gt;要看第 5000-5020 行，怎么操作？&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkt0a7nj4j30mp0fygnh.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;管道 |：可以进行连续操作&lt;/p&gt;
+&lt;p&gt;比如解决上述问题： head -5020 log.txt | tail -21&lt;/p&gt;
+&lt;h1 id=&#34;mv指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mv指令&#34;&gt;#&lt;/a&gt; mv 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mv src [文件、目录] dst [路径、文件]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;剪切文件或者目录&lt;/li&gt;
+&lt;li&gt;重命名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;echo指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#echo指令&#34;&gt;#&lt;/a&gt; echo 指令&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&lt;/code&gt; ：表示输出重定向，将本来要输出到显示器文件的内容输出到指定文件；如果指定文件不存在就新建一个&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输出重定向，每次都从头开始，清空源文件的所有内容，再进行写入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;test.txt&lt;/code&gt; ：可以实现新建文件 / 将文件内容清空&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo &amp;quot;helloword&amp;quot;&amp;gt;test.txt&lt;/code&gt;  将要输出的字符串内容，写到文件中&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; ：追加重定向&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每次在文件后面追加内容，不清空&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;时间相关的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#时间相关的指令&#34;&gt;#&lt;/a&gt; 时间相关的指令&lt;/h1&gt;
+&lt;p&gt;date： &lt;code&gt;date +%Y-%m-%d\ %H:%M:%S&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看时间戳为 0 时的时间： &lt;code&gt;date +%Y-%m-%d\ %H:%M:%S -d @0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;cal：显示任意年份的日历&lt;/p&gt;
+&lt;h1 id=&#34;find指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#find指令&#34;&gt;#&lt;/a&gt; find 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;find + 路径 + -name +  文件名，把所有该文件名的文件显示出来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-o：表示或者，可以同时查找多个文件，如： &lt;code&gt;find /home/cy -name test1.c -o -name test2.c&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;which指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which指令&#34;&gt;#&lt;/a&gt; which 指令&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用来在 linux 系统中查找指定的指令&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://www.luckycyyyy.top/2024/07/29/Linux/Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+            <title>Linux环境配置</title>
+            <link>http://www.luckycyyyy.top/2024/07/29/Linux/Linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+            <category>Linux</category>
+            <pubDate>Mon, 29 Jul 2024 14:26:42 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;连接服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接服务器&#34;&gt;#&lt;/a&gt; 连接服务器&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载 Xshell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;购买云服务器，保留公网 ip（注意！！！是 linux 的服务器！！不是 windows！！！）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;xshell 链接服务器：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODQ3MTQ3L2FydGljbGUvZGV0YWlscy8xMDQ3Mzc3NjM=&#34;&gt;详细步骤见此篇博客&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建新用户 + 给新用户设置密码 + 删除用户： &lt;code&gt;adduser cy1&lt;/code&gt; ，  &lt;code&gt;passwd cy1&lt;/code&gt; ， &lt;code&gt;userdel -r cy1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzkt0w88y9j30li05oq4g.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

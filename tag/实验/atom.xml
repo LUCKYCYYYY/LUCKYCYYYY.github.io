@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://www.luckycyyyy.top</id>
+    <title>眨眼的小星玥 • Posts by &#34;实验&#34; tag</title>
+    <link href="http://www.luckycyyyy.top" />
+    <updated>2025-01-04T06:11:08.000Z</updated>
+    <category term="Linux" />
+    <category term="python" />
+    <category term="数字电路与逻辑设计" />
+    <category term="半导体与激光" />
+    <category term="原子核物理" />
+    <category term="振动与波动" />
+    <category term="量子物理" />
+    <category term="实验" />
+    <category term="波动光学" />
+    <category term="稳恒磁场" />
+    <category term="无穷级数" />
+    <category term="静电场" />
+    <category term="物理实验" />
+    <category term="概率论" />
+    <category term="离散数学上" />
+    <category term="AC自动机" />
+    <category term="Dp" />
+    <category term="algorithm" />
+    <category term="sstream" />
+    <category term="memset" />
+    <category term="数据库" />
+    <category term="前缀和" />
+    <category term="差分" />
+    <category term="二分" />
+    <category term="电磁感应" />
+    <category term="并查集" />
+    <category term="数论" />
+    <category term="图论" />
+    <category term="贪心" />
+    <category term="数据结构" />
+    <category term="线段树" />
+    <category term="级数" />
+    <category term="常微分方程" />
+    <category term="常用定理" />
+    <category term="微分中值定理" />
+    <category term="公式" />
+    <category term="极限" />
+    <category term="积分" />
+    <category term="汇编" />
+    <category term="计网" />
+    <category term="DP" />
+    <category term="Codeforces" />
+    <category term="Nowcoder" />
+    <category term="CSP" />
+    <entry>
+        <id>http://www.luckycyyyy.top/2025/01/04/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/</id>
+        <title>物理演示实验</title>
+        <link rel="alternate" href="http://www.luckycyyyy.top/2025/01/04/%E7%89%A9%E7%90%86/%E7%89%A9%E7%90%86--%E7%89%A9%E7%90%86%E6%BC%94%E7%A4%BA%E5%AE%9E%E9%AA%8C/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;电磁学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#电磁学&#34;&gt;#&lt;/a&gt; 电磁学&lt;/h1&gt;
+&lt;h2 id=&#34;巴克豪森效应&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#巴克豪森效应&#34;&gt;#&lt;/a&gt; 巴克豪森效应&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;原理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;巴克豪森效应产生的原因是&lt;strong&gt;铁磁材料&lt;/strong&gt;在&lt;strong&gt;加磁场磁化&lt;/strong&gt;过程中，&lt;strong&gt;磁畴发生突然长大&lt;/strong&gt;的现象。具体来说，铁磁材料在未磁化状态下，其内部存在许多小的磁畴，当铁磁材料受到外部磁场的作用时，磁畴会发生排列，使得磁矩方向与外部磁场方向趋于一致。&lt;/p&gt;
+&lt;p&gt;在铁磁材料加磁场磁化的过程中，随着磁场的增强，磁畴会逐渐长大。磁畴的长大过程是&lt;strong&gt;不可逆的&lt;/strong&gt;，即磁畴&lt;strong&gt;不会因为磁场的减小而回到原来的状态&lt;/strong&gt;。在磁畴长大的过程中，磁畴的取向和排列方式会发生突然的改变，导致磁化曲线出现剧烈的变化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;现象：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;共有三个金属片，分别是坡莫合金、铜片、铝片，其中只有坡莫合金具有磁性可以被磁铁吸附&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;铁磁材料&lt;/strong&gt;：在磁铁分别靠近装有这三个材料的装置时，只有坡莫合金会发出 “沙沙” 的声音，而另两个不会。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不可逆&lt;/strong&gt;：而对于坡莫合金，在磁铁连续靠近两次装置时，第一次发出 “沙沙” 声，第二次不发出。&lt;/p&gt;
+&lt;h2 id=&#34;铜管式楞次定律演示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#铜管式楞次定律演示&#34;&gt;#&lt;/a&gt; 铜管式楞次定律演示&lt;/h2&gt;
+&lt;p&gt;磁铁周围有磁场，进入金属管中后，金属管中的某些横截面就有了&lt;strong&gt;磁通量&lt;/strong&gt;，在磁铁下落的过程中，磁铁下方金属管的横截面的磁通量要增加，磁铁上面的金属管的截面中的磁通量会减小，上下横截面中的磁通量只要发生变化，就会&lt;strong&gt;产生感应电流&lt;/strong&gt;，这些感应电流的磁场总是&lt;strong&gt;阻碍&lt;/strong&gt;永久磁铁的磁场的变化，即都会阻碍磁铁的运动。用楞次定律判断的结果是：“来拒去留”。&lt;/p&gt;
+&lt;p&gt;磁铁的&lt;strong&gt;下落速度越快&lt;/strong&gt;，金属管对其&lt;strong&gt;阻力越大&lt;/strong&gt;，最后当金属管中的磁场对磁铁的阻力等于磁铁的重力时，磁铁不能再加速，此后在金属管内做匀速直线运动。&lt;/p&gt;
+&lt;h2 id=&#34;铝管楞次定律演示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#铝管楞次定律演示&#34;&gt;#&lt;/a&gt; 铝管楞次定律演示&lt;/h2&gt;
+&lt;p&gt;现象与铜管式楞次定律演示一致，但是因为铜的电导率比铝更高，电阻率也更低，因此铜管中产生的涡电流会更强，相应地，产生的反向磁场也会更强，磁铁的减速效果会更显著。&lt;/p&gt;
+&lt;h2 id=&#34;自感系数和mu的关系&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自感系数和mu的关系&#34;&gt;#&lt;/a&gt; 自感系数和&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\mu&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.625em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;μ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的关系&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;高磁导率&lt;/strong&gt;材料（&lt;strong&gt;铁&lt;/strong&gt;）能极大地增强螺线管的磁场，进而增加自感系数&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;低磁导率&lt;/strong&gt;材料（&lt;strong&gt;铝，铜&lt;/strong&gt;）则几乎不影响或仅微弱影响自感系数&lt;/p&gt;
+&lt;p&gt;在电路稳定之后，向螺线管中插入&lt;strong&gt;高磁导率&lt;/strong&gt;材料，螺线管的自感系数增加，此时电感器（螺线管）会产生一个&lt;strong&gt;反向电动势&lt;/strong&gt;，试图抵抗电流的变化，这会导致&lt;strong&gt;电流暂时出现下降&lt;/strong&gt;，灯泡的亮度也会暂时减弱。&lt;/p&gt;
+&lt;p&gt;如果插入的是&lt;strong&gt;非磁性金属&lt;/strong&gt;（如铜或铝），由于这些材料的磁导率较低，它们对自感系数的影响较小。插入后，螺线管的自感变化不大，因此电流的变化也会相对较小，灯泡的亮度&lt;strong&gt;变化也不显著&lt;/strong&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;振动与波&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#振动与波&#34;&gt;#&lt;/a&gt; 振动与波&lt;/h1&gt;
+&lt;h2 id=&#34;音叉演示拍现象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#音叉演示拍现象&#34;&gt;#&lt;/a&gt; 音叉演示拍现象&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择两个完全相同的音叉&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将两音叉平行放置，两个共鸣箱箱口朝向观众。稍微移动音叉 A 臂上的金属套，使两个音叉解谐。敲击音叉 A 并敲击音叉 B，可听到忽强忽弱的嗡嗡声，这种强弱变化的声音就是拍。强弱变化的频率叫做拍频。若用手握住一音叉使其停止振动，则听不到声音的强弱变化，而只听到另一音叉所发出的匀强声响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再略微移动金属套的位置，使得两音叉的固有频率相差略大，则敲击两个音叉后听到的拍频亦增高，由缓慢深沉的拍音变为拍频较高的清晰的颤音。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当二音叉频率相差较大时，则无明显的拍音，可见拍是两振动频率相差不太大时合成的结果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;金属套的影响&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;质量影响&lt;/strong&gt;：添加金属套后，音叉的质量增加，物体的质量和弹性决定了其振动的频率，质量越大，振动频率通常会越低。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;位置影响：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果金属套靠近音叉的&lt;strong&gt;支点&lt;/strong&gt;（音叉的底部），它对音叉的频率影响较&lt;strong&gt;大&lt;/strong&gt;，因为它会显著改变音叉的整体振动模式，增加的质量会减少音叉的自然频率。&lt;/li&gt;
+&lt;li&gt;如果金属套靠近音叉的&lt;strong&gt;自由端&lt;/strong&gt;（音叉的尖端），影响则较&lt;strong&gt;小&lt;/strong&gt;。因为音叉的自由端是振动最剧烈的地方，金属套的质量对这个部分的振动影响相对较小。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;激光垂直振动合成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#激光垂直振动合成&#34;&gt;#&lt;/a&gt; 激光垂直振动合成&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;开启激光电源，激光束经两&lt;strong&gt;相互垂直的平面镜&lt;/strong&gt;反射后投射到投影屏上&lt;/li&gt;
+&lt;li&gt;分别轻轻拨动两相互垂直振动的振动条，在投影屏上可观察到不同方向的振动&lt;/li&gt;
+&lt;li&gt;同时拨动两相互垂直振动的振动条，在投影屏上可观察到合振动的运动轨迹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当两个激光源的频率相差很小时，它们的干涉会形成&lt;strong&gt;周期性&lt;/strong&gt;的强度变化模式，这种变化是由于两束激光的&lt;strong&gt;相位差&lt;/strong&gt;随时间变化所引起的。具体地：直线&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\to&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.36687em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;→&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 椭圆（左旋）&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\to&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.36687em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;→&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 正椭圆&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\to&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.36687em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;→&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 椭圆（右旋）&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo&gt;→&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\to&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.36687em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;→&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 直线&lt;/p&gt;
+&lt;p&gt;光显示为&lt;strong&gt;断续&lt;/strong&gt;而不是连续：&lt;/p&gt;
+&lt;p&gt;两个振动源的频率差导致的拍频效应，会引起光的振幅周期性地增强和减弱。当光强达到最低点时，实验中观察到的光可能会暂时消失或变暗，而在光强达到最大值时，光又恢复正常。&lt;/p&gt;
+&lt;h2 id=&#34;弦驻波&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#弦驻波&#34;&gt;#&lt;/a&gt; 弦驻波&lt;/h2&gt;
+&lt;p&gt;准备了一根&lt;strong&gt;长且绷紧&lt;/strong&gt;的弦、一个电子频率计和一个振动源。首先，我们用钳子夹住一端的弦并将其固定，然后调整另一端的张力，使弦保持绷紧状态。接下来，我们将电子频率计连接到振动源，以便能够准确地测量频率。&lt;/p&gt;
+&lt;p&gt;将振动源的频率调整到一个较低的值，然后慢慢&lt;strong&gt;增加频率&lt;/strong&gt;，直到产生明显的高频振动。当振动源频率达到一定值时，我们可以观察到弦上形成了第一个驻波。驻波由节点和腹部组成，我们可以清楚地看到弦上产生了一系列等间距的节点和腹部。&lt;/p&gt;
+&lt;h1 id=&#34;光学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#光学&#34;&gt;#&lt;/a&gt; 光学&lt;/h1&gt;
+&lt;h2 id=&#34;方解石的双折射&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方解石的双折射&#34;&gt;#&lt;/a&gt; 方解石的双折射&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWRUNDExVjdpaC8/c3BtX2lkX2Zyb209MzMzLjMzNy5zZWFyY2gtY2FyZC5hbGwuY2xpY2smYW1wO3ZkX3NvdXJjZT1lZjVlNTEyNzgxOTQ2MGUyNjE4Mjk4MjkzM2NmYTIxZQ==&#34;&gt; 晶体的双折射现象&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;小鸭子&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小鸭子&#34;&gt;#&lt;/a&gt; 小鸭子&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVdyNHkxVTd3cD9zcG1faWRfZnJvbT0zMzMuNzg4LnJlY29tbWVuZF9tb3JlX3ZpZGVvLi0xJmFtcDt2ZF9zb3VyY2U9ZWY1ZTUxMjc4MTk0NjBlMjYxODI5ODI5MzNjZmEyMWU=&#34;&gt;光的偏振&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;显色偏振的基本原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;偏振光&lt;/strong&gt;： 偏振光是指光波的振动方向仅限于某一平面内的光。自然光是由多个方向的光波组成的，而通过偏振片或特定的光学材料，光的某些方向被过滤掉，剩下的光波就是偏振光。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;干涉效应&lt;/strong&gt;： 在某些薄膜（如金属氧化物、光学薄膜等）上，偏振光入射到表面时，会发生反射和折射。光在这些材料中传播时，会发生干涉现象。当不同的光波在传播过程中相位差异适当时，反射光的强度会发生变化，形成明暗交替的效果，从而产生颜色。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;色彩形成&lt;/strong&gt;： 由于偏振光的干涉效应，反射回来的光在通过材料的不同厚度或不同折射率时，会产生不同的相位差。这种相位差导致了某些波长（即颜色）的光波增强，而另一些波长的光波则被削弱。最终，这种增强和削弱的效果会组合在一起，形成一种特定的颜色。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;材料特性&lt;/strong&gt;： 不同的材料、不同的表面处理（例如金属表面的氧化层或塑料薄膜）会产生不同的颜色变化，因为它们的折射率、膜厚度和表面结构等都会影响到光波的干涉效应。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="实验" />
+        <updated>2025-01-04T06:11:08.000Z</updated>
+    </entry>
+</feed>
