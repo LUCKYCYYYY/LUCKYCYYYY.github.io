@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
         <title>眨眼的小星玥 • Posts by &#34;memset&#34; tag</title>
@@ -7,70 +7,118 @@
         <language>zh-CN</language>
         <pubDate>Tue, 18 Mar 2025 01:10:54 +0800</pubDate>
         <lastBuildDate>Tue, 18 Mar 2025 01:10:54 +0800</lastBuildDate>
+        
         <category>Linux</category>
-        <category>python</category>
+        
         <category>半导体与激光</category>
+        
         <category>原子核物理</category>
-        <category>振动与波动</category>
+        
         <category>量子物理</category>
-        <category>实验</category>
-        <category>稳恒磁场</category>
-        <category>电磁感应</category>
-        <category>无穷级数</category>
+        
+        <category>振动与波动</category>
+        
         <category>波动光学</category>
+        
+        <category>实验</category>
+        
+        <category>电磁感应</category>
+        
+        <category>python</category>
+        
+        <category>稳恒磁场</category>
+        
         <category>静电场</category>
+        
         <category>物理实验</category>
-        <category>概率论</category>
-        <category>离散数学上</category>
+        
         <category>AC自动机</category>
+        
         <category>Dp</category>
+        
         <category>algorithm</category>
+        
         <category>memset</category>
-        <category>二分</category>
+        
         <category>sstream</category>
+        
+        <category>二分</category>
+        
         <category>前缀和</category>
+        
         <category>差分</category>
+        
+        <category>无穷级数</category>
+        
         <category>图论</category>
-        <category>线段树</category>
-        <category>贪心</category>
-        <category>数论</category>
-        <category>数据结构</category>
+        
         <category>并查集</category>
-        <category>汇编</category>
-        <category>计网</category>
-        <category>数据库</category>
+        
+        <category>线段树</category>
+        
+        <category>数论</category>
+        
+        <category>贪心</category>
+        
+        <category>概率论</category>
+        
+        <category>离散数学上</category>
+        
         <category>级数</category>
+        
         <category>微分中值定理</category>
+        
         <category>公式</category>
-        <category>常用定理</category>
+        
         <category>常微分方程</category>
+        
         <category>极限</category>
+        
+        <category>常用定理</category>
+        
         <category>积分</category>
-        <category>DP</category>
-        <category>Nowcoder</category>
+        
+        <category>汇编</category>
+        
+        <category>数据结构</category>
+        
+        <category>计网</category>
+        
+        <category>数据库</category>
+        
         <category>Codeforces</category>
+        
+        <category>DP</category>
+        
+        <category>Nowcoder</category>
+        
         <category>CSP</category>
+        
+        
         <item>
             <guid isPermalink="true">http://www.luckycyyyy.top/2025/03/18/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--memset%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>memset的使用</title>
             <link>http://www.luckycyyyy.top/2025/03/18/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--memset%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            
             <category>memset</category>
+            
             <pubDate>Tue, 18 Mar 2025 01:10:54 +0800</pubDate>
-            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;memset的赋值规则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#memset的赋值规则&#34;&gt;#&lt;/a&gt; memset 的赋值规则&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;memset 赋值时，是按字节赋值，是将参数转换成二进制之后填入一个字节&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;eg: memset(g, 100, sizeof g);&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;100 转换成二进制是 0110 0100，而 int 是 4 个字节，&lt;/p&gt;
-&lt;p&gt;所以一个 int 被赋值为 0110 0100, 0110 0100, 0110 0100, 0110 0100，&lt;/p&gt;
-&lt;p&gt;对应十进制是 1684300900&lt;/p&gt;
-&lt;h1 id=&#34;memset的赋值-100x3f&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#memset的赋值-100x3f&#34;&gt;#&lt;/a&gt; memset 的赋值 - 1，0，0x3f&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;0 赋值之后肯定还是 0&lt;/li&gt;
-&lt;li&gt;-1 因为它的补码是 111……111，所以赋值之后还是 - 1&lt;/li&gt;
-&lt;li&gt;0x3f 赋值之后是无穷大，即 0x3f3f3f3f&lt;/li&gt;
-&lt;/ol&gt;
+            <description><![CDATA[ <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="memset的赋值规则"><a class="markdownIt-Anchor" href="#memset的赋值规则">#</a> memset 的赋值规则</h1>
+<blockquote>
+<p>memset 赋值时，是按字节赋值，是将参数转换成二进制之后填入一个字节</p>
+</blockquote>
+<p><code>eg: memset(g, 100, sizeof g);</code></p>
+<p>100 转换成二进制是 0110 0100，而 int 是 4 个字节，</p>
+<p>所以一个 int 被赋值为 0110 0100, 0110 0100, 0110 0100, 0110 0100，</p>
+<p>对应十进制是 1684300900</p>
+<h1 id="memset的赋值-100x3f"><a class="markdownIt-Anchor" href="#memset的赋值-100x3f">#</a> memset 的赋值 - 1，0，0x3f</h1>
+<ol>
+<li>0 赋值之后肯定还是 0</li>
+<li>-1 因为它的补码是 111……111，所以赋值之后还是 - 1</li>
+<li>0x3f 赋值之后是无穷大，即 0x3f3f3f3f</li>
+</ol>
  ]]></description>
         </item>
+        
     </channel>
 </rss>

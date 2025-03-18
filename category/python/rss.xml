@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
         <title>眨眼的小星玥 • Posts by &#34;python&#34; category</title>
@@ -7,232 +7,283 @@
         <language>zh-CN</language>
         <pubDate>Fri, 17 Jan 2025 14:25:30 +0800</pubDate>
         <lastBuildDate>Fri, 17 Jan 2025 14:25:30 +0800</lastBuildDate>
+        
         <category>Linux</category>
-        <category>python</category>
+        
         <category>半导体与激光</category>
+        
         <category>原子核物理</category>
-        <category>振动与波动</category>
+        
         <category>量子物理</category>
-        <category>实验</category>
-        <category>稳恒磁场</category>
-        <category>电磁感应</category>
-        <category>无穷级数</category>
+        
+        <category>振动与波动</category>
+        
         <category>波动光学</category>
+        
+        <category>实验</category>
+        
+        <category>电磁感应</category>
+        
+        <category>python</category>
+        
+        <category>稳恒磁场</category>
+        
         <category>静电场</category>
+        
         <category>物理实验</category>
-        <category>概率论</category>
-        <category>离散数学上</category>
+        
         <category>AC自动机</category>
+        
         <category>Dp</category>
+        
         <category>algorithm</category>
+        
         <category>memset</category>
-        <category>二分</category>
+        
         <category>sstream</category>
+        
+        <category>二分</category>
+        
         <category>前缀和</category>
+        
         <category>差分</category>
+        
+        <category>无穷级数</category>
+        
         <category>图论</category>
-        <category>线段树</category>
-        <category>贪心</category>
-        <category>数论</category>
-        <category>数据结构</category>
+        
         <category>并查集</category>
-        <category>汇编</category>
-        <category>计网</category>
-        <category>数据库</category>
+        
+        <category>线段树</category>
+        
+        <category>数论</category>
+        
+        <category>贪心</category>
+        
+        <category>概率论</category>
+        
+        <category>离散数学上</category>
+        
         <category>级数</category>
+        
         <category>微分中值定理</category>
+        
         <category>公式</category>
-        <category>常用定理</category>
+        
         <category>常微分方程</category>
+        
         <category>极限</category>
+        
+        <category>常用定理</category>
+        
         <category>积分</category>
-        <category>DP</category>
-        <category>Nowcoder</category>
+        
+        <category>汇编</category>
+        
+        <category>数据结构</category>
+        
+        <category>计网</category>
+        
+        <category>数据库</category>
+        
         <category>Codeforces</category>
+        
+        <category>DP</category>
+        
+        <category>Nowcoder</category>
+        
         <category>CSP</category>
+        
+        
         <item>
             <guid isPermalink="true">http://www.luckycyyyy.top/2025/01/17/Python/python%E5%9F%BA%E7%A1%80/</guid>
             <title>python基础</title>
             <link>http://www.luckycyyyy.top/2025/01/17/Python/python%E5%9F%BA%E7%A1%80/</link>
+            
             <category>python</category>
+            
             <pubDate>Fri, 17 Jan 2025 14:25:30 +0800</pubDate>
-            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;numpy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#numpy&#34;&gt;#&lt;/a&gt; Numpy&lt;/h1&gt;
-&lt;h2 id=&#34;创建数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建数组&#34;&gt;#&lt;/a&gt; 创建数组&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;通过 array () 函数将 Python 的列表或者元组转换为数组&lt;/li&gt;
-&lt;li&gt;利用 &lt;code&gt;zeros(), ones(), empty()&lt;/code&gt;  函数创建&lt;/li&gt;
-&lt;li&gt;通过 arange () 函数得到数组，arange () 函数的原型为 &lt;code&gt;arange(start, end,step)&lt;/code&gt; ，起始值为 start，终止值为 end，但不含终止值，步长为 step。arange () 函数可以使用 float 型数据。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;数组运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组运算&#34;&gt;#&lt;/a&gt; 数组运算&lt;/h2&gt;
-&lt;p&gt;元素对元素的乘法： &lt;code&gt;a * b&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;矩阵的乘法： &lt;code&gt;a @ b&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;形状改变&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#形状改变&#34;&gt;#&lt;/a&gt; 形状改变&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;ravel ()、reshape ()、T 这 3 个方法会返回已修改的矩阵，但不会更改原始矩阵&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;resize () 方法会更改原始矩阵&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;pandas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pandas&#34;&gt;#&lt;/a&gt; pandas&lt;/h1&gt;
-&lt;h2 id=&#34;series&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#series&#34;&gt;#&lt;/a&gt; Series&lt;/h2&gt;
-&lt;p&gt;Series 对象是 Pandas 中的一维数据结构，能存储不同类型的数据&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;a = pd.Series([&amp;quot;b&amp;quot;, 2, [1 ,2]], index = [&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;])&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;dataframe&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dataframe&#34;&gt;#&lt;/a&gt; DataFrame&lt;/h2&gt;
-&lt;p&gt;DataFrame 是 Pandas 中的二维数据结构，能存储不同类型的数据，有行索引和列索引，并与元素对应&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; pandas &lt;span class=&#34;keyword&#34;&gt;as&lt;/span&gt; pd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;a = &amp;#123;&lt;span class=&#34;string&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;:[&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;], &lt;span class=&#34;string&#34;&gt;&amp;quot;b&amp;quot;&lt;/span&gt;: [&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;]&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;a:\n&amp;quot;&lt;/span&gt;, a)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df = pd.DataFrame(data=a)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;\ndf:\n&amp;quot;&lt;/span&gt;, df)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzktqeh9hyj30d3061a9y.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;表格文件操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格文件操作&#34;&gt;#&lt;/a&gt; 表格文件操作&lt;/h2&gt;
-&lt;p&gt;读取 csv 文件 &lt;code&gt;read_csv()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;使用 to_csv () 方法将 DataFrame 存储为 csv 文件&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;表格数据处理&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;head (n) 方法用于读取前面的 n 行，如果不填参数 n ，默认返回 5 行。&lt;/p&gt;
-&lt;p&gt;tail (n) 方法用于读取尾部的 n 行，如果不填参数 n ，默认返回 5 行，空行各个字段的值返回 NaN。&lt;/p&gt;
-&lt;p&gt;info () 方法返回表格的一些基本信息&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; pandas &lt;span class=&#34;keyword&#34;&gt;as&lt;/span&gt; pd&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df = pd.read_csv(&lt;span class=&#34;string&#34;&gt;&amp;#x27;population.csv&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(df.head())&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(df.head(&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(df.tail())&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(df.tail(&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;print&lt;/span&gt;(df.info())&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df.shape &lt;span class=&#34;comment&#34;&gt;#查看维度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df.columns &lt;span class=&#34;comment&#34;&gt;#查看列名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df.dtypes &lt;span class=&#34;comment&#34;&gt;#每一列数据的格式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df[&lt;span class=&#34;string&#34;&gt;&amp;quot;country&amp;quot;&lt;/span&gt;].values &lt;span class=&#34;comment&#34;&gt;#某一列的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df.iloc[&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;].values &lt;span class=&#34;comment&#34;&gt;#某一行的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;df.loc[df[&lt;span class=&#34;string&#34;&gt;&amp;#x27;year&amp;#x27;&lt;/span&gt;] == &lt;span class=&#34;number&#34;&gt;2020&lt;/span&gt;, [&lt;span class=&#34;string&#34;&gt;&amp;#x27;country&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;population&amp;#x27;&lt;/span&gt;]] &lt;span class=&#34;comment&#34;&gt;#条件筛选&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;matplotlib&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#matplotlib&#34;&gt;#&lt;/a&gt; Matplotlib&lt;/h1&gt;
-&lt;p&gt;折线图 plot&lt;/p&gt;
-&lt;p&gt;散点图 scatter&lt;/p&gt;
-&lt;p&gt;柱形图 bar&lt;/p&gt;
-&lt;p&gt;多子图 subplot&lt;/p&gt;
-&lt;p&gt;直方图 hist&lt;/p&gt;
-&lt;p&gt;误差图 errorbar&lt;/p&gt;
-&lt;p&gt;图修饰&lt;/p&gt;
-&lt;h1 id=&#34;scikit-learn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scikit-learn&#34;&gt;#&lt;/a&gt; Scikit-learn&lt;/h1&gt;
-&lt;p&gt;支持包括分类，回归，降维和聚类四大机器学习算法；还包括了特征提取，数据处理和模型评估三大模块&lt;/p&gt;
-&lt;h2 id=&#34;数据包&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据包&#34;&gt;#&lt;/a&gt; 数据包&lt;/h2&gt;
-&lt;p&gt;数据处理： &lt;code&gt;from sklearn import datasets, preprocessing&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;数据集的划分： &lt;code&gt;from sklearn.model_selection import train_test_split&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;建模的模型： &lt;code&gt;from sklearn.linear_model import LinearRegression&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;模型的评估： &lt;code&gt;from sklearn.metrics import r2_score&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;加载数据&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#加载数据&#34;&gt;#&lt;/a&gt; 加载数据&lt;/h2&gt;
-&lt;p&gt;Scikit-learn 支持以 NumPy 的 arrays 对象、Pandas 对象、SciPy 的稀疏 矩阵及其他可转换为数值型 arrays 的数据结构作为其输入，前提是数据必须是&lt;strong&gt;数值型&lt;/strong&gt;的&lt;/p&gt;
-&lt;p&gt;sklearn.datasets 模块提供了一系列&lt;strong&gt;加载和获取&lt;/strong&gt;著名&lt;strong&gt;数据集&lt;/strong&gt;如鸢尾花、波士顿房价、Olivetti 人脸、MNIST 数据集等的工具，也包括了一些 toy data 如 S 型数据等的生成工具&lt;/p&gt;
-&lt;p&gt;eg:&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn.datasets &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; load_iris&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iris = load_iris()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;X = iris.data&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;y = iris.target&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;数据的划分&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据的划分&#34;&gt;#&lt;/a&gt; 数据的划分&lt;/h2&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn.model_selection &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; train_test_split&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=&lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;, stratify=y,test_size=&lt;span class=&#34;number&#34;&gt;0.3&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# X特征，y目标值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;将完整数据集的 70% 作为训练集，30% 作为测试集，并使得测试集和训练集中各类别数据的比例与原始数据集比例一致（stratify 分层策略），另外可通过设置 &lt;code&gt;shuffle=True&lt;/code&gt;  提前打乱数据&lt;/p&gt;
-&lt;h2 id=&#34;数据预处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据预处理&#34;&gt;#&lt;/a&gt; 数据预处理&lt;/h2&gt;
-&lt;p&gt;使用 Scikit-learn 进行&lt;strong&gt;数据标准化&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;导入 &lt;code&gt;from sklearn.preprocessing import StandardScaler&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;Z&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mtext&gt;标准化：&lt;/mtext&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;/mrow&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Z-Score标准化：x^*=\frac{x-\mu}{\sigma}
-&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.76666em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;Z&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.738696em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;标&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;准&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;化&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.738696em;&#34;&gt;&lt;span style=&#34;top:-3.113em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mbin mtight&#34;&gt;∗&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.9463300000000001em;vertical-align:-0.686em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.2603300000000002em;&#34;&gt;&lt;span style=&#34;top:-2.314em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;σ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.677em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;μ&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.686em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;构建转换器实例 &lt;code&gt;scaler = StandardScaler()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;拟合及转换 &lt;code&gt;scaler.fit_transform(X_train)&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;监督学习算法-回归&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监督学习算法-回归&#34;&gt;#&lt;/a&gt; 监督学习算法 - 回归&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;LASSO&lt;/strong&gt;         &lt;code&gt;linear_model.Lasso&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ridge&lt;/strong&gt;         &lt;code&gt;linear_model.Ridge&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ElasticNet&lt;/strong&gt;         &lt;code&gt;linear_model.ElasticNet&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;回归树&lt;/strong&gt;         &lt;code&gt;tree.DecisionTreeRegressor&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;导入 &lt;code&gt;from sklearn.linear_model import LinearRegression&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;构建模型实例 &lt;code&gt;lr = LinearRegression(normalize=True)&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;normalize&lt;/code&gt;  表示是否要进行归一化，即是否要将数据映射到 &lt;code&gt;[0,1]&lt;/code&gt;  之间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;训练模型 &lt;code&gt;lr.fit(X_train, y_train)&lt;/code&gt; ，即进行拟合&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;X_train&lt;/code&gt;  表示训练集特征&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;y_train&lt;/code&gt;  训练集的目标值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;作出预测 &lt;code&gt;y_pred = lr.predict(X_test)&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;X_test&lt;/code&gt;  测试集的特征&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;监督学习算法-分类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监督学习算法-分类&#34;&gt;#&lt;/a&gt; 监督学习算法 - 分类&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;逻辑回归&lt;/strong&gt;： &lt;code&gt;linear_model.LogisticRegression&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;支持向量机&lt;/strong&gt;： &lt;code&gt;svm.SVC&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;朴素贝叶斯&lt;/strong&gt;： &lt;code&gt;naive_bayes.GaussianNB&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;K 近邻&lt;/strong&gt;： &lt;code&gt;neighbors.NearestNeighbors&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;导入 &lt;code&gt;from sklearn.tree import DecisionTreeClassifier&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;实例 &lt;code&gt;clf = DecisionTreeClassifier(max_depth=5)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;拟合 &lt;code&gt;clf.fit(X_train, y_train)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;预测&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;y_pred = clf.predict(X_test)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;y_prob = clf.predict_proba(X_test)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;使用决策树分类算法解决二分类问题，y_prob 为每个样本预测为 “0” 和 “1” 类的概率&lt;/p&gt;
-&lt;h2 id=&#34;监督学习算法-集成学习&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监督学习算法-集成学习&#34;&gt;#&lt;/a&gt; 监督学习算法 - 集成学习&lt;/h2&gt;
-&lt;p&gt;sklearn.ensemble 模块包含了一系列基于集成思想的分类、回归和离群值检测方法.&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn.ensemble &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; RandomForestClassifier&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;clf = RandomForestClassifier(n_estimators=&lt;span class=&#34;number&#34;&gt;20&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;clf.fit(X_train, y_train)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;y_pred = clf.predict(X_test)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;y_prob = clf.predict_proba(X_test)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;无监督学习&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无监督学习&#34;&gt;#&lt;/a&gt; 无监督学习&lt;/h2&gt;
-&lt;p&gt;sklearn.cluster 模块包含了一系列无监督聚类算法.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DBSCAN&lt;/strong&gt;： &lt;code&gt;cluster.DBSCAN&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;层次聚类&lt;/strong&gt;： &lt;code&gt;cluster.AgglomerativeClustering&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;谱聚类&lt;/strong&gt;： &lt;code&gt;cluster.SpectralClustering&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;实例：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;导入 &lt;code&gt;from sklearn.cluster import KMeans&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;构建聚类实例 &lt;code&gt;kmeans = KMeans(n_clusters=3, random_state=0)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;拟合 &lt;code&gt;kmeans.fit(X_train)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;预测 &lt;code&gt;kmeans.predict(X_test)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;评价指标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#评价指标&#34;&gt;#&lt;/a&gt; 评价指标&lt;/h2&gt;
-&lt;p&gt;sklearn.metrics 模块包含了一系列用于评价模型的评分函数、损失函数以及成对数据的距离度量函数.&lt;/p&gt;
-&lt;h3 id=&#34;回归模型评价&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#回归模型评价&#34;&gt;#&lt;/a&gt; 回归模型评价&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktqgizrrj30fy02sjrv.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;分类模型评价&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分类模型评价&#34;&gt;#&lt;/a&gt; 分类模型评价&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzktqiu3nfj30gs06aab5.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;交叉验证及超参数调优&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#交叉验证及超参数调优&#34;&gt;#&lt;/a&gt; &lt;strong&gt;交叉验证及超参数调优&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;超参数调优⸺网格搜索&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在参数网格上进行&lt;strong&gt;穷举&lt;/strong&gt;搜索，方法简单但是&lt;strong&gt;搜索速度慢&lt;/strong&gt;（超参数较多时），且不容易找到参数空间中的局部最优&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn.model_selection &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; GridSearchCV&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; svm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;svc = svm.SVC()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;params = &amp;#123;‘kernel’:[‘linear’, ‘rbf’], ‘C’:[&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;]&amp;#125; grid_search = GridSearchCV(svc, params, cv=&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;) grid_search.fit(X_train, y_train) grid_search.best_params_&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;超参数调优⸺随机搜索&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在参数子空间中进行随机搜索，选取空间中的 100 个点进行建模（可从 scipy.stats 常见分布如正态分布 norm、均匀分布 uniform 中随机采样得到），时间耗费较少，更容易找到局部最优&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; sklearn.model_selection &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; RandomizedSearchCV&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; scipy.stats &lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; randint&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;svc = svm.SVC()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;param_dist = &amp;#123;‘kernel’:[‘linear’, ‘rbf’], ‘C’:randint(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;20&lt;/span&gt;)&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;random_search = RandomizedSearchCV(svc, param_dist, n_iter=&lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;random_search.fit(X_train, y_train)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;random_search.best_params_&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+            <description><![CDATA[ <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="numpy"><a class="markdownIt-Anchor" href="#numpy">#</a> Numpy</h1>
+<h2 id="创建数组"><a class="markdownIt-Anchor" href="#创建数组">#</a> 创建数组</h2>
+<ul>
+<li>通过 array () 函数将 Python 的列表或者元组转换为数组</li>
+<li>利用 <code>zeros(), ones(), empty()</code>  函数创建</li>
+<li>通过 arange () 函数得到数组，arange () 函数的原型为 <code>arange(start, end,step)</code> ，起始值为 start，终止值为 end，但不含终止值，步长为 step。arange () 函数可以使用 float 型数据。</li>
+</ul>
+<h2 id="数组运算"><a class="markdownIt-Anchor" href="#数组运算">#</a> 数组运算</h2>
+<p>元素对元素的乘法： <code>a * b</code></p>
+<p>矩阵的乘法： <code>a @ b</code></p>
+<h2 id="形状改变"><a class="markdownIt-Anchor" href="#形状改变">#</a> 形状改变</h2>
+<ul>
+<li>
+<p>ravel ()、reshape ()、T 这 3 个方法会返回已修改的矩阵，但不会更改原始矩阵</p>
+</li>
+<li>
+<p>resize () 方法会更改原始矩阵</p>
+</li>
+</ul>
+<h1 id="pandas"><a class="markdownIt-Anchor" href="#pandas">#</a> pandas</h1>
+<h2 id="series"><a class="markdownIt-Anchor" href="#series">#</a> Series</h2>
+<p>Series 对象是 Pandas 中的一维数据结构，能存储不同类型的数据</p>
+<p><code>a = pd.Series([&quot;b&quot;, 2, [1 ,2]], index = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;])</code></p>
+<h2 id="dataframe"><a class="markdownIt-Anchor" href="#dataframe">#</a> DataFrame</h2>
+<p>DataFrame 是 Pandas 中的二维数据结构，能存储不同类型的数据，有行索引和列索引，并与元素对应</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = &#123;<span class="string">&quot;a&quot;</span>:[<span class="number">1</span>, <span class="number">2</span>], <span class="string">&quot;b&quot;</span>: [<span class="number">3</span>, <span class="number">4</span>]&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a:\n&quot;</span>, a)</span><br><span class="line">df = pd.DataFrame(data=a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\ndf:\n&quot;</span>, df)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzktqeh9hyj30d3061a9y.jpg" alt=""></p>
+<h2 id="表格文件操作"><a class="markdownIt-Anchor" href="#表格文件操作">#</a> 表格文件操作</h2>
+<p>读取 csv 文件 <code>read_csv()</code></p>
+<p>使用 to_csv () 方法将 DataFrame 存储为 csv 文件</p>
+<p><strong>表格数据处理</strong>：</p>
+<p>head (n) 方法用于读取前面的 n 行，如果不填参数 n ，默认返回 5 行。</p>
+<p>tail (n) 方法用于读取尾部的 n 行，如果不填参数 n ，默认返回 5 行，空行各个字段的值返回 NaN。</p>
+<p>info () 方法返回表格的一些基本信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;population.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br><span class="line"><span class="built_in">print</span>(df.head(<span class="number">10</span>))</span><br><span class="line"><span class="built_in">print</span>(df.tail())</span><br><span class="line"><span class="built_in">print</span>(df.tail(<span class="number">10</span>))</span><br><span class="line"><span class="built_in">print</span>(df.info())</span><br><span class="line">df.shape <span class="comment">#查看维度</span></span><br><span class="line">df.columns <span class="comment">#查看列名</span></span><br><span class="line">df.dtypes <span class="comment">#每一列数据的格式</span></span><br><span class="line">df[<span class="string">&quot;country&quot;</span>].values <span class="comment">#某一列的值</span></span><br><span class="line">df.iloc[<span class="number">3</span>].values <span class="comment">#某一行的值</span></span><br><span class="line">df.loc[df[<span class="string">&#x27;year&#x27;</span>] == <span class="number">2020</span>, [<span class="string">&#x27;country&#x27;</span>, <span class="string">&#x27;population&#x27;</span>]] <span class="comment">#条件筛选</span></span><br></pre></td></tr></table></figure>
+<h1 id="matplotlib"><a class="markdownIt-Anchor" href="#matplotlib">#</a> Matplotlib</h1>
+<p>折线图 plot</p>
+<p>散点图 scatter</p>
+<p>柱形图 bar</p>
+<p>多子图 subplot</p>
+<p>直方图 hist</p>
+<p>误差图 errorbar</p>
+<p>图修饰</p>
+<h1 id="scikit-learn"><a class="markdownIt-Anchor" href="#scikit-learn">#</a> Scikit-learn</h1>
+<p>支持包括分类，回归，降维和聚类四大机器学习算法；还包括了特征提取，数据处理和模型评估三大模块</p>
+<h2 id="数据包"><a class="markdownIt-Anchor" href="#数据包">#</a> 数据包</h2>
+<p>数据处理： <code>from sklearn import datasets, preprocessing</code></p>
+<p>数据集的划分： <code>from sklearn.model_selection import train_test_split</code></p>
+<p>建模的模型： <code>from sklearn.linear_model import LinearRegression</code></p>
+<p>模型的评估： <code>from sklearn.metrics import r2_score</code></p>
+<h2 id="加载数据"><a class="markdownIt-Anchor" href="#加载数据">#</a> 加载数据</h2>
+<p>Scikit-learn 支持以 NumPy 的 arrays 对象、Pandas 对象、SciPy 的稀疏 矩阵及其他可转换为数值型 arrays 的数据结构作为其输入，前提是数据必须是<strong>数值型</strong>的</p>
+<p>sklearn.datasets 模块提供了一系列<strong>加载和获取</strong>著名<strong>数据集</strong>如鸢尾花、波士顿房价、Olivetti 人脸、MNIST 数据集等的工具，也包括了一些 toy data 如 S 型数据等的生成工具</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris</span><br><span class="line">iris = load_iris()</span><br><span class="line">X = iris.data</span><br><span class="line">y = iris.target</span><br></pre></td></tr></table></figure>
+<h2 id="数据的划分"><a class="markdownIt-Anchor" href="#数据的划分">#</a> 数据的划分</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=<span class="number">12</span>, stratify=y,test_size=<span class="number">0.3</span>)</span><br><span class="line"><span class="comment"># X特征，y目标值</span></span><br></pre></td></tr></table></figure>
+<p>将完整数据集的 70% 作为训练集，30% 作为测试集，并使得测试集和训练集中各类别数据的比例与原始数据集比例一致（stratify 分层策略），另外可通过设置 <code>shuffle=True</code>  提前打乱数据</p>
+<h2 id="数据预处理"><a class="markdownIt-Anchor" href="#数据预处理">#</a> 数据预处理</h2>
+<p>使用 Scikit-learn 进行<strong>数据标准化</strong></p>
+<ol>
+<li>导入 <code>from sklearn.preprocessing import StandardScaler</code></li>
+</ol>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>Z</mi><mo>−</mo><mi>S</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mtext>标准化：</mtext><msup><mi>x</mi><mo>∗</mo></msup><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><annotation encoding="application/x-tex">Z-Score标准化：x^*=\frac{x-\mu}{\sigma}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.738696em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">c</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">e</span><span class="mord cjk_fallback">标</span><span class="mord cjk_fallback">准</span><span class="mord cjk_fallback">化</span><span class="mord cjk_fallback">：</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.738696em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.9463300000000001em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2603300000000002em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">μ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<ol start="2">
+<li>构建转换器实例 <code>scaler = StandardScaler()</code></li>
+<li>拟合及转换 <code>scaler.fit_transform(X_train)</code></li>
+</ol>
+<h2 id="监督学习算法-回归"><a class="markdownIt-Anchor" href="#监督学习算法-回归">#</a> 监督学习算法 - 回归</h2>
+<p><strong>LASSO</strong>         <code>linear_model.Lasso</code></p>
+<p><strong>Ridge</strong>         <code>linear_model.Ridge</code></p>
+<p><strong>ElasticNet</strong>         <code>linear_model.ElasticNet</code></p>
+<p><strong>回归树</strong>         <code>tree.DecisionTreeRegressor</code></p>
+<ol>
+<li>
+<p>导入 <code>from sklearn.linear_model import LinearRegression</code></p>
+</li>
+<li>
+<p>构建模型实例 <code>lr = LinearRegression(normalize=True)</code></p>
+<ul>
+<li><code>normalize</code>  表示是否要进行归一化，即是否要将数据映射到 <code>[0,1]</code>  之间</li>
+</ul>
+</li>
+<li>
+<p>训练模型 <code>lr.fit(X_train, y_train)</code> ，即进行拟合</p>
+<ul>
+<li><code>X_train</code>  表示训练集特征</li>
+<li><code>y_train</code>  训练集的目标值</li>
+</ul>
+</li>
+<li>
+<p>作出预测 <code>y_pred = lr.predict(X_test)</code></p>
+<ul>
+<li><code>X_test</code>  测试集的特征</li>
+</ul>
+</li>
+</ol>
+<h2 id="监督学习算法-分类"><a class="markdownIt-Anchor" href="#监督学习算法-分类">#</a> 监督学习算法 - 分类</h2>
+<p><strong>逻辑回归</strong>： <code>linear_model.LogisticRegression</code></p>
+<p><strong>支持向量机</strong>： <code>svm.SVC</code></p>
+<p><strong>朴素贝叶斯</strong>： <code>naive_bayes.GaussianNB</code></p>
+<p><strong>K 近邻</strong>： <code>neighbors.NearestNeighbors</code></p>
+<ol>
+<li>
+<p>导入 <code>from sklearn.tree import DecisionTreeClassifier</code></p>
+</li>
+<li>
+<p>实例 <code>clf = DecisionTreeClassifier(max_depth=5)</code></p>
+</li>
+<li>
+<p>拟合 <code>clf.fit(X_train, y_train)</code></p>
+</li>
+<li>
+<p>预测</p>
+<p><code>y_pred = clf.predict(X_test)</code></p>
+<p><code>y_prob = clf.predict_proba(X_test)</code></p>
+</li>
+</ol>
+<p>使用决策树分类算法解决二分类问题，y_prob 为每个样本预测为 “0” 和 “1” 类的概率</p>
+<h2 id="监督学习算法-集成学习"><a class="markdownIt-Anchor" href="#监督学习算法-集成学习">#</a> 监督学习算法 - 集成学习</h2>
+<p>sklearn.ensemble 模块包含了一系列基于集成思想的分类、回归和离群值检测方法.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">clf = RandomForestClassifier(n_estimators=<span class="number">20</span>)</span><br><span class="line">clf.fit(X_train, y_train)</span><br><span class="line">y_pred = clf.predict(X_test)</span><br><span class="line">y_prob = clf.predict_proba(X_test)</span><br></pre></td></tr></table></figure>
+<h2 id="无监督学习"><a class="markdownIt-Anchor" href="#无监督学习">#</a> 无监督学习</h2>
+<p>sklearn.cluster 模块包含了一系列无监督聚类算法.</p>
+<p><strong>DBSCAN</strong>： <code>cluster.DBSCAN</code></p>
+<p><strong>层次聚类</strong>： <code>cluster.AgglomerativeClustering</code></p>
+<p><strong>谱聚类</strong>： <code>cluster.SpectralClustering</code></p>
+<p>实例：</p>
+<ol>
+<li>
+<p>导入 <code>from sklearn.cluster import KMeans</code></p>
+</li>
+<li>
+<p>构建聚类实例 <code>kmeans = KMeans(n_clusters=3, random_state=0)</code></p>
+</li>
+<li>
+<p>拟合 <code>kmeans.fit(X_train)</code></p>
+</li>
+<li>
+<p>预测 <code>kmeans.predict(X_test)</code></p>
+</li>
+</ol>
+<h2 id="评价指标"><a class="markdownIt-Anchor" href="#评价指标">#</a> 评价指标</h2>
+<p>sklearn.metrics 模块包含了一系列用于评价模型的评分函数、损失函数以及成对数据的距离度量函数.</p>
+<h3 id="回归模型评价"><a class="markdownIt-Anchor" href="#回归模型评价">#</a> 回归模型评价</h3>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktqgizrrj30fy02sjrv.jpg" alt=""></p>
+<h3 id="分类模型评价"><a class="markdownIt-Anchor" href="#分类模型评价">#</a> 分类模型评价</h3>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzktqiu3nfj30gs06aab5.jpg" alt=""></p>
+<h3 id="交叉验证及超参数调优"><a class="markdownIt-Anchor" href="#交叉验证及超参数调优">#</a> <strong>交叉验证及超参数调优</strong></h3>
+<p><strong>超参数调优⸺网格搜索</strong></p>
+<p>在参数网格上进行<strong>穷举</strong>搜索，方法简单但是<strong>搜索速度慢</strong>（超参数较多时），且不容易找到参数空间中的局部最优</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line">svc = svm.SVC()</span><br><span class="line">params = &#123;‘kernel’:[‘linear’, ‘rbf’], ‘C’:[<span class="number">1</span>, <span class="number">10</span>]&#125; grid_search = GridSearchCV(svc, params, cv=<span class="number">5</span>) grid_search.fit(X_train, y_train) grid_search.best_params_</span><br></pre></td></tr></table></figure>
+<p><strong>超参数调优⸺随机搜索</strong></p>
+<p>在参数子空间中进行随机搜索，选取空间中的 100 个点进行建模（可从 scipy.stats 常见分布如正态分布 norm、均匀分布 uniform 中随机采样得到），时间耗费较少，更容易找到局部最优</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> RandomizedSearchCV</span><br><span class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> randint</span><br><span class="line">svc = svm.SVC()</span><br><span class="line">param_dist = &#123;‘kernel’:[‘linear’, ‘rbf’], ‘C’:randint(<span class="number">1</span>, <span class="number">20</span>)&#125;</span><br><span class="line">random_search = RandomizedSearchCV(svc, param_dist, n_iter=<span class="number">10</span>)</span><br><span class="line">random_search.fit(X_train, y_train)</span><br><span class="line">random_search.best_params_</span><br></pre></td></tr></table></figure>
  ]]></description>
         </item>
+        
         <item>
             <guid isPermalink="true">http://www.luckycyyyy.top/2024/12/19/Python/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
             <title>python环境配置</title>
             <link>http://www.luckycyyyy.top/2024/12/19/Python/python%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+            
             <category>python</category>
+            
             <pubDate>Thu, 19 Dec 2024 10:53:21 +0800</pubDate>
-            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;vscode-anaconda&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vscode-anaconda&#34;&gt;#&lt;/a&gt; VSCode + anaconda&lt;/h1&gt;
-&lt;p&gt;首先按照步骤下载 vscode 和 anaconda&lt;/p&gt;
-&lt;p&gt;在 vscode 中按 &lt;code&gt;Ctrl+Shift+P&lt;/code&gt; ，找到 &lt;code&gt;Python:Select Interpreter&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktpir8hgj30p90gt0w0.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;将 python 改成 anaconda 路径下的即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzktpku5r4j30p908lwga.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;pycharmanaconda&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pycharmanaconda&#34;&gt;#&lt;/a&gt; Pycharm+anaconda&lt;/h1&gt;
-&lt;p&gt;首先下载好 pycharm 和 anaconda，如果需要破解版 pycharm 可以查看这个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZXhjZXB0aW9uLnNpdGUv&#34;&gt;网站&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;在新建 pyhton 文件时将类型改成 conda&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzktpn1azxj30xf0qz766.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;找到自己的 conda.bat 的路径更改即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktpoo94zj30xf0r4q56.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+            <description><![CDATA[ <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="vscode-anaconda"><a class="markdownIt-Anchor" href="#vscode-anaconda">#</a> VSCode + anaconda</h1>
+<p>首先按照步骤下载 vscode 和 anaconda</p>
+<p>在 vscode 中按 <code>Ctrl+Shift+P</code> ，找到 <code>Python:Select Interpreter</code></p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktpir8hgj30p90gt0w0.jpg" alt=""></p>
+<p>将 python 改成 anaconda 路径下的即可</p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzktpku5r4j30p908lwga.jpg" alt=""></p>
+<h1 id="pycharmanaconda"><a class="markdownIt-Anchor" href="#pycharmanaconda">#</a> Pycharm+anaconda</h1>
+<p>首先下载好 pycharm 和 anaconda，如果需要破解版 pycharm 可以查看这个<span class="exturl" data-url="aHR0cHM6Ly93d3cuZXhjZXB0aW9uLnNpdGUv">网站</span></p>
+<p>在新建 pyhton 文件时将类型改成 conda</p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzktpn1azxj30xf0qz766.jpg" alt=""></p>
+<p>找到自己的 conda.bat 的路径更改即可</p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzktpoo94zj30xf0r4q56.jpg" alt=""></p>
  ]]></description>
         </item>
+        
     </channel>
 </rss>
