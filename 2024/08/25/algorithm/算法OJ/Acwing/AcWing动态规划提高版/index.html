@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="algorithm,Dp" />
+  <meta name="keywords" content="Dp,algorithm" />
 
 
 <link rel="canonical" href="http://www.luckycyyyy.top/2024/08/25/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/">
@@ -117,12 +117,12 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzn7lfw3c5j31hc0u04da.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzocea4qsfj31hc0u0gq0.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzl49db70fj31hc0u0n3n.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzn7k6ztayj31hj0u0q95.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzl489dfe0j31c00u0tbz.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzoceit6a5j31hc0u045d.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzl48kb6gaj31hj0u01b8.jpg"></li>
+          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/18/pEd2BAH.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzn7kdqi1aj31hj0u07cu.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzm3zj4matj31d70u0dqk.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzm3z3497mj31er0u0k3i.jpg"></li>
+          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/22/pE06gu8.jpg"></li>
         </ul>
       </div>
     </header>
@@ -235,8 +235,8 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1010</span>;</span><br><span class="line"><span class="type">int</span> h[N], f[N], g[N];</span><br><span class="line"><span class="type">int</span> n, cnt;</span><br><span class="line"><span class="type">int</span> ans1;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; h[++n]);</span><br><span class="line">    n -= <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//第一问</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        f[i] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt; i; j++)</span><br><span class="line">            <span class="keyword">if</span>(h[j] &gt;= h[i]) f[i] = <span class="built_in">max</span>(f[i], f[j] + <span class="number">1</span>);</span><br><span class="line">            ans1 = <span class="built_in">max</span>(ans1, f[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans1 &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="comment">//第二问</span></span><br><span class="line">    g[<span class="number">0</span>] = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x = <span class="built_in">lower_bound</span>(g, g + cnt, h[i]) - g;<span class="comment">//找到第一个大于h[i]的地方</span></span><br><span class="line">        <span class="keyword">if</span>(x == cnt) g[cnt++] = h[i];</span><br><span class="line">        <span class="keyword">else</span> g[x] = h[i];</span><br><span class="line">        cnt = <span class="built_in">max</span>(x, cnt);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
-          <a href="/tags/algorithm/" rel="tag"><i class="ic i-tag"></i> algorithm</a>
           <a href="/tags/Dp/" rel="tag"><i class="ic i-tag"></i> Dp</a>
+          <a href="/tags/algorithm/" rel="tag"><i class="ic i-tag"></i> algorithm</a>
       </div>
   </div>
 
@@ -298,7 +298,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item left">
       
 
-  <a href="/2024/08/20/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--STL%E4%B9%8Bbound/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007CYURoly8hzn7k6ztayj31hj0u0q95.jpg" title="STL之bound">
+  <a href="/2024/08/20/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--STL%E4%B9%8Bbound/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx1.sinaimg.cn&#x2F;large&#x2F;007CYURoly8hzocep4s4gj31k90u0ti2.jpg" title="STL之bound">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 杂杂的算法知识</span>
   <h3>STL之bound</h3>
@@ -308,7 +308,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item right">
       
 
-  <a href="/2024/08/26/%E7%AB%9E%E8%B5%9B/CMC/CMC%E7%BA%A7%E6%95%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007CYURoly8hzm7t6zb08j31hc0u078f.jpg" title="CMC级数">
+  <a href="/2024/08/26/%E7%AB%9E%E8%B5%9B/CMC/CMC%E7%BA%A7%E6%95%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007CYURoly8hzochmontfj31g10smadz.jpg" title="CMC级数">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> CMC</span>
   <h3>CMC级数</h3>
