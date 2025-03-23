@@ -90,12 +90,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/22/pE06G1x.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzmbtzod5xj31160ku76r.jpg"></li>
-          <li class="item" data-background-image="https://s3.bmp.ovh/imgs/2025/03/22/3f32aa46d58a717e.jpg"></li>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/18/pEdgXtA.jpg"></li>
           <li class="item" data-background-image="https://s21.ax1x.com/2025/03/18/pEd2DNd.jpg"></li>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/18/pEdgxpt.png"></li>
+          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/22/pE062DS.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzm7t6zb08j31hc0u078f.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzm7u5d9l3j317h0sqn66.jpg"></li>
+          <li class="item" data-background-image="https://s3.bmp.ovh/imgs/2025/03/22/f1c2423faa586fef.jpg"></li>
+          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/22/pE06gu8.jpg"></li>
         </ul>
       </div>
     </header>
@@ -314,6 +314,32 @@
       placeholder: "文章搜索",
       empty: "关于 「 ${query} 」，什么也没搜到",
       stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
+me} ms 内找到 ${hits} 条结果"
     },
     valine: true,fancybox: true,
     copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
