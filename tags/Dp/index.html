@@ -90,12 +90,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15675518720905536"></li>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/16715485889940864"></li>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/16517312942624128"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzl482elh3j31hc0u04cf.jpg"></li>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15883778668940672"></li>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/26/pEDJuuR.png"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/2526ff12f157f774428eef9a08fc6ec22526ff12f157f774428eef9a08fc6ec2"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzn7lfw3c5j31hc0u04da.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzm3z6wynqj31530t0dtc.jpg"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15477812666339648"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/16490682801835392"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzm7tuf5mij31ft0soww6.jpg"></li>
         </ul>
       </div>
     </header>
@@ -287,13 +287,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">618k 字</span>
+    <span title="站点总字数">620k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">9:22</span>
+    <span title="站点阅读时长">9:24</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -317,6 +317,29 @@
     },
     valine: true,fancybox: true,
     copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
+s="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
         return uri.includes('#');
