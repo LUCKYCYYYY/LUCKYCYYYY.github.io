@@ -90,12 +90,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzoceit6a5j31hc0u045d.jpg"></li>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/16715486313631104"></li>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/25/pEDVKxS.jpg"></li>
-          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/18/pEdgxpt.png"></li>
-          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15477809368109376"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzl490mezxj31hc0u0tm1.jpg"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15477812666339648"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzl489dfe0j31c00u0tbz.jpg"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/16626955991960960"></li>
+          <li class="item" data-background-image="https://haowallpaper.com/link/common/file/previewFileImg/15755357466562880"></li>
+          <li class="item" data-background-image="https://s21.ax1x.com/2025/03/22/pE0644s.png"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzm7tgb8a2j31hc0u0jxd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -314,6 +314,32 @@
       placeholder: "文章搜索",
       empty: "关于 「 ${query} 」，什么也没搜到",
       stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
+  stats: "${time} ms 内找到 ${hits} 条结果"
     },
     valine: true,fancybox: true,
     copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
