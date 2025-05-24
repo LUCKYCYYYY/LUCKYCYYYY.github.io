@@ -90,12 +90,12 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i1g9ctv43xj30uk0h7jt7.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i1k2f4fwidj31hc0u0gox.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1ic53ela7j30rs0jnadm.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8i1ibpv6r5oj30p00e3gny.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8i1g9cnp2h4j30uk0gomz2.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8hzm7t6zb08j31hc0u078f.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i1g9bc9duij30uk0h7ac0.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i1g9duaoh1j30uk0gqjtg.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1n2vvydonj312n0svdlb.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1o80yjo8yj31f60ssn1v.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1lzw1w9awj31h80u0tla.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1g99z8ixxj30uk0h775e.jpg"></li>
         </ul>
       </div>
     </header>
@@ -133,230 +133,16 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="关于shoka主题配置的博客"><a class="markdownIt-Anchor" href="#关于shoka主题配置的博客">#</a> 关于 Shoka 主题配置的博客</h1>
-<div class="post-body">
-   <div id="links">
-      <style>
-         /* 设置链接内容的顶部外边距 */
-         .links-content {
-            margin-top: 1rem;
-         }
-         /* 清除浮动，确保布局正确 */
-         .link-navigation::after {
-            content: " ";
-            display: block;
-            clear: both;
-         }
-         /* 卡片样式 */
-         .card {
-            width: 45%; /* 卡片宽度 */
-            font-size: 1rem; /* 字体大小 */
-            padding: 10px 20px; /* 内边距 */
-            border-radius: 8px; /* 圆角 */
-            transition-duration: 0.15s; /* 过渡动画时间 */
-            margin-bottom: 1rem; /* 底部外边距 */
-            display: flex; /* 使用 Flexbox 布局 */
-            align-items: center; /* 垂直居中 */
-            background-color: #f9f9f9; /* 背景颜色 */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影 */
-         }
-         /* 奇数卡片靠左浮动 */
-         .card:nth-child(odd) {
-            float: left;
-         }
-         /* 偶数卡片靠右浮动 */
-         .card:nth-child(even) {
-            float: right;
-         }
-         /* 卡片悬停效果 */
-         .card:hover {
-            transform: scale(1.05); /* 放大 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影加深 */
-         }
-         /* 卡片内的链接样式 */
-         .card a {
-            border: none;
-            text-decoration: none; /* 去除下划线 */
-         }
-         /* 头像样式 */
-         .card .ava {
-            width: 4rem !important; /* 宽度 */
-            height: 4rem !important; /* 高度 */
-            margin: 0 !important; /* 外边距 */
-            margin-right: 1.5em !important; /* 右边距 */
-            border-radius: 8px; /* 圆角 */
-         }
-         /* 卡片头部样式 */
-         .card .card-header {
-            font-style: italic; /* 斜体 */
-            overflow: hidden; /* 溢出隐藏 */
-            width: 100%; /* 宽度 */
-            padding-left: 1rem; /* 左边距 */
-            text-align: left; /* 左对齐 */
-         }
-         /* 卡片头部链接样式 */
-         .card .card-header a {
-            font-style: normal; /* 正常字体 */
-            font-weight: bold; /* 加粗 */
-         }
-         /* 卡片头部链接悬停样式 */
-         .card .card-header a:hover {
-            color: #d480aa; /* 悬停颜色 */
-         }
-         /* 卡片头部信息样式 */
-         .card .card-header .info {
-            font-style: normal; /* 正常字体 */
-            color: #a3a3a3; /* 颜色 */
-            font-size: 14px; /* 字体大小 */
-            min-width: 0; /* 最小宽度 */
-            overflow: hidden; /* 溢出隐藏 */
-            white-space: nowrap; /* 不换行 */
-         }
-         /* 为不同的卡片设置不同的悬停背景颜色和链接颜色 */
-         #links-content-1 .card:nth-child(1):hover {
-            background-color:rgb(255, 240, 225); /* 第一个卡片的悬停背景颜色 */
-         }
-         #links-content-1 .card:nth-child(1) .card-header a {
-            color:rgb(151, 130, 25); /* 第一个卡片的链接颜色 */
-         }
-         #links-content-1 .card:nth-child(2):hover {
-            background-color:rgb(178, 146, 146); /* 第二个卡片的悬停背景颜色 */
-         }
-         #links-content-1 .card:nth-child(2) .card-header a {
-            color:rgb(67, 62, 58); /* 第二个卡片的链接颜色 */
-         }
-         #links-content-1 .card:nth-child(3):hover {
-            background-color:rgb(130, 112, 96); /* 第三个卡片的悬停背景颜色 */
-         }
-         #links-content-1 .card:nth-child(3) .card-header a {
-            color:rgb(72, 61, 43); /* 第三个卡片的链接颜色 */
-         }
-         #links-content-1 .card:nth-child(4):hover {
-            background-color:rgb(91, 93, 96); /* 第四个卡片的悬停背景颜色 */
-         }
-         #links-content-1 .card:nth-child(4) .card-header a {
-            color:rgb(230, 147, 137); /* 第四个卡片的链接颜色 */
-         }
-         #links-content-1 .card:nth-child(5):hover {
-            background-color:rgb(195, 221, 237); /* 第五个卡片的悬停背景颜色 */
-         }
-         #links-content-1 .card:nth-child(5) .card-header a {
-            color:rgb(6, 80, 126); /* 第五个卡片的链接颜色 */
-         }
-         #links-content-2 .card:nth-child(1):hover {
-            background-color: #b9b9b9; /* 第六个卡片的悬停背景颜色 */
-         }
-         #links-content-2 .card:nth-child(1) .card-header a {
-            color: #00a97f; /* 第六个卡片的链接颜色 */
-         }
-         #links-content-2 .card:nth-child(2):hover {
-            background-color:rgb(217, 198, 200); /* 第七个卡片的悬停背景颜色 */
-         }
-         #links-content-2 .card:nth-child(2) .card-header a {
-            color:rgb(42, 53, 32); /* 第七个卡片的链接颜色 */
-         }
-         #links-content-2 .card:nth-child(3):hover {
-            background-color: #f2e6e1; /* 第八个卡片的悬停背景颜色 */
-         }
-         #links-content-2 .card:nth-child(3) .card-header a {
-            color: #a0725b; /* 第八个卡片的链接颜色 */
-         }
-      </style>
-      <div class="links-content" id="links-content-1">
-         <div class="link-navigation">
-            <!-- 第一个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="avatar.jpg" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUv">Yume Shoka's Blog</span>
-                  </div>
-                  <div class="info">该主题原作者的博客，配置非常详细</div>
-               </div>
-            </div>
-            <!-- 第二个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="lavender.png" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9sYXZlbmRlcjgxNi5naXRodWIuaW8v">Lavender's Blog</span>
-                  </div>
-                  <div class="info">一个对shako主题页面美化深有造诣的博主，非常喜欢他的统计页面</div>
-               </div>
-            </div>
-            <!-- 第三个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="FAF.jpg" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9tb2JpdXMtMC5naXRodWIuaW8v">FAF MAVE</span>
-                  </div>
-                  <div class="info">可以看看他的网站图片处理</div>
-               </div>
-            </div>
-            <!-- 第四个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="Linn.jpg" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9saW5uLXlsei5jb20vSGV4by9ibG9nLWNvbnRlbnQtdGVzdC8=">Linn's Shoka</span>
-                  </div>
-                  <div class="info">非常多的美化</div>
-               </div>
-            </div>
-            <!-- 第五个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="hexo.svg" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmthaXRha3UueHl6L2d1aWRlLw==">hexo-theme-shokaX</span>
-                  </div>
-                  <div class="info">内容非常详细</div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<h1 id="可视化"><a class="markdownIt-Anchor" href="#可视化">#</a> 可视化</h1>
-<div class="post-body">
-   <div id="links">
-      <div class="links-content" id="links-content-2">
-         <div class="link-navigation">
-            <!-- 第一个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="va.png" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly92aXN1YWxnby5uZXQvemg=">visualgo</span>
-                  </div>
-                  <div class="info">数据结构可视化</div>
-               </div>
-            </div>
-            <!-- 第二个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="USA.png" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly93d3cuY3MudXNmY2EuZWR1L35nYWxsZXMvdmlzdWFsaXphdGlvbi9BbGdvcml0aG1zLmh0bWw=">Data Structure Visualizations</span>
-                  </div>
-                  <div class="info">数据结构可视化</div>
-               </div>
-            </div>
-            <!-- 第三个卡片 -->
-            <div class="card">
-               <img class="ava" data-src="matplotlib.svg" alt="Logo" />
-               <div class="card-header">
-                  <div>
-                     <span class="exturl" data-url="aHR0cHM6Ly9tYXRwbG90bGliLm9yZy9zdGFibGUvZ2FsbGVyeS9pbmRleC5odG1s">matplotlib</span>
-                  </div>
-                  <div class="info">利用python中的库matplotlib画图</div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+    <h1 id="图片视频网站"><a class="markdownIt-Anchor" href="#图片视频网站">#</a> 图片 &amp; 视频网站</h1>
+<div class="links"><div class="item" title="哲风壁纸" style="--block-color:#4b4a54;"><span class="exturl image" data-url="aHR0cHM6Ly9oYW93YWxscGFwZXIuY29tLw==" data-background-image="https://haowallpaper.com/favicon.ico"></span>
+          <div class="info">
+          <span class="exturl title" data-url="aHR0cHM6Ly9oYW93YWxscGFwZXIuY29tLw==">哲风壁纸</span>
+          <p class="desc">超级多的好看壁纸，每天可以下载10张，强推！！！</p>
+          </div></div><div class="item" title="Lavender's Blog" style="--block-color:#1E0739;"><span class="exturl image" data-url="aHR0cHM6Ly93d3cudmNnLmNvbS8=" data-background-image="/lavender.png"></span>
+          <div class="info">
+          <span class="exturl title" data-url="aHR0cHM6Ly93d3cudmNnLmNvbS8=">Lavender's Blog</span>
+          <p class="desc">一个对shako主题页面美化深有造诣的博主，非常喜欢他的统计页面</p>
+          </div></div></div>
 
   </div>
 
@@ -368,7 +154,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2025-03-18 22:24:00" itemprop="dateModified" datetime="2025-03-18T22:24:00+08:00">2025-03-18</time>
+    <time title="修改时间：2025-05-22 21:52:05" itemprop="dateModified" datetime="2025-05-22T21:52:05+08:00">2025-05-22</time>
   </span>
 </div>
 
@@ -425,7 +211,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Eshoka%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text"> 关于 Shoka 主题配置的博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text"> 可视化</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91%E7%BD%91%E7%AB%99"><span class="toc-number">1.</span> <span class="toc-text"> 图片 &amp; 视频网站</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -495,11 +281,6 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
   </li>
 
   </ul>
-    
-  <li class="item">
-    <a href="/links/" rel="section"><i class="ic i-magic"></i>网站</a>
-  </li>
-
 
 </ul>
 
@@ -549,7 +330,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">10:23</span>
+    <span title="站点阅读时长">10:24</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
