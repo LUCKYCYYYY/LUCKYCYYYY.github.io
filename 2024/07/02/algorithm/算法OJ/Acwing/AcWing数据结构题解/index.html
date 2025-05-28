@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="algorithm,数据结构" />
+  <meta name="keywords" content="数据结构,algorithm" />
 
 
 <link rel="canonical" href="http://www.luckycyyyy.top/2024/07/02/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%98%E8%A7%A3/">
@@ -117,12 +117,12 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1k2v0uiegj31hc0u0n9d.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1ics37ofpj30uk0h70vv.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8i1g9la30t5j30uk0kdtb6.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1mfl7rvsgj31be0qowo1.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i1g9kg73tpj30uk0h741w.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1id9428f7j30uk0j477j.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzm3z3497mj31er0u0k3i.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1id9dcxbaj30uk0mxq8f.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzn7jxnqy4j31hk0u0q9i.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1k2m8p18sj318t0u0win.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007CYURoly8i1g9b1wxexj30rs0rqtbb.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1mfli1kmpj31sg0u07de.jpg"></li>
         </ul>
       </div>
     </header>
@@ -267,8 +267,8 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="comment">//冲突问题：通过巧妙设置P (131 或 13331) , Q (2^64)的值，一般可以理解为不产生冲突。</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> P = <span class="number">131</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ULL;</span><br><span class="line">ULL h[N], p[N];</span><br><span class="line"><span class="type">char</span> s[N]; </span><br><span class="line"><span class="function">ULL <span class="title">Query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>]* p[r - l + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;   cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; s[i];</span><br><span class="line">    p[<span class="number">0</span>] = <span class="number">1</span>, h[<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">//p[i]表示p的i次方</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[i] = p[i - <span class="number">1</span>] * P;</span><br><span class="line">        h[i] = h[i - <span class="number">1</span>] * P + s[i]; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> l1, l2, r1, r2;</span><br><span class="line">        cin &gt;&gt; l1 &gt;&gt; r1 &gt;&gt; l2 &gt;&gt; r2;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Query</span>(l1, r1) == <span class="built_in">Query</span>(l2, r2)) cout &lt;&lt; <span class="string">&quot;Yes&quot;</span> &lt;&lt; endl;<span class="comment">//如果两个字符串的哈希值相等，那么就说明两个字符串相等</span></span><br><span class="line">        <span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;No&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
-          <a href="/tags/algorithm/" rel="tag"><i class="ic i-tag"></i> algorithm</a>
           <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="ic i-tag"></i> 数据结构</a>
+          <a href="/tags/algorithm/" rel="tag"><i class="ic i-tag"></i> algorithm</a>
       </div>
   </div>
 
@@ -330,7 +330,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item left">
       
 
-  <a href="/2024/07/01/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007CYURoly8i1g9e33n5mj30uk0grmzf.jpg" title="AcWing基础算法题解">
+  <a href="/2024/07/01/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx1.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1mfm64xtsj31hc0u0483.jpg" title="AcWing基础算法题解">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Acwing</span>
   <h3>AcWing基础算法题解</h3>
@@ -340,7 +340,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item right">
       
 
-  <a href="/2024/07/24/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E9%A2%98%E8%A7%A3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1mfli1kmpj31sg0u07de.jpg" title="AcWing数学知识题解">
+  <a href="/2024/07/24/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E9%A2%98%E8%A7%A3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1n2ysh2c2j31hb0u0tmb.jpg" title="AcWing数学知识题解">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Acwing</span>
   <h3>AcWing数学知识题解</h3>

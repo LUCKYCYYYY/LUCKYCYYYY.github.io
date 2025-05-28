@@ -1,0 +1,491 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="algorithm,图论" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2024/08/15/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9B%BE%E8%AE%BA%E6%8F%90%E9%AB%98%E7%89%88/">
+
+
+
+  <title>
+AcWing图论提高版 - Acwing - 算法OJ - algorithm |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">AcWing图论提高版
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-08-15 12:11:57">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-08-15T12:11:57+08:00">2024-08-15</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1mfli1kmpj31sg0u07de.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1mfl7rvsgj31be0qowo1.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzocebt2djj31hk0u00xq.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1lzt16iyyj31hk0u0wns.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8hzn7ktyllij318f0nmqry.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8hzm7t8dqn4j31c50u0aef.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/algorithm/" itemprop="item" rel="index" title="分类于 algorithm"><span itemprop="name">algorithm</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/algorithm/%E7%AE%97%E6%B3%95OJ/" itemprop="item" rel="index" title="分类于 算法OJ"><span itemprop="name">算法OJ</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/" itemprop="item" rel="index" title="分类于 Acwing"><span itemprop="name">Acwing</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2024/08/15/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9B%BE%E8%AE%BA%E6%8F%90%E9%AB%98%E7%89%88/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="最优乘车"><a class="markdownIt-Anchor" href="#最优乘车">#</a> 最优乘车</h1>
+<blockquote 使用getlilne不要忘记读入最开始的换行符="">
+<ol>
+<li>建图方式：因为要算的是最少换乘多少次，所以要考虑如何把换乘次数问题转换成最短距离问题。我们可以设置，让一辆车所走的路线之间距离都是 1，比如：路线为 2 5 7 4，则 2-&gt;5，2-&gt;7，2-&gt;4，5-&gt;7，5-&gt;4，7-&gt;4 全部设置为 1；由此将换乘次数转换成最短路</li>
+<li>读入方式：因为读入时的站点数量未知且不唯一，所以利用 getline+stringstream 进行读入，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"></mstyle></mrow><annotation encoding="application/x-tex">\color{red}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">510</span>;</span><br><span class="line"><span class="type">int</span> g[N][N], dist[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> stop[N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Dijkstral</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line">    dist[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(!st[j] &amp;&amp; (t == <span class="number">-1</span> || dist[j] &lt; dist[t])) t = j;</span><br><span class="line">        &#125;</span><br><span class="line">        st[t] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(dist[j] &gt; dist[t] + g[t][j])</span><br><span class="line">                dist[j] = dist[t] + g[t][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(g, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> g);</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    string line;</span><br><span class="line">    <span class="built_in">getline</span>(cin, line);</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">getline</span>(cin, line);</span><br><span class="line">        <span class="function">stringstream <span class="title">ss</span><span class="params">(line)</span></span>;<span class="comment">//不要忘记读\n</span></span><br><span class="line">        <span class="type">int</span> cnt = <span class="number">0</span>, p;</span><br><span class="line">        <span class="keyword">while</span>(ss &gt;&gt; p) stop[cnt++] = p;<span class="comment">//因为读入的数量未知，使用stringstream</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; cnt; j++)</span><br><span class="line">                g[stop[i]][stop[j]] = <span class="number">1</span>;<span class="comment">//只要一辆车能走到的地方距离就是1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Dijkstral</span>();</span><br><span class="line">    <span class="keyword">if</span>(dist[n] &gt; <span class="number">0x3f3f3f3f</span> / <span class="number">2</span>) cout &lt;&lt; <span class="string">&quot;NO&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> cout &lt;&lt; dist[n] - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="昂贵的聘礼"><a class="markdownIt-Anchor" href="#昂贵的聘礼">#</a> 昂贵的聘礼</h1>
+<blockquote>
+<ol>
+<li>建图方式：将一个物品可以用一个替代品和优惠后的价格购买，转换成一个节点（待购买的物品）由另一个节点（替代品）和指向（待购买物品）的边组成；因为每个物品由有本身的单价，于是创建虚拟原点，指向每个（物品的）节点，边权为物品的单价。</li>
+<li>阶级问题：因为该题的数据量较小，可以直接用暴力的方式；我们可以在选择距离最小的点的时候判断 level 是否符合要求，但这个时候需要注意，如果没有符合要求的点，t 可能是 - 1，导致数组越界，所以需要特判 t == -1；也可以在更新距离的时候判断，这时候直接判断即可。</li>
+<li>因为重复调用多次 Dijsktral，所以需要每次重置 st 数组</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">110</span>;</span><br><span class="line"><span class="type">int</span> g[N][N], dist[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> level[N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Dijkstral</span><span class="params">(<span class="type">int</span> s, <span class="type">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line">    <span class="built_in">memset</span>(st, <span class="number">0</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">    dist[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!st[j] &amp;&amp; (level[j] &gt;= s &amp;&amp; level[j] &lt;= e) &amp;&amp; (t == <span class="number">-1</span> || dist[j] &lt; dist[t])) t = j;</span><br><span class="line">            <span class="comment">//if (!st[j] &amp;&amp; (t == -1 || dist[j] &lt; dist[t])) t = j;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t == <span class="number">-1</span>) <span class="keyword">continue</span>;</span><br><span class="line">        st[t] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(level[j] &gt;= s &amp;&amp; level[j] &lt;= e)</span><br><span class="line">                dist[j] = <span class="built_in">min</span>(dist[j], dist[t] + g[t][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dist[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(g, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> g);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++) g[i][i] = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> price;</span><br><span class="line">        cin &gt;&gt; price &gt;&gt; level[i];</span><br><span class="line">        g[<span class="number">0</span>][i] = <span class="built_in">min</span>(g[<span class="number">0</span>][i], price);</span><br><span class="line">        <span class="type">int</span> x;</span><br><span class="line">        cin &gt;&gt; x;</span><br><span class="line">        <span class="keyword">while</span> (x--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t, v;</span><br><span class="line">            cin &gt;&gt; t &gt;&gt; v;</span><br><span class="line">            g[t][i] = <span class="built_in">min</span>(g[t][i], v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    level[<span class="number">0</span>] = level[<span class="number">1</span>];</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = level[<span class="number">1</span>] - m; i &lt;= level[<span class="number">1</span>]; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="built_in">Dijkstral</span>(i, i + m);</span><br><span class="line">        ans = <span class="built_in">min</span>(ans, res);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="新年好"><a class="markdownIt-Anchor" href="#新年好">#</a> 新年好</h1>
+<blockquote>
+<ol>
+<li M一定要记得×2！！！！！！！！="">只要是双向的路径，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"></mstyle></mrow><annotation encoding="application/x-tex">\color{red}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span></li>
+<li>因为 n 的范围比较大，所以不能直接设置<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">[</mo><mi>N</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>N</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">d[N][N]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">]</span></span></span></span> 的数组，需要利用映射的方式，让 d 的第一维从 1 到 6 变化</li>
+<li>因为一共只有 5 个亲戚，所以可以直接全排列，使用 STL 中的 next_permutation，在使用前记得排序</li>
+<li>以每个亲戚作为原点，计算其他点到该点的距离</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">5e4</span> + <span class="number">10</span>, M = (<span class="number">1e5</span> + <span class="number">10</span>) * <span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> head[M], to[M], ne[M], w[M], idx;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> d[<span class="number">10</span>][N];</span><br><span class="line"><span class="type">int</span> source[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> rel[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line">priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt; q;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Dijkstral</span><span class="params">(<span class="type">int</span> s, <span class="type">int</span> dist[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(st, <span class="number">0</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">    q.<span class="built_in">push</span>(&#123; <span class="number">0</span>, s &#125;);</span><br><span class="line">    dist[s] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (q.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> [d, t] = q.<span class="built_in">top</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (st[t]) <span class="keyword">continue</span>;</span><br><span class="line">        st[t] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = head[t]; i != <span class="number">-1</span>; i = ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j = to[i];</span><br><span class="line">            <span class="keyword">if</span> (dist[j] &gt; d + w[i])</span><br><span class="line">            &#123;</span><br><span class="line">                dist[j] = d + w[i];</span><br><span class="line">                q.<span class="built_in">push</span>(&#123; dist[j], j &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    to[idx] = y, ne[idx] = head[x], w[idx] = z, head[x] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="keyword">sizeof</span> head);</span><br><span class="line">    <span class="built_in">memset</span>(d, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> d);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    rel[<span class="number">0</span>] = <span class="number">1</span>, source[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) cin &gt;&gt; rel[i];</span><br><span class="line">    <span class="built_in">sort</span>(rel + <span class="number">1</span>, rel + <span class="number">6</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++)  source[rel[i]] = i;</span><br><span class="line">    <span class="keyword">while</span> (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x, y, t;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; t;</span><br><span class="line">        <span class="built_in">add</span>(x, y, t); <span class="built_in">add</span>(y, x, t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">5</span>; i++) </span><br><span class="line">        <span class="built_in">Dijkstral</span>(rel[i], d[i]);</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> res = d[<span class="number">0</span>][rel[<span class="number">1</span>]];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">4</span>; i++) res += d[source[rel[i]]][rel[i + <span class="number">1</span>]];</span><br><span class="line">        ans = <span class="built_in">min</span>(ans, res);</span><br><span class="line">    &#125; <span class="keyword">while</span> (<span class="built_in">next_permutation</span>(rel + <span class="number">1</span>, rel + <span class="number">6</span>));</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通信线路"><a class="markdownIt-Anchor" href="#通信线路">#</a> 通信线路</h1>
+<blockquote>
+<ol>
+<li>将题意转换成求：所有线路中，每条线路花费第 k+1 大的电缆所需要的最小花费</li>
+<li>求第 k 大的最小值 / 第 k 小的最大值<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 利用二分的思想</li>
+<li>二分的判断条件：花费大于 x 的电缆数小于等于 k，找满足条件的 x 的最小值</li>
+<li>建图方式：将花费大于 x 的边权值设置为 1，求 n 号点的最短距离，判断和 k 比较的大小</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">2e4</span> + <span class="number">10</span>, N = <span class="number">1e3</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> head[M], to[M], ne[M], w[M], idx;</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> dist[N];</span><br><span class="line"><span class="type">int</span> n, m, k;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line">priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt; q;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    to[idx] = y, ne[idx] = head[x], w[idx] = z, head[x] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line">    <span class="built_in">memset</span>(st, <span class="number">0</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">    dist[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    q.<span class="built_in">push</span>(&#123;<span class="number">0</span>, <span class="number">1</span>&#125;);</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> [d, t] = q.<span class="built_in">top</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(st[t]) <span class="keyword">continue</span>;</span><br><span class="line">        st[t] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = head[t]; ~i; i = ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j = to[i], v = w[i] &gt; x;</span><br><span class="line">            <span class="keyword">if</span>(dist[j] &gt; d + v)</span><br><span class="line">            &#123;</span><br><span class="line">                dist[j] = d + v;</span><br><span class="line">                q.<span class="built_in">push</span>(&#123;dist[j], j&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dist[n] &lt;= k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="keyword">sizeof</span> head);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x, y, z;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">        <span class="built_in">add</span>(x, y, z);</span><br><span class="line">        <span class="built_in">add</span>(y, x, z);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = <span class="number">1e6</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">check</span>(mid)) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(r == <span class="number">1e6</span> + <span class="number">1</span>) r = <span class="number">-1</span>;</span><br><span class="line">    cout &lt;&lt; r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="最优贸易"><a class="markdownIt-Anchor" href="#最优贸易">#</a> 最优贸易</h1>
+<blockquote>
+<ol>
+<li>将问题转换成，求<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">1\sim i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 路上水晶球的最小价格、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">i\sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 路上水晶球的最大价格，用遍历所有的 i，用最大减最小即可</li>
+<li>在刚拿到该题的时候，可能会觉得直接用最大价格减最小价格即可，但是因为有的路是单行线，所以有可能不能从最小价格的城市走到最大价格的城市</li>
+<li>“dp 问题都可以转换成最短路径”，那么是用 Dijkstral 还是 spfa 呢？Dijsktral 的适用条件是，每次堆顶取出的是该点的最小值，但是该图可能存在环，且该图是点的权重不是边的权重，如果有一个环中后面点的权重小于前面点的权重（相当于有负权边），就会导致前一个点第一次出堆时不是该点的最小值，于是 Dijsktral 不适用；spfa 一般情况都适用，于是适用 spfa</li>
+<li>因为后面是求<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">i\sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的最大价格，所以可以反向建图，求 i 到 n 的最大价格；只需要多加一个 head 数组即可</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>, M = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> hs[N], he[N], ne[M], to[M], idx;</span><br><span class="line"><span class="type">int</span> price[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"><span class="type">int</span> dmin[N], dmax[N];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> h[], <span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    to[idx] = y, ne[idx] = h[x], h[x] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">spfa</span><span class="params">(<span class="type">int</span> h[], <span class="type">int</span> s, <span class="type">int</span> d[], <span class="type">int</span> flag)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    <span class="built_in">memset</span>(st, <span class="number">0</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">    <span class="keyword">if</span>(flag == <span class="number">0</span>)<span class="comment">//求最小值 </span></span><br><span class="line">        <span class="built_in">memset</span>(d, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dmin);</span><br><span class="line">    <span class="comment">//注意！！！！！！！！不能写sizeof d，因为在函数里面d是一个指针，只占4个字节，而不是d数组的大小</span></span><br><span class="line">    d[s] = price[s];</span><br><span class="line">    q.<span class="built_in">push</span>(s);</span><br><span class="line">    st[s] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        st[t] = <span class="literal">false</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = h[t]; ~i; i = ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j = to[i];</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">0</span> &amp;&amp; d[j] &gt; <span class="built_in">min</span>(d[t], price[j]) || flag == <span class="number">1</span> &amp;&amp; d[j] &lt; <span class="built_in">max</span>(d[t], price[j]))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(flag == <span class="number">0</span>) d[j] = <span class="built_in">min</span>(d[t], price[j]);<span class="comment">//与求最短路的区别</span></span><br><span class="line">                <span class="keyword">else</span> d[j] = <span class="built_in">max</span>(d[t], price[j]);</span><br><span class="line">                <span class="keyword">if</span>(!st[j])</span><br><span class="line">                &#123;</span><br><span class="line">                    st[j] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    std::cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(he, <span class="number">-1</span>, <span class="keyword">sizeof</span> he);</span><br><span class="line">    <span class="built_in">memset</span>(hs, <span class="number">-1</span>, <span class="keyword">sizeof</span> hs);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; price[i];</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x, y, z;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">        <span class="built_in">add</span>(hs, x, y); <span class="built_in">add</span>(he, y, x);</span><br><span class="line">        <span class="keyword">if</span>(z == <span class="number">2</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">add</span>(hs, y, x);</span><br><span class="line">            <span class="built_in">add</span>(he, x, y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">spfa</span>(hs, <span class="number">1</span>, dmin, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">spfa</span>(he, n, dmax, <span class="number">1</span>);</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) res = <span class="built_in">max</span>(res, dmax[i] - dmin[i]);</span><br><span class="line">    cout &lt;&lt; res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/algorithm/" rel="tag"><i class="ic i-tag"></i> algorithm</a>
+          <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"><i class="ic i-tag"></i> 图论</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-03-18 00:48:46" itemprop="dateModified" datetime="2025-03-18T00:48:46+08:00">2025-03-18</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2024/08/15/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9B%BE%E8%AE%BA%E6%8F%90%E9%AB%98%E7%89%88/" title="AcWing图论提高版">http://www.luckycyyyy.top/2024/08/15/algorithm/算法OJ/Acwing/AcWing图论提高版/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/08/14/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--memset%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1id8nkvhtj30uk0h70y4.jpg" title="memset的使用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂杂的算法知识</span>
+  <h3>memset的使用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/08/15/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--STL%E4%B9%8Bpermutation/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007CYURoly8hzm7u5d9l3j317h0sqn66.jpg" title="STL之permutation">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂杂的算法知识</span>
+  <h3>STL之permutation</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E4%B9%98%E8%BD%A6"><span class="toc-number">1.</span> <span class="toc-text"> 最优乘车</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%98%82%E8%B4%B5%E7%9A%84%E8%81%98%E7%A4%BC"><span class="toc-number">2.</span> <span class="toc-text"> 昂贵的聘礼</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%B9%B4%E5%A5%BD"><span class="toc-number">3.</span> <span class="toc-text"> 新年好</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%BA%BF%E8%B7%AF"><span class="toc-number">4.</span> <span class="toc-text"> 通信线路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E8%B4%B8%E6%98%93"><span class="toc-number">5.</span> <span class="toc-text"> 最优贸易</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/07/01/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" rel="bookmark" title="AcWing基础算法题解">AcWing基础算法题解</a></li><li><a href="/2024/07/02/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%98%E8%A7%A3/" rel="bookmark" title="AcWing数据结构题解">AcWing数据结构题解</a></li><li><a href="/2024/07/24/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E9%A2%98%E8%A7%A3/" rel="bookmark" title="AcWing数学知识题解">AcWing数学知识题解</a></li><li><a href="/2024/07/24/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9B%BE%E8%AE%BA%E6%A8%A1%E7%89%88%E9%A2%98/" rel="bookmark" title="AcWing图论模版题">AcWing图论模版题</a></li><li class="active"><a href="/2024/08/15/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%9B%BE%E8%AE%BA%E6%8F%90%E9%AB%98%E7%89%88/" rel="bookmark" title="AcWing图论提高版">AcWing图论提高版</a></li><li><a href="/2024/08/19/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A8%A1%E7%89%88%E9%A2%98/" rel="bookmark" title="AcWing动态规划模版题">AcWing动态规划模版题</a></li><li><a href="/2024/08/25/algorithm/%E7%AE%97%E6%B3%95OJ/Acwing/AcWing%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%8F%90%E9%AB%98%E7%89%88/" rel="bookmark" title="AcWing动态规划提高版">AcWing动态规划提高版</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">116</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">34</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">62</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/08/14/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--memset%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/08/15/algorithm/%E6%9D%82%E6%9D%82%E7%9A%84%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86/algorithm--STL%E4%B9%8Bpermutation/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">704k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10:40</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/08/15/algorithm/算法OJ/Acwing/AcWing图论提高版/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
