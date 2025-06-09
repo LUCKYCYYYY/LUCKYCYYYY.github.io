@@ -1,0 +1,718 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/cyy.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眨眼的小星玥" href="http://www.luckycyyyy.top/atom.xml" />
+<link rel="alternate" type="application/json" title="眨眼的小星玥" href="http://www.luckycyyyy.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="计算机组成原理" />
+
+
+<link rel="canonical" href="http://www.luckycyyyy.top/2025/05/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
+
+
+
+  <title>
+存储系统 - 计算机组成原理 - 计算机科学 |
+Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四海丰收</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">存储系统
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2025-05-31 09:13:26">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-05-31T09:13:26+08:00">2025-05-31</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aurijun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8i246sxlbjsj31hc0u0k1f.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1lzu87b0jj31j40u04cy.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1mfl7rvsgj31be0qowo1.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1ijj6ft2lj30zk0k0afo.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1mfm4lt89j31a20ssdqu.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1lzwy7ywej31hc0u0avf.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" itemprop="item" rel="index" title="分类于 计算机组成原理"><span itemprop="name">计算机组成原理</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://www.luckycyyyy.top/2025/05/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/cyy.png">
+    <meta itemprop="name" content="Aurijun">
+    <meta itemprop="description" content="世间风物论自由，喜一生我有，共四海丰收, 小星玥，要努力学习呀！">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眨眼的小星玥">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="存储器概述"><a class="markdownIt-Anchor" href="#存储器概述">#</a> 存储器概述</h1>
+<h2 id="存储器分类"><a class="markdownIt-Anchor" href="#存储器分类">#</a> 存储器分类</h2>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1yfeojtk0j31ny0u0tdk.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yftfbzh3j316t0kggoj.jpg" alt=""></p>
+<p><strong>存储介质</strong>：</p>
+<ul>
+<li>磁存储器：机械硬盘</li>
+<li>半导体存储器：固态硬盘，内存条</li>
+<li>光存储器：光盘</li>
+</ul>
+<p><strong>存取方式</strong>：</p>
+<ul>
+<li>
+<p>随机存储器<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">RAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>：可按照地址随机读写数据存储单元，存取访问时间与存储单元的位置无关</p>
+</li>
+<li>
+<p>顺序存储器<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>：存储单元中的内容只能依地址顺序访问，访问速度与存储单元的位置有关</p>
+</li>
+<li>
+<p>直接存储器<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>：不必经过顺序搜索就能在存储器中直接存取信息的存储器，这类存储器兼有随机存储器和顺序存储器的访问特性。</p>
+<p>（绕过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 直接传输数据，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>M</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">DMA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">A</span></span></span></span> 是外设与内存间直接传输数据的技术，无需 CPU 逐字节干预，但仍需指定内存地址（非搜索））</p>
+</li>
+</ul>
+<h2 id="存储器技术指标"><a class="markdownIt-Anchor" href="#存储器技术指标">#</a> 存储器技术指标</h2>
+<p><strong>存储容量</strong></p>
+<blockquote>
+<p>可以存储的二进制信息总量，采用比特位或者字节表示</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1ygd6fw5yj316e0jqwh3.jpg" alt=""></p>
+<ul>
+<li>位表示： 以存储器中<strong>存储单元总数</strong>与<strong>存储字位数</strong>的乘积表示，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>g</mi><mo>:</mo><mn>1</mn><mi>K</mi><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">eg:1K\times 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 表示该芯片有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>K</mi></mrow><annotation encoding="application/x-tex">1K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> 个单元，每个存储单元长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 个二进制位</li>
+<li>字节表示：以存储器中的单元总数表示，存储单元由 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 个二进制位组成，称为一个字节，用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 表示，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>g</mi><mo>:</mo><mn>128</mn><mi>B</mi></mrow><annotation encoding="application/x-tex">eg:128B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 表示该芯片由 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>128</mn></mrow><annotation encoding="application/x-tex">128</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span></span></span></span> 个单元</li>
+</ul>
+<p><strong>存取速度</strong></p>
+<ul>
+<li>存取时间：启动一次存储器操作到该操作完成所经历的时间</li>
+<li>存取周期：连续启动两次访问操作之间的最短时间间隔</li>
+</ul>
+<img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1ygkpdy9aj30r004nt8y.jpg" style="zoom:67%;" />
+<ul>
+<li>存储器带宽：单位时间内存储器所能传输的信息量，一般而言，存取时间越短，数据位宽越大，存储带宽越高</li>
+</ul>
+<h2 id="存储系统层次结构"><a class="markdownIt-Anchor" href="#存储系统层次结构">#</a> 存储系统层次结构</h2>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1ygmrkzy7j31700iyjw3.jpg" alt=""></p>
+<h2 id="主存基本结构"><a class="markdownIt-Anchor" href="#主存基本结构">#</a> 主存基本结构</h2>
+<blockquote>
+<p>主存是机器指令直接操作的存储器</p>
+</blockquote>
+<img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1ygu28rr1j31d90u00ux.jpg" style="zoom:50%;" />
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1ygvscwp5j31710j30wx.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yh1wnh7bj316m0kswk5.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1yh2dcmfpj30y10l7jth.jpg" alt=""></p>
+<h2 id="主存中数据的存放"><a class="markdownIt-Anchor" href="#主存中数据的存放">#</a> 主存中数据的存放</h2>
+<h3 id="存储字长和数据字长的概念"><a class="markdownIt-Anchor" href="#存储字长和数据字长的概念">#</a> 存储字长和数据字长的概念</h3>
+<p>存储字长：主存的一个存储单元所存储的二进制位数</p>
+<p>数据字长：计算机一次能处理的二进制的位数</p>
+<h3 id="地址访问模式"><a class="markdownIt-Anchor" href="#地址访问模式">#</a> 地址访问模式</h3>
+<p>存储字长都是字节的整数倍，主存通常按字节进行编址</p>
+<p>按照访问存储单元的大小，主存地址可以分为字节地址，半字地址，字地址</p>
+<img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1yh7nhwqgj30vq0piacv.jpg" style="zoom:60%;" />
+<p>字节地址逻辑右移一位得到半字地址，右移两位可得到字地址</p>
+<p>不同的地址访问模式所使用的主存地址实际上都是字节地址，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 在执行指令的时候可以将字节的低两位用于访问控制</p>
+<ol>
+<li>采用<strong>字节</strong>访问模式，字节地址的<strong>低两位</strong>用于选择字存储单元中的哪一个字节</li>
+<li>采用<strong>半字</strong>访问模式，字节地址的倒数第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 位用于选择字存储单元中的哪个半字</li>
+</ol>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mi>g</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">eg:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<ul>
+<li><code>MOV AL,[0x4]</code>  ， <code>[AL]=0x00</code></li>
+<li><code>MOV AX,[0x4]</code> ， <code>[AX]=0xEF00</code></li>
+<li><code>MOV EAX,[0x4]</code> ， <code>[EAX]=0xABEF00</code></li>
+</ul>
+<h3 id="大端和小端"><a class="markdownIt-Anchor" href="#大端和小端">#</a> 大端和小端</h3>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yhosrvf0j31uv0t90yt.jpg" alt=""></p>
+<h3 id="数据的边界对齐"><a class="markdownIt-Anchor" href="#数据的边界对齐">#</a> 数据的边界对齐</h3>
+<ul>
+<li>字节数据不存在边界对齐问题</li>
+<li>半字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">(2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span></span></span></span> 字节<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 数据的起始字节地址的最低 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 位为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> ，即地址是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的倍数</li>
+<li>单字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">(4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">4</span></span></span></span> 字节<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 数据的起始字节地址的最低 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 位为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>00</mn></mrow><annotation encoding="application/x-tex">00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span></span></span></span>，即地址是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 的整数倍</li>
+<li>双字<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">(8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">8</span></span></span></span> 字节<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">)</span></span></span></span> 数据的起始字节地址的最低 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 位为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>000</mn></mrow><annotation encoding="application/x-tex">000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>，即地址是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 的整数倍、</li>
+</ul>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1yhy9gl57j31ig0hedjv.jpg" alt=""></p>
+<h1 id="半导体存储器"><a class="markdownIt-Anchor" href="#半导体存储器">#</a> 半导体存储器</h1>
+<h2 id="静态-mos-存储器"><a class="markdownIt-Anchor" href="#静态-mos-存储器">#</a> 静态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器</h2>
+<blockquote>
+<p>以静态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储元为基本单位组成的存储器称为静态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(SRAM)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></p>
+<p>“静态” 指的是只要保持通电，其内部所存储的数据就可以保持不变，而不需要进行周期性地刷新；但是只要断电，数据就会消失</p>
+</blockquote>
+<h3 id="存储元"><a class="markdownIt-Anchor" href="#存储元">#</a> 存储元</h3>
+<blockquote>
+<p>存储元是存储器中的最小存储单元，其作用是存储一位二进制信息</p>
+<p>若干存储元组成一个存储单元，若干存储单元组成一个存储器</p>
+</blockquote>
+<p><strong>初始状态</strong></p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1yi9nnaopj31sb0u0wlv.jpg" alt=""></p>
+<p><strong>读操作</strong></p>
+<p>行列选通信号都为<strong>有效高电平</strong></p>
+<img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yieurn6gj30vd0suq4p.jpg" style="zoom:33%;" />
+<p>将两个位线的输出信号经过差分放大器放大后，就可以根据电流方向的不同输出不同的数据信息</p>
+<p><strong>写操作</strong></p>
+<p>行列选通信号都为<strong>有效高电平</strong></p>
+<img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1yif1bsz1j30uj0ssgnd.jpg" style="zoom:33%;" />
+<p><strong>信息的保持</strong></p>
+<p>行列选通信号都为<strong>无效信号低电平</strong></p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1yijjv3igj31uq0te78o.jpg" alt=""></p>
+<p><strong>总结</strong>：</p>
+<p><img data-src="D:%5CMYBlog%5Csource_posts%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%5Cassets%5Cimage-20250531112850631.png" alt=""></p>
+<h3 id="存储元扩展"><a class="markdownIt-Anchor" href="#存储元扩展">#</a> 存储元扩展</h3>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1yitrtk5kj31u40srjv2.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1yiwnsrr9j31uf0u0gsh.jpg" alt=""></p>
+<div class="note danger">
+<p>同一时刻只能访问一位数据，而实际存储器均是以字节为基本单位的，如何扩展存储器的字长呢？</p>
+</div>
+<p><strong>字长扩展</strong></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yj2w18mij31pk0u0jwt.jpg" alt=""></p>
+<h3 id="静态-mos-存储器的结构"><a class="markdownIt-Anchor" href="#静态-mos-存储器的结构">#</a> 静态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器的结构</h3>
+<p><strong>存储阵列</strong></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1yj6kpovcj31so0srjun.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yj80uoebj31tb0tln2b.jpg" alt=""></p>
+<p><strong>驱动器</strong></p>
+<p>每个行译码器输出信号都要同时驱动这一行上所有位存储体的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>5</mn></msub><mtext>、</mtext><msub><mi>T</mi><mn>6</mn></msub></mrow><annotation encoding="application/x-tex">T_5、T_6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">、</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 两个门控制</p>
+<ul>
+<li>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 个存储阵列并发，每一根行译码输出信号要驱动 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>×</mo><mn>2</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>512</mn></mrow><annotation encoding="application/x-tex">64\times 2\times 4=512</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">1</span><span class="mord">2</span></span></span></span> 个门控制，负载较大，用驱动增强负载功能</li>
+</ul>
+<p>每个列译码器输出信号要打开 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>7</mn></msub><mtext>、</mtext><msub><mi>T</mi><mn>8</mn></msub></mrow><annotation encoding="application/x-tex">T_7、T_8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">、</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 两个门控制</p>
+<ul>
+<li>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 位存储体需要驱动 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>4</mn><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">2\times 4=7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span> 个门控制，负载较大，用驱动增强负载功能</li>
+</ul>
+<h3 id="存储器芯片实例"><a class="markdownIt-Anchor" href="#存储器芯片实例">#</a> 存储器芯片实例</h3>
+<p><img data-src="D:%5CMYBlog%5Csource_posts%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%5Cassets%5Cimage-20250531121154854.png" alt=""></p>
+<p><strong>写入时</strong>：</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>C</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>W</mi><mi>E</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{CS},\overline{WE}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0777700000000001em;vertical-align:-0.19444em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 均有效（低电平），左侧的三态门打开，数据总线上的数据经输入数据控制逻辑写入存储器</p>
+<p><strong>读出时</strong>：</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>W</mi><mi>E</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{WE}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 无效（高电平），右侧三态门打开，数据从存储器读出并由列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi mathvariant="normal">/</mi><mi>O</mi></mrow><annotation encoding="application/x-tex">I/O</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span></span></span></span> 电路送入数据总线</p>
+<h3 id="sram-读写时序"><a class="markdownIt-Anchor" href="#sram-读写时序">#</a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 读写时序</h3>
+<blockquote>
+<p>存储器由自己的读写周期特性，只有按照存储器的读写周期去访问存储器才能保证读写操作的正确性</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yk1ul4vzj31820u076x.jpg" alt=""></p>
+<details class="warning"><summary>习题</summary><div>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yk5m4jgtj31qk09caax.jpg" alt=""></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 芯片的引脚通常包括以下几类：</p>
+<ul>
+<li>地址线</li>
+<li>数据线</li>
+<li>控制信号线</li>
+<li>电源和地线</li>
+</ul>
+<p>地址线：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>256</mn><mi>K</mi><mo>=</mo><msup><mn>2</mn><mn>18</mn></msup><mi>b</mi></mrow><annotation encoding="application/x-tex">256K=2^{18}b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">6</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">b</span></span></span></span>，需要 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn></mrow><annotation encoding="application/x-tex">18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">8</span></span></span></span> 根地址线</p>
+<p>数据线：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn></mrow><annotation encoding="application/x-tex">16</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">6</span></span></span></span> 根</p>
+<p>控制信号线：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>C</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{CS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>W</mi><mi>E</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{WE}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>，两根</p>
+<p>共</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>18</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">18+16+2=36
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">6</span></span></span></span></span></p>
+</div></details>
+<h2 id="动态-mos-存储器"><a class="markdownIt-Anchor" href="#动态-mos-存储器">#</a> 动态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器</h2>
+<h3 id="存储元-2"><a class="markdownIt-Anchor" href="#存储元-2">#</a> 存储元</h3>
+<img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1yoiovor7j30mk0dcwep.jpg" style="zoom:40%;" />
+<ul>
+<li>
+<p>电容 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 没电表示二进制 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></p>
+</li>
+<li>
+<p>电容 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 充满电表示二进制 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+</li>
+</ul>
+<p>读操作会使电容放电，原来存储的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，所以在读之后需要进行数据恢复</p>
+<h3 id="存储元扩展-2"><a class="markdownIt-Anchor" href="#存储元扩展-2">#</a> 存储元扩展</h3>
+<img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1yp5zhpfsj31aj0u077k.jpg" style="zoom:50%;" />
+<p>、</p>
+<ol>
+<li 2=""><strong>预充电操作</strong>：将<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Y</mi><mn>0</mn></msub><mo>∼</mo><msub><mi>Y</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">Y_0\sim Y_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 这些线充到 \frac{V_{CC}}</li>
+<li><strong>访问操作</strong>：接着给出行选通信号。让每个电容上存储 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
+<li><strong>信号检测</strong>：读入时，如果电容本来是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，操作会使 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">Y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的电压变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub><mn>2</mn></mfrac><mo>+</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\frac{V_{CC}}{2}+\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2336359999999997em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8886359999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.410305em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.22222em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span>，电容变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>；如果电容本来是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，操作会使 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">Y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的电压变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub><mn>2</mn></mfrac><mo>−</mo><mi>δ</mi></mrow><annotation encoding="application/x-tex">\frac{V_{CC}}{2}-\delta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2336359999999997em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8886359999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.410305em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-left:-0.22222em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span></span></span></span></li>
+<li><strong>数据恢复</strong></li>
+<li><strong>数据输出 / 输入</strong></li>
+</ol>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1zkrn5waqj31bj0u0n1g.jpg" alt=""></p>
+<h3 id="动态-mos-存储器的刷新"><a class="markdownIt-Anchor" href="#动态-mos-存储器的刷新">#</a> 动态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器的刷新</h3>
+<h4 id="概念"><a class="markdownIt-Anchor" href="#概念">#</a> 概念</h4>
+<p><strong>最大刷新周期</strong>：从数据存入 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 开始，到数据丢失之前为止的这段时间</p>
+<p><strong>刷新周期</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 实际完成两次完整刷新之间的时间间隔</p>
+<p><strong>刷新方式</strong>：按行刷新，为了缩短刷新周期，可减少存储阵列的行数，增加列数</p>
+<h4 id="刷新的方式"><a class="markdownIt-Anchor" href="#刷新的方式">#</a> 刷新的方式</h4>
+<blockquote>
+<p>因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 在刷新时是不能响应 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 的访问的，因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 对  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 进行访问 和 内存控制器对  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 进行刷新就存在内存争用问题</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1zlgbxcygj31jc0blq6f.jpg" alt=""></p>
+<p><strong>集中刷新</strong></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zlgzd6fdj31km0d441o.jpg" alt=""></p>
+<p><strong>分散刷新</strong></p>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1zlhdypq2j31kk0c3juz.jpg" alt=""></p>
+<p><strong>异步刷新</strong></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zlhjrnbij31kf0c7ac4.jpg" alt=""></p>
+<h3 id="动态-mos-存储芯片实例"><a class="markdownIt-Anchor" href="#动态-mos-存储芯片实例">#</a> 动态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储芯片实例</h3>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1zljpxp1nj31v30tdjy1.jpg" alt=""></p>
+<h3 id="动态-mos-存储器的读写周期"><a class="markdownIt-Anchor" href="#动态-mos-存储器的读写周期">#</a> 动态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mi>O</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">MOS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 存储器的读写周期</h3>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zlmyy4vzj311g0u0goa.jpg" alt=""></p>
+<p>读周期中：</p>
+<ol>
+<li>行地址必须于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>R</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{RAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 有效前送到地址输入端</li>
+<li>由于地址复用，因此 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>C</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{CAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 必须滞后于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>R</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{RAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>，直到列地址送入地址输入端为止</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>R</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{RAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>C</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{CAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 必须保持一定的宽度</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>W</mi><mi>E</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{WE}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 信号为高电平，必须在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mrow><mi>C</mi><mi>A</mi><mi>S</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{CAS}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span> 有效前建立</li>
+</ol>
+<details class="warning"><summary>习题</summary><div>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1zm5mzugqj31q80u0dnb.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1zm81k5ykj31sf0tjafm.jpg" alt=""></p>
+</div></details>
+<h2 id="只读存储器"><a class="markdownIt-Anchor" href="#只读存储器">#</a> 只读存储器</h2>
+<h2 id="高级-dram"><a class="markdownIt-Anchor" href="#高级-dram">#</a> 高级 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">DRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span></h2>
+<h1 id="主存的组织及与-cpu-的连接"><a class="markdownIt-Anchor" href="#主存的组织及与-cpu-的连接">#</a> 主存的组织及与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 的连接</h1>
+<h2 id="存储器的扩展"><a class="markdownIt-Anchor" href="#存储器的扩展">#</a> 存储器的扩展</h2>
+<h3 id="位扩展"><a class="markdownIt-Anchor" href="#位扩展">#</a> 位扩展</h3>
+<blockquote>
+<p>当存储芯片数据总线位宽小于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 数据总线位宽时，采用位扩展的方式进行扩展</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zmddausej31sj0r8n1j.jpg" alt=""></p>
+<h3 id="字扩展"><a class="markdownIt-Anchor" href="#字扩展">#</a> 字扩展</h3>
+<blockquote>
+<p>当存储芯片容量不能满足存储器对存储容量的需求时，采用字扩展方式扩展存储器</p>
+</blockquote>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1zmfnou3ij31uq0rfaf0.jpg" alt=""></p>
+<h3 id="字位同时扩展"><a class="markdownIt-Anchor" href="#字位同时扩展">#</a> 字位同时扩展</h3>
+<blockquote>
+<p>当存储芯片的数据位宽和存储容量均不能满足存储器的数据位和存储容量要求时，可以采用字位同时扩展方式来组织存储器</p>
+<ol>
+<li>首先通过位扩展满足数据位的要求</li>
+<li>再通过字扩展满足存储总容量的要求</li>
+</ol>
+</blockquote>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1zmidkfi2j324o0u0jyk.jpg" alt=""></p>
+<details class="warning"><summary>例题</summary><div>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1zotn59epj31pf0u043t.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zowglknlj31sa0u07ao.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zqsf4g44j324z0u0aht.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zqxlo2xij31jh0rpn13.jpg" alt=""></p>
+</div></details>
+<h2 id="并行主存系统"><a class="markdownIt-Anchor" href="#并行主存系统">#</a> 并行主存系统</h2>
+<blockquote>
+<p>提高主存的存取速度的方法：</p>
+<ol>
+<li>使用高速元件来提高主存的访问速度</li>
+<li>通过存储器的并行工作来提高主存的访问速度</li>
+</ol>
+</blockquote>
+<p><strong>双端口存储器</strong></p>
+<p><img data-src="https://dlink.host/wx2.sinaimg.cn/large/007D2bgfly8i1zr5js3ifj31q40u0aiu.jpg" alt=""></p>
+<p><strong>单体多字存储器</strong></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1zr65fnq0j31ov0u0tj1.jpg" alt=""></p>
+<p><strong>多体交叉存储器</strong></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1zr6gku9sj31oh0u0493.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1zr6mt9bsj31qh0u04al.jpg" alt=""></p>
+<details class="warning"><summary>证明</summary><div>
+<p><img data-src="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1zta8qxamj31ql0u0ai9.jpg" alt=""></p>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1ztdmpznvj321z0u010s.jpg" alt=""></p>
+</div></details>
+<h1 id="高速缓冲存储器"><a class="markdownIt-Anchor" href="#高速缓冲存储器">#</a> 高速缓冲存储器</h1>
+<h2 id="cache-工作原理"><a class="markdownIt-Anchor" href="#cache-工作原理">#</a> cache 工作原理</h2>
+<p>主存一般采用容量大、功耗较小、成本较低的同步动态随机存取存储器 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SDRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span></p>
+<p>静态随机存取存储器 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 的容量小、功耗大、成本高，但 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 的访问速度远高于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>D</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SDRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span></p>
+<p>因此，为了提升 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 访问主存的性能，通常会在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 与主存之间添加一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>R</mi><mi>A</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">SRAM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 作为高速缓冲存储器 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">cache</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span></p>
+<ul>
+<li>将主存中经常访问或即将访问的数据，复制一份调度到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">cache</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span> 中，使得大部分数据访问都可以在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">cache</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span> 中进行，从而提升系统性能</li>
+<li>采用这种方法的主要原因是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 执行的程序具有较强的程序局限性</li>
+</ul>
+<p><img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8i25r0ng9p1j31gp0eu0u7.jpg" alt=""></p>
+<h2 id="程序局限性"><a class="markdownIt-Anchor" href="#程序局限性">#</a> 程序局限性</h2>
+<blockquote>
+<p>在一段时间内，整个程序的执行仅限于一个较小的局部范围内</p>
+</blockquote>
+<h3 id="时间局限性"><a class="markdownIt-Anchor" href="#时间局限性">#</a> 时间局限性</h3>
+<p>若程序在某个时刻访问了一个存储位置，该位置在未来可能会被多次访问</p>
+<h3 id="空间局限性"><a class="markdownIt-Anchor" href="#空间局限性">#</a> 空间局限性</h3>
+<p>若程序访问了某个存储位置，则其附近的存储位置也可能被访问</p>
+<img data-src="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8i25r6q2wsgj30yh0u00x3.jpg" style="zoom: 33%;" />
+<h2 id="cache-的基本概念cache-系统的性能评价"><a class="markdownIt-Anchor" href="#cache-的基本概念cache-系统的性能评价">#</a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">cache</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span> 的基本概念–<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">cache</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span></span></span></span> 系统的性能评价</h2>
+<h1 id="虚拟存储器"><a class="markdownIt-Anchor" href="#虚拟存储器">#</a> 虚拟存储器</h1>
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag"><i class="ic i-tag"></i> 计算机组成原理</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2025-06-06 17:47:09" itemprop="dateModified" datetime="2025-06-06T17:47:09+08:00">2025-06-06</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Aurijun 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Aurijun 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aurijun <i class="ic i-at"><em>@</em></i>眨眼的小星玥
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://www.luckycyyyy.top/2025/05/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" title="存储系统">http://www.luckycyyyy.top/2025/05/31/计算机科学/计算机组成原理/存储系统/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/05/27/Math/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E4%B8%8E%E6%96%B9%E6%A0%B9/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007CYURoly8i1ibo5lky5j30uk0h7n2i.jpg" title="信息安全数学基础-二次剩余与方根">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信息安全数学基础</span>
+  <h3>信息安全数学基础-二次剩余与方根</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2025/06/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E8%A1%A8%E7%A4%BA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1icqsk4nij30p00e3jtr.jpg" title="周期信号的傅里叶级数表示">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 信号与系统</span>
+  <h3>周期信号的傅里叶级数表示</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 存储器概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E5%88%86%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text"> 存储器分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%8A%80%E6%9C%AF%E6%8C%87%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text"> 存储器技术指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text"> 存储系统层次结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text"> 主存基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E6%94%BE"><span class="toc-number">1.5.</span> <span class="toc-text"> 主存中数据的存放</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AD%97%E9%95%BF%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 存储字长和数据字长的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 地址访问模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%AB%AF%E5%92%8C%E5%B0%8F%E7%AB%AF"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 大端和小端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%B9%E7%95%8C%E5%AF%B9%E9%BD%90"><span class="toc-number">1.5.4.</span> <span class="toc-text"> 数据的边界对齐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text"> 半导体存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81-mos-%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text"> 静态 MOSMOSMOS 存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%85%83"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 存储元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%85%83%E6%89%A9%E5%B1%95"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 存储元扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81-mos-%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.3.</span> <span class="toc-text"> 静态 MOSMOSMOS 存储器的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E8%8A%AF%E7%89%87%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.1.4.</span> <span class="toc-text"> 存储器芯片实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sram-%E8%AF%BB%E5%86%99%E6%97%B6%E5%BA%8F"><span class="toc-number">2.1.5.</span> <span class="toc-text"> SRAMSRAMSRAM 读写时序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81-mos-%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> 动态 MOSMOSMOS 存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%85%83-2"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 存储元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%85%83%E6%89%A9%E5%B1%95-2"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 存储元扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81-mos-%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%88%B7%E6%96%B0"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 动态 MOSMOSMOS 存储器的刷新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">2.2.3.1.</span> <span class="toc-text"> 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B7%E6%96%B0%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">2.2.3.2.</span> <span class="toc-text"> 刷新的方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81-mos-%E5%AD%98%E5%82%A8%E8%8A%AF%E7%89%87%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 动态 MOSMOSMOS 存储芯片实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81-mos-%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E8%AF%BB%E5%86%99%E5%91%A8%E6%9C%9F"><span class="toc-number">2.2.5.</span> <span class="toc-text"> 动态 MOSMOSMOS 存储器的读写周期</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E8%AF%BB%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text"> 只读存储器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7-dram"><span class="toc-number">2.4.</span> <span class="toc-text"> 高级 DRAMDRAMDRAM</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E5%AD%98%E7%9A%84%E7%BB%84%E7%BB%87%E5%8F%8A%E4%B8%8E-cpu-%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text"> 主存的组织及与 CPUCPUCPU 的连接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E6%89%A9%E5%B1%95"><span class="toc-number">3.1.</span> <span class="toc-text"> 存储器的扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E6%89%A9%E5%B1%95"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 位扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E6%89%A9%E5%B1%95"><span class="toc-number">3.1.2.</span> <span class="toc-text"> 字扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%8D%E5%90%8C%E6%97%B6%E6%89%A9%E5%B1%95"><span class="toc-number">3.1.3.</span> <span class="toc-text"> 字位同时扩展</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E4%B8%BB%E5%AD%98%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.2.</span> <span class="toc-text"> 并行主存系统</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E9%80%9F%E7%BC%93%E5%86%B2%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text"> 高速缓冲存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cache-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text"> cache 工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text"> 程序局限性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">4.2.1.</span> <span class="toc-text"> 时间局限性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">4.2.2.</span> <span class="toc-text"> 空间局限性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cache-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5cache-%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%80%A7%E8%83%BD%E8%AF%84%E4%BB%B7"><span class="toc-number">4.3.</span> <span class="toc-text"> cachecachecache 的基本概念–cachecachecache 系统的性能评价</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text"> 虚拟存储器</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2025/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" rel="bookmark" title="计算机系统概述">计算机系统概述</a></li><li><a href="/2025/04/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E8%A1%A8%E7%A4%BA/" rel="bookmark" title="数据信息表示">数据信息表示</a></li><li><a href="/2025/05/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E4%B8%8E%E8%BF%90%E7%AE%97%E5%99%A8/" rel="bookmark" title="运算方法与运算器">运算方法与运算器</a></li><li class="active"><a href="/2025/05/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="存储系统">存储系统</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aurijun"
+      data-src="/images/cyy.png">
+  <p class="name" itemprop="name">Aurijun</p>
+  <div class="description" itemprop="description">小星玥，要努力学习呀！</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">118</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">34</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">64</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xVQ0tZQ1lZWVk=" title="https:&#x2F;&#x2F;github.com&#x2F;LUCKYCYYYY"><i class="ic i-github"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2025/05/27/Math/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99%E4%B8%8E%E6%96%B9%E6%A0%B9/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2025/06/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E8%A1%A8%E7%A4%BA/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aurijun @ Aurijun</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">720k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10:55</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/05/31/计算机科学/计算机组成原理/存储系统/',
+    favicon: {
+      show: "嘿嘿好久不见(*¯︶¯*)",
+      hide: "哎呀~走掉惹"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
