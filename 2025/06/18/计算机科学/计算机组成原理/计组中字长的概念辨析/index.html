@@ -76,7 +76,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>444</span>
+    <span>698</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007D2bgfly8i1lzleifwhj31hc0u0788.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1v47q4y2hj31hc0u0wmm.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1wcdbccy3j31m50u0dkn.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8i1ibpv6r5oj30p00e3gny.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1k2l469bqj31hc0u07ee.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/007CYURoly8i1ibox1phvj30p00e2q3p.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i1icrv251ej30rs0fnadd.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8i1g9lm6q6uj30uk0kdad7.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007D2bgfly8i1ijjpajghj31hc0u07n6.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007CYURoly8hzm3z3497mj31er0u0k3i.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/007D2bgfly8i21d1js376j31bs0u0n6p.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/007CYURoly8i1k2cmsztaj316q0u0anh.jpg"></li>
         </ul>
       </div>
     </header>
@@ -179,12 +179,27 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
 <h1 id="机器字长-存储字长-指令字长"><a class="markdownIt-Anchor" href="#机器字长-存储字长-指令字长">#</a> 机器字长 &amp; 存储字长 &amp; 指令字长</h1>
 <h2 id="机器字长"><a class="markdownIt-Anchor" href="#机器字长">#</a> 机器字长</h2>
 <blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 进行一次整数运算所能处理的二进制数据的位数</p>
+<p>指 CPU 寄存器、数据总线、ALU（算术逻辑单元）一次能处理的二进制数据的<strong>最大位数</strong></p>
 </blockquote>
 <p>机器字长 = 运算器 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>L</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">ALU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">L</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 的位数 = 通用寄存器的位数 = 内部数据总线根数</p>
+<ul>
+<li>是固定的，由 CPU 架构决定</li>
+<li>决定了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 的寻址能力，寄存器的大小</li>
+<li>不可变</li>
+</ul>
+<h2 id="数据字长"><a class="markdownIt-Anchor" href="#数据字长">#</a> 数据字长</h2>
+<blockquote>
+<p>指 CPU 在特定操作中一次性处理的数据位数，通常与机器字长一致，但可能因指令或场景不同而变化。</p>
+</blockquote>
+<p>通常由 ALU（算术逻辑单元）的宽度决定。例如，32 位 CPU 的数据字长为 32 位，表示其能一次性处理 32 位的数据运算。</p>
+<ul>
+<li>可动态调整，例如 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 位 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>P</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">CPU</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 可处理 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span> 位、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn></mrow><annotation encoding="application/x-tex">16</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">6</span></span></span></span> 位、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn></mrow><annotation encoding="application/x-tex">32</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span></span></span></span> 位数据</li>
+<li>反映实际运算或传输的数据位数</li>
+</ul>
 <h2 id="存储字长"><a class="markdownIt-Anchor" href="#存储字长">#</a> 存储字长</h2>
 <blockquote>
-<p>一个存储单元中二进制代码的位数</p>
+<p>一个<strong>存储单元</strong>中二进制代码的位数</p>
+<p>指主存储器（内存）一次读写操作中传输的数据位数，即内存单元的宽度。</p>
 </blockquote>
 <ul>
 <li>为外部数据总线根数</li>
@@ -211,7 +226,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2025-06-18 08:45:26" itemprop="dateModified" datetime="2025-06-18T08:45:26+08:00">2025-06-18</time>
+    <time title="修改时间：2025-06-21 21:53:48" itemprop="dateModified" datetime="2025-06-21T21:53:48+08:00">2025-06-21</time>
   </span>
 </div>
 
@@ -261,7 +276,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item left">
       
 
-  <a href="/2025/06/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1id5q9xonj30uk0iedlj.jpg" title="中央处理器">
+  <a href="/2025/06/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1icrmwijxj30p00e3jtu.jpg" title="中央处理器">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 计算机组成原理</span>
   <h3>中央处理器</h3>
@@ -271,7 +286,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
     <div class="item right">
       
 
-  <a href="/2025/06/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx3.sinaimg.cn&#x2F;large&#x2F;007CYURoly8i1g9ctv43xj30uk0h7jt7.jpg" title="离散时间傅里叶变换">
+  <a href="/2025/06/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx1.sinaimg.cn&#x2F;large&#x2F;007D2bgfly8i1o81k4606j31hc0u0dkb.jpg" title="离散时间傅里叶变换">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 信号与系统</span>
   <h3>离散时间傅里叶变换</h3>
@@ -293,7 +308,7 @@ Aurijun = 眨眼的小星玥 = 世间风物论自由，喜一生我有，共四�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E6%80%BB%E7%BA%BF-%E5%A4%96%E9%83%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">1.</span> <span class="toc-text"> 内部总线 &amp; 外部总线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF-%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF-%E6%8C%87%E4%BB%A4%E5%AD%97%E9%95%BF"><span class="toc-number">2.</span> <span class="toc-text"> 机器字长 &amp; 存储字长 &amp; 指令字长</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF"><span class="toc-number">2.1.</span> <span class="toc-text"> 机器字长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF"><span class="toc-number">2.2.</span> <span class="toc-text"> 存储字长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%AD%97%E9%95%BF"><span class="toc-number">2.3.</span> <span class="toc-text"> 指令字长</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mar-mdr"><span class="toc-number">3.</span> <span class="toc-text"> MAR &amp; MDR</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E6%80%BB%E7%BA%BF-%E5%A4%96%E9%83%A8%E6%80%BB%E7%BA%BF"><span class="toc-number">1.</span> <span class="toc-text"> 内部总线 &amp; 外部总线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF-%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF-%E6%8C%87%E4%BB%A4%E5%AD%97%E9%95%BF"><span class="toc-number">2.</span> <span class="toc-text"> 机器字长 &amp; 存储字长 &amp; 指令字长</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%97%E9%95%BF"><span class="toc-number">2.1.</span> <span class="toc-text"> 机器字长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E9%95%BF"><span class="toc-number">2.2.</span> <span class="toc-text"> 数据字长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%AD%97%E9%95%BF"><span class="toc-number">2.3.</span> <span class="toc-text"> 存储字长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%AD%97%E9%95%BF"><span class="toc-number">2.4.</span> <span class="toc-text"> 指令字长</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mar-mdr"><span class="toc-number">3.</span> <span class="toc-text"> MAR &amp; MDR</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
